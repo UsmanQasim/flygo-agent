@@ -1,0 +1,4344 @@
+[
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 715,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "22:50:00+03:00",
+                            "terminal": "5",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "21:15:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 95,
+                        "totalMilesFlown": 508,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 92,
+                            "operating": "XY",
+                            "operatingFlightNumber": 92,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "02:10:00+03:00",
+                            "terminal": "3",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 275,
+                        "totalMilesFlown": 1540,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 141,
+                            "operating": "TK",
+                            "operatingFlightNumber": 141,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "09:10:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "08:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 70,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2312,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2312,
+                            "equipment": {
+                                "code": "32B",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 780,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "22:50:00+03:00",
+                            "terminal": "5",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "21:15:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 95,
+                        "totalMilesFlown": 508,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 92,
+                            "operating": "XY",
+                            "operatingFlightNumber": 92,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "02:10:00+03:00",
+                            "terminal": "3",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 275,
+                        "totalMilesFlown": 1540,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 141,
+                            "operating": "TK",
+                            "operatingFlightNumber": 141,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "10:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "09:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2316,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2316,
+                            "equipment": {
+                                "code": "73J",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 840,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "22:50:00+03:00",
+                            "terminal": "5",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "21:15:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 95,
+                        "totalMilesFlown": 508,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 92,
+                            "operating": "XY",
+                            "operatingFlightNumber": 92,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "02:10:00+03:00",
+                            "terminal": "3",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 275,
+                        "totalMilesFlown": 1540,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 141,
+                            "operating": "TK",
+                            "operatingFlightNumber": 141,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "11:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "10:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2318,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2318,
+                            "equipment": {
+                                "code": "73H",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 975,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "18:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "16:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 120,
+                        "totalMilesFlown": 718,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 738,
+                            "operating": "XY",
+                            "operatingFlightNumber": 738,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "02:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 265,
+                        "totalMilesFlown": 1575,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 151,
+                            "operating": "TK",
+                            "operatingFlightNumber": 151,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "09:10:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "08:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 70,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2312,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2312,
+                            "equipment": {
+                                "code": "32B",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 915,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "19:10:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "17:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 434,
+                            "operating": "XY",
+                            "operatingFlightNumber": 434,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "02:25:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 245,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 95,
+                            "operating": "TK",
+                            "operatingFlightNumber": 95,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "09:10:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "08:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 70,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2312,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2312,
+                            "equipment": {
+                                "code": "32B",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 980,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "19:10:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "17:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 434,
+                            "operating": "XY",
+                            "operatingFlightNumber": 434,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "02:25:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 245,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 95,
+                            "operating": "TK",
+                            "operatingFlightNumber": 95,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "10:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "09:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2316,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2316,
+                            "equipment": {
+                                "code": "73J",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1040,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "18:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "16:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 120,
+                        "totalMilesFlown": 718,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 738,
+                            "operating": "XY",
+                            "operatingFlightNumber": 738,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "02:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 265,
+                        "totalMilesFlown": 1575,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 151,
+                            "operating": "TK",
+                            "operatingFlightNumber": 151,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "10:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "09:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2316,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2316,
+                            "equipment": {
+                                "code": "73J",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1160,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "18:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "16:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 120,
+                        "totalMilesFlown": 718,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 738,
+                            "operating": "XY",
+                            "operatingFlightNumber": 738,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "02:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 265,
+                        "totalMilesFlown": 1575,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 151,
+                            "operating": "TK",
+                            "operatingFlightNumber": 151,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "12:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "11:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2320,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2320,
+                            "equipment": {
+                                "code": "73J",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1100,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "18:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "16:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 120,
+                        "totalMilesFlown": 718,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 738,
+                            "operating": "XY",
+                            "operatingFlightNumber": 738,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "02:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 265,
+                        "totalMilesFlown": 1575,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 151,
+                            "operating": "TK",
+                            "operatingFlightNumber": 151,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "11:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "10:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2318,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2318,
+                            "equipment": {
+                                "code": "73H",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1280,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "19:10:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "17:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 434,
+                            "operating": "XY",
+                            "operatingFlightNumber": 434,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "10:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "06:40:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 245,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 97,
+                            "operating": "TK",
+                            "operatingFlightNumber": 97,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "15:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "14:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2324,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2324,
+                            "equipment": {
+                                "code": "73H",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1340,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "18:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "16:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 120,
+                        "totalMilesFlown": 718,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 738,
+                            "operating": "XY",
+                            "operatingFlightNumber": 738,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "02:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 265,
+                        "totalMilesFlown": 1575,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 151,
+                            "operating": "TK",
+                            "operatingFlightNumber": 151,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "15:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "14:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2324,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2324,
+                            "equipment": {
+                                "code": "73H",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1580,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "18:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "16:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 120,
+                        "totalMilesFlown": 718,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 738,
+                            "operating": "XY",
+                            "operatingFlightNumber": 738,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "02:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 265,
+                        "totalMilesFlown": 1575,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 151,
+                            "operating": "TK",
+                            "operatingFlightNumber": 151,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "19:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "18:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2334,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2334,
+                            "equipment": {
+                                "code": "7M8",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1460,
+                "flight_classes": [
+                    {
+                        "bookingCode": "E",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "18:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "16:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 120,
+                        "totalMilesFlown": 718,
+                        "airline": {
+                            "name": "flynas",
+                            "logo": "https://images.kiwi.com/airlines/64/XY.png"
+                        },
+                        "carrier": {
+                            "marketing": "XY",
+                            "marketingFlightNumber": 738,
+                            "operating": "XY",
+                            "operatingFlightNumber": 738,
+                            "equipment": {
+                                "code": "32N",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "DMM",
+                            "city": "Dammam",
+                            "country": "SA",
+                            "time": "02:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 265,
+                        "totalMilesFlown": 1575,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 151,
+                            "operating": "TK",
+                            "operatingFlightNumber": 151,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "17:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "16:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2328,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2328,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1422
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 665,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "23:30:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "22:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1655,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1655,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "02:25:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 245,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 95,
+                            "operating": "TK",
+                            "operatingFlightNumber": 95,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "09:10:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "08:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 70,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2312,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2312,
+                            "equipment": {
+                                "code": "32B",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 730,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "23:30:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "22:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1655,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1655,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "02:25:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 245,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 95,
+                            "operating": "TK",
+                            "operatingFlightNumber": 95,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "10:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "09:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2316,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2316,
+                            "equipment": {
+                                "code": "73J",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 735,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "22:40:00+03:00",
+                            "terminal": "5",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "20:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 105,
+                        "totalMilesFlown": 508,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1678,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1678,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "02:10:00+03:00",
+                            "terminal": "3",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 275,
+                        "totalMilesFlown": 1540,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 141,
+                            "operating": "TK",
+                            "operatingFlightNumber": 141,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "09:10:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "08:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 70,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2312,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2312,
+                            "equipment": {
+                                "code": "32B",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 755,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "11:05:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "09:40:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1647,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1647,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "18:25:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "14:15:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 250,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 93,
+                            "operating": "TK",
+                            "operatingFlightNumber": 93,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "22:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "21:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2342,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2342,
+                            "equipment": {
+                                "code": "321",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 790,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "23:30:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "22:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1655,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1655,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "02:25:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 245,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 95,
+                            "operating": "TK",
+                            "operatingFlightNumber": 95,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "11:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "10:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2318,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2318,
+                            "equipment": {
+                                "code": "73H",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 800,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "21:15:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "19:50:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1653,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1653,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "02:25:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 245,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 95,
+                            "operating": "TK",
+                            "operatingFlightNumber": 95,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "09:10:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "08:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 70,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2312,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2312,
+                            "equipment": {
+                                "code": "32B",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 780,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "15:40:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "14:15:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1649,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1649,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "00:05:00+03:00",
+                            "dateAdjustment": 1,
+                            "date": "2024-02-07"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "19:45:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 260,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 127,
+                            "operating": "TK",
+                            "operatingFlightNumber": 127,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "03:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "02:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2354,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2354,
+                            "equipment": {
+                                "code": "73H",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 860,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "22:40:00+03:00",
+                            "terminal": "5",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "20:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 105,
+                        "totalMilesFlown": 508,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1678,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1678,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "02:10:00+03:00",
+                            "terminal": "3",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 275,
+                        "totalMilesFlown": 1540,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 141,
+                            "operating": "TK",
+                            "operatingFlightNumber": 141,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "11:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "10:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2318,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2318,
+                            "equipment": {
+                                "code": "73H",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 800,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "22:40:00+03:00",
+                            "terminal": "5",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "20:55:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 105,
+                        "totalMilesFlown": 508,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1678,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1678,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "02:10:00+03:00",
+                            "terminal": "3",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 275,
+                        "totalMilesFlown": 1540,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 141,
+                            "operating": "TK",
+                            "operatingFlightNumber": 141,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "10:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "09:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2316,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2316,
+                            "equipment": {
+                                "code": "73J",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 815,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "11:05:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "09:40:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1647,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1647,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "18:25:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "14:15:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 250,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 93,
+                            "operating": "TK",
+                            "operatingFlightNumber": 93,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "23:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "22:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2340,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2340,
+                            "equipment": {
+                                "code": "73H",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 865,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "20:35:00+03:00",
+                            "terminal": "5",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "18:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 110,
+                        "totalMilesFlown": 508,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1676,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1676,
+                            "equipment": {
+                                "code": "330",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "02:10:00+03:00",
+                            "terminal": "3",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 275,
+                        "totalMilesFlown": 1540,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 141,
+                            "operating": "TK",
+                            "operatingFlightNumber": 141,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "09:10:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "08:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 70,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2312,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2312,
+                            "equipment": {
+                                "code": "32B",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 865,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "21:15:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "19:50:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1653,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1653,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "02:25:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 245,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 95,
+                            "operating": "TK",
+                            "operatingFlightNumber": 95,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "10:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "09:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2316,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2316,
+                            "equipment": {
+                                "code": "73J",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 990,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "20:35:00+03:00",
+                            "terminal": "5",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "18:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 110,
+                        "totalMilesFlown": 508,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1676,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1676,
+                            "equipment": {
+                                "code": "330",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "02:10:00+03:00",
+                            "terminal": "3",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 275,
+                        "totalMilesFlown": 1540,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 141,
+                            "operating": "TK",
+                            "operatingFlightNumber": 141,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "11:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "10:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2318,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2318,
+                            "equipment": {
+                                "code": "73H",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 930,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "20:35:00+03:00",
+                            "terminal": "5",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "18:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 110,
+                        "totalMilesFlown": 508,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1676,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1676,
+                            "equipment": {
+                                "code": "330",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:45:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "RUH",
+                            "city": "Riyadh",
+                            "country": "SA",
+                            "time": "02:10:00+03:00",
+                            "terminal": "3",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 275,
+                        "totalMilesFlown": 1540,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 141,
+                            "operating": "TK",
+                            "operatingFlightNumber": 141,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "10:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "09:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2316,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2316,
+                            "equipment": {
+                                "code": "73J",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 995,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "11:05:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "09:40:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1647,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1647,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "18:25:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "14:15:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 250,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 93,
+                            "operating": "TK",
+                            "operatingFlightNumber": 93,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "02:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "01:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2348,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2348,
+                            "equipment": {
+                                "code": "32B",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1000,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "17:55:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "16:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1651,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1651,
+                            "equipment": {
+                                "code": "330",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "02:25:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 245,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 95,
+                            "operating": "TK",
+                            "operatingFlightNumber": 95,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "09:10:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "08:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 70,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2312,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2312,
+                            "equipment": {
+                                "code": "32B",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1220,
+                "flight_classes": [
+                    {
+                        "bookingCode": "U",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 7
+                    },
+                    {
+                        "bookingCode": "L",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "U",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 4,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "DXB",
+                            "city": "Dubai",
+                            "country": "AE",
+                            "time": "01:45:00+04:00",
+                            "terminal": "2",
+                            "dateAdjustment": 1,
+                            "date": "2024-02-07"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "22:05:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 160,
+                        "totalMilesFlown": 937,
+                        "airline": {
+                            "name": "Fly Dubai",
+                            "logo": "https://images.kiwi.com/airlines/64/FZ.png"
+                        },
+                        "carrier": {
+                            "marketing": "FZ",
+                            "marketingFlightNumber": 816,
+                            "operating": "FZ",
+                            "operatingFlightNumber": 816,
+                            "equipment": {
+                                "code": "7M8",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ATH",
+                            "city": "Athens",
+                            "country": "GR",
+                            "time": "15:25:00+02:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "DXB",
+                            "city": "Dubai",
+                            "country": "AE",
+                            "time": "11:50:00+04:00",
+                            "terminal": "3",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 335,
+                        "totalMilesFlown": 2035,
+                        "airline": {
+                            "name": "Emirates",
+                            "logo": "https://images.kiwi.com/airlines/64/EK.png"
+                        },
+                        "carrier": {
+                            "marketing": "EK",
+                            "marketingFlightNumber": 209,
+                            "operating": "EK",
+                            "operatingFlightNumber": 209,
+                            "equipment": {
+                                "code": "77W",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "18:25:00+03:00",
+                            "terminal": "I",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "ATH",
+                            "city": "Athens",
+                            "country": "GR",
+                            "time": "16:15:00+02:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 70,
+                        "totalMilesFlown": 172,
+                        "airline": {
+                            "name": "Aegean",
+                            "logo": "https://images.kiwi.com/airlines/64/A3.png"
+                        },
+                        "carrier": {
+                            "marketing": "A3",
+                            "marketingFlightNumber": 996,
+                            "operating": "A3",
+                            "operatingFlightNumber": 996,
+                            "disclosure": "OA",
+                            "equipment": {
+                                "code": "AT7",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 2232
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1065,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "17:55:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "16:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1651,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1651,
+                            "equipment": {
+                                "code": "330",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "06:30:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "02:25:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 245,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 95,
+                            "operating": "TK",
+                            "operatingFlightNumber": 95,
+                            "equipment": {
+                                "code": "333",
+                                "typeForFirstLeg": "W",
+                                "typeForLastLeg": "W"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "10:15:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "09:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 75,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2316,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2316,
+                            "equipment": {
+                                "code": "73J",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    },
+    {
+        "legs": [
+            {
+                "origin": "Abha(AHB)",
+                "destination": "Izmir(ADB)",
+                "duration": 1075,
+                "flight_classes": [
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 4
+                    },
+                    {
+                        "bookingCode": "Q",
+                        "cabinCode": "Y",
+                        "mealCode": "M",
+                        "seatsAvailable": 9
+                    },
+                    {
+                        "bookingCode": "Y",
+                        "cabinCode": "Y",
+                        "mealCode": "S",
+                        "seatsAvailable": 9,
+                        "availabilityBreak": true
+                    }
+                ],
+                "connecting_flights": 2,
+                "schedules": [
+                    {
+                        "arrival": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "15:40:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "AHB",
+                            "city": "Abha",
+                            "country": "SA",
+                            "time": "14:15:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 85,
+                        "totalMilesFlown": 322,
+                        "airline": {
+                            "name": "Saudi Arabian Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/SV.png"
+                        },
+                        "carrier": {
+                            "marketing": "SV",
+                            "marketingFlightNumber": 1649,
+                            "operating": "SV",
+                            "operatingFlightNumber": 1649,
+                            "equipment": {
+                                "code": "320",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "00:05:00+03:00",
+                            "dateAdjustment": 1,
+                            "date": "2024-02-07"
+                        },
+                        "departure": {
+                            "airport": "JED",
+                            "city": "Jeddah",
+                            "country": "SA",
+                            "time": "19:45:00+03:00",
+                            "terminal": "1",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 260,
+                        "totalMilesFlown": 1492,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 127,
+                            "operating": "TK",
+                            "operatingFlightNumber": 127,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    },
+                    {
+                        "arrival": {
+                            "airport": "ADB",
+                            "city": "Izmir",
+                            "country": "TR",
+                            "time": "08:10:00+03:00",
+                            "terminal": "D",
+                            "date": "2024-02-06"
+                        },
+                        "departure": {
+                            "airport": "IST",
+                            "city": "Istanbul",
+                            "country": "TR",
+                            "time": "07:00:00+03:00",
+                            "date": "2024-02-06"
+                        },
+                        "elapsedTime": 70,
+                        "totalMilesFlown": 211,
+                        "airline": {
+                            "name": "Turkish Airlines",
+                            "logo": "https://images.kiwi.com/airlines/64/TK.png"
+                        },
+                        "carrier": {
+                            "marketing": "TK",
+                            "marketingFlightNumber": 2310,
+                            "operating": "TK",
+                            "operatingFlightNumber": 2310,
+                            "equipment": {
+                                "code": "32Q",
+                                "typeForFirstLeg": "N",
+                                "typeForLastLeg": "N"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "baseFareAmount": 1572
+    }
+]
