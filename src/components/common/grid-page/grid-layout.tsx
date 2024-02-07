@@ -16,11 +16,29 @@ import RestaurantProducts from "../elements/product-box-6/restaurant-product";
 import useFilterRestaurant from "@/utils/filters/useFilterRestaurant";
 import { IGridLayoutProps } from "./grid-page.d";
 
-const GridLayout: FC<IGridLayoutProps> = ({flights, value, grid, type, view, trip }) => {
+const GridLayout: FC<IGridLayoutProps> = ({
+  flights,
+  value,
+  grid,
+  type,
+  view,
+  trip,
+}) => {
   const cardToShow = 6;
   const dispatch = useDispatch();
 
-  const showProduct = type === "hotel" ? useFilterHotel({ value }) : type === "tour" ? useFilterTour({ value }) : type === "flight" ? useFilterFlight({ value }) : type === "cab" ? useFilterCab({ value }) : type === "restaurant" ? useFilterRestaurant({ value }) : [];
+  const showProduct =
+    type === "hotel"
+      ? useFilterHotel({ value })
+      : type === "tour"
+      ? useFilterTour({ value })
+      : type === "flight"
+      ? useFilterFlight({ value })
+      : type === "cab"
+      ? useFilterCab({ value })
+      : type === "restaurant"
+      ? useFilterRestaurant({ value })
+      : [];
   const totalPages = Math.ceil(showProduct?.length / cardToShow);
 
   useEffect(() => {
@@ -29,56 +47,148 @@ const GridLayout: FC<IGridLayoutProps> = ({flights, value, grid, type, view, tri
 
   return (
     <>
-      <div className={`product-wrapper-grid special-section grid-box  ${grid.gridStyle === "list-view" ? "container" : ""}`}>
-        <div className={`row content grid ${grid.gridStyle === "list-view" ? "list-view" : ""}`}>
+      <div
+        className={`product-wrapper-grid special-section grid-box  ${
+          grid.gridStyle === "list-view" ? "container" : ""
+        }`}
+      >
+        <div
+          className={`row content grid  ${
+            grid.gridStyle === "list-view" ? "list-view" : ""
+          }`}
+        >
           {type === "tour" &&
             (showProduct as IBaseProps[]) // Explicitly type-cast to IBaseProps[] here
-              ?.slice(cardToShow * grid.toPage - cardToShow, cardToShow * grid.toPage)
+              ?.slice(
+                cardToShow * grid.toPage - cardToShow,
+                cardToShow * grid.toPage
+              )
               .map((dataItems: IBaseProps, index) => {
                 if (grid.gridStyle === "list-view") {
-                  return <ListPage data={dataItems} view={view} type={type} key={index} />;
+                  return (
+                    <ListPage
+                      data={dataItems}
+                      view={view}
+                      type={type}
+                      key={index}
+                    />
+                  );
                 } else {
-                  return <TourGridProduct grid={grid} view={view} data={dataItems as IBaseProps} key={index} />;
+                  return (
+                    <TourGridProduct
+                      grid={grid}
+                      view={view}
+                      data={dataItems as IBaseProps}
+                      key={index}
+                    />
+                  );
                 }
               })}
 
           {type === "hotel" &&
-            (showProduct as IBaseProps[])?.slice(cardToShow * grid.toPage - cardToShow, cardToShow * grid.toPage).map((dataItems: IBaseProps, i: number) => {
-              if (grid.gridStyle === "list-view") {
-                return type === dataItems.type && <ListPage data={dataItems} view={view} key={i} />;
-              } else {
-                return (
-                  <div className={`${grid.gridSize === 3 && "col-xl-4"} ${grid.gridSize === 4 && "col-xl-3 col-lg-4"} col-sm-6 popular grid-item wow fadeInUp`} key={i}>
-                    <ProductBox data={dataItems} view={view} key={dataItems.id} />
-                  </div>
-                );
-              }
-            })}
-
-            {type === "restaurant" &&
-              (showProduct)?.slice(cardToShow * grid.toPage - cardToShow, cardToShow * grid.toPage).map((dataItems, i) => {
+            (showProduct as IBaseProps[])
+              ?.slice(
+                cardToShow * grid.toPage - cardToShow,
+                cardToShow * grid.toPage
+              )
+              .map((dataItems: IBaseProps, i: number) => {
                 if (grid.gridStyle === "list-view") {
-                  return type === dataItems.type && <ListPage data={dataItems} view={view} key={i} />;
+                  return (
+                    type === dataItems.type && (
+                      <ListPage data={dataItems} view={view} key={i} />
+                    )
+                  );
                 } else {
                   return (
-                    <div className={`${grid.gridSize === 3 && "col-xl-4"} ${grid.gridSize === 4 && "col-xl-3 col-lg-4"} col-sm-6 popular grid-item wow fadeInUp`} key={i}>
-                      <RestaurantProducts data={dataItems} view={view} key={dataItems.id} />
+                    <div
+                      className={`${grid.gridSize === 3 && "col-xl-4"} ${
+                        grid.gridSize === 4 && "col-xl-3 col-lg-4"
+                      } col-sm-6 popular grid-item wow fadeInUp`}
+                      key={i}
+                    >
+                      <ProductBox
+                        data={dataItems}
+                        view={view}
+                        key={dataItems.id}
+                      />
+                    </div>
+                  );
+                }
+              })}
+
+          {type === "restaurant" &&
+            showProduct
+              ?.slice(
+                cardToShow * grid.toPage - cardToShow,
+                cardToShow * grid.toPage
+              )
+              .map((dataItems, i) => {
+                if (grid.gridStyle === "list-view") {
+                  return (
+                    type === dataItems.type && (
+                      <ListPage data={dataItems} view={view} key={i} />
+                    )
+                  );
+                } else {
+                  return (
+                    <div
+                      className={`${grid.gridSize === 3 && "col-xl-4"} ${
+                        grid.gridSize === 4 && "col-xl-3 col-lg-4"
+                      } col-sm-6 popular grid-item wow fadeInUp`}
+                      key={i}
+                    >
+                      <RestaurantProducts
+                        data={dataItems}
+                        view={view}
+                        key={dataItems.id}
+                      />
                     </div>
                   );
                 }
               })}
 
           {type === "cab" && grid.gridStyle === "list-view" ? (
-            <CabListProducts data={showProduct as IBaseProps[]} cardToShow={cardToShow} grid={grid} />
+            <CabListProducts
+              data={showProduct as IBaseProps[]}
+              cardToShow={cardToShow}
+              grid={grid}
+            />
           ) : type === "cab" ? (
-            (showProduct as IBaseProps[])?.slice(cardToShow * grid.toPage - cardToShow, cardToShow * grid.toPage).map((dataItems: IBaseProps, i) => {
-              return <CabGridProduct data={dataItems} grid={grid} key={i} view={view} />;
-            })
+            (showProduct as IBaseProps[])
+              ?.slice(
+                cardToShow * grid.toPage - cardToShow,
+                cardToShow * grid.toPage
+              )
+              .map((dataItems: IBaseProps, i) => {
+                return (
+                  <CabGridProduct
+                    data={dataItems}
+                    grid={grid}
+                    key={i}
+                    view={view}
+                  />
+                );
+              })
           ) : (
             ""
           )}
 
-          {type === "flight" && trip !== "round" ? <FlightProductBox flights={flights} data={showProduct as IBaseProps[]} cardToShow={cardToShow} grid={grid} /> : type == "flight" ? <RoundTrip data={showProduct as IBaseProps[]} cardToShow={cardToShow} grid={grid} /> : ""}
+          {type === "flight" && trip !== "round" ? (
+            <FlightProductBox
+              flights={flights}
+              data={showProduct as IBaseProps[]}
+              cardToShow={cardToShow}
+              grid={grid}
+            />
+          ) : type == "flight" ? (
+            <RoundTrip
+              data={showProduct as IBaseProps[]}
+              cardToShow={cardToShow}
+              grid={grid}
+            />
+          ) : (
+            ""
+          )}
         </div>
       </div>
 

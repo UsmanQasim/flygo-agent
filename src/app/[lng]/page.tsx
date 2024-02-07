@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const Home = () => {
   const router = useRouter();
   useEffect(() => {
-    router.push("/home/hotels/classic");
+    router.push("/home/flight/modern");
   }, []);
 
   return <></>;

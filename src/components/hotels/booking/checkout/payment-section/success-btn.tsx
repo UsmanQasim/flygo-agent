@@ -4,15 +4,20 @@ import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 
 const SuccessBtn = () => {
-  const { push } = useRouter();
+  const router = useRouter();
   const { i18LangStatus } = useSelector((state: RootState) => state.language);
 
   const makePaymentBtn = () => {
-    push(`${i18LangStatus}/hotel/booking/booking-success`)
+    // router.push(`${i18LangStatus}`);
+    router.push(`${"/flight/booking/success"}`);
   };
   return (
     <div className="payment-btn">
-      <button type="button" className="btn btn-solid color1" onClick={makePaymentBtn}>
+      <button
+        type="button"
+        className="btn btn-solid color1"
+        onClick={makePaymentBtn}
+      >
         {MakePayment}
       </button>
     </div>

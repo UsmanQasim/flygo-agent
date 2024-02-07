@@ -59,7 +59,8 @@ const LoginForm: FC = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <div className="form-group form-check">
+      <div className="form-group form-check flex gap-2 align-items-center justify-content-start p-0">
+        <input id="checkbox1" type="checkbox" />
         <label className="form-check-label" htmlFor="exampleCheck1">
           remember me
         </label>

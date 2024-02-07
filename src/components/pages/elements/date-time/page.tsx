@@ -14,12 +14,16 @@ const BodyContent: FC = () => {
   return (
     <section className="section-b-space bg-inner elements-date-time">
       <div className="container">
-        <TitleThree classTitle="title-1" title={Rica} subTitle="date & time picker" />
+        <TitleThree
+          classTitle="title-1"
+          title={Rica}
+          subTitle="date & time picker"
+        />
         <div className="row">
           <div className="col-md-4">
             <label>Date Picker</label>
             <div className="form-control">
-            <DatePickerComponent start={startDate} setStart={setStartDate} />
+              <DatePickerComponent start={startDate} setStart={setStartDate} />
             </div>
           </div>
           <div className="col-md-4">
@@ -29,7 +33,7 @@ const BodyContent: FC = () => {
           <div className="col-md-4">
             <label>Date & Time Picker</label>
             <div className="form-control">
-            <DateTimePickerComp />
+              <DateTimePickerComp />
             </div>
           </div>
         </div>
@@ -42,7 +46,7 @@ const BodyContent: FC = () => {
             <div className="suggestion_box">
               <div className="form-group">
                 <label>Destination</label>
-                <SelectCity value="To" cityData={cityData} />
+                {/* <SelectCity value="To" cityData={cityData} /> */}
               </div>
             </div>
           </div>

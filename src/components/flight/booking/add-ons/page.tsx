@@ -4,8 +4,11 @@ import Button from "@/components/common/btn";
 import NewsLatterContent from "@/components/common/news-latter/page";
 import FlightDetailsContent from "./flight-detail";
 import { FC } from "react";
+import { useRouter } from "next/navigation";
 
-const Addons:FC = () => {
+const Addons: FC = () => {
+  const router = useRouter();
+
   return (
     <section className="small-section">
       <div className="container">
@@ -30,12 +33,16 @@ const Addons:FC = () => {
                   <TravelAddons />
                 </div>
               </div>
-              <NewsLatterContent titleClass="single-section" />
+              {/* <NewsLatterContent titleClass="single-section" /> */}
             </div>
           </div>
         </div>
         <div className="continue-btn">
-          <Button btnClass="btn btn-solid" name="make payment" />
+          <Button
+            btnClass="btn btn-solid"
+            name="make payment"
+            onClick={() => router.push("/flight/booking/payment")}
+          />
         </div>
       </div>
     </section>

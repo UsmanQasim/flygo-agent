@@ -23,6 +23,6 @@
       "@/*": ["./src/*", "./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next-i18next.config.js", "src/components/common/elements/product-box2", "src/components/common/elements/product-box3"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next-i18next.config.js", "src/components/common/elements/product-box2", "src/components/common/elements/product-box3", "src/components/common/elements/product-box/flight-product-box/flightCard.js"],
   "exclude": ["node_modules"]
 }

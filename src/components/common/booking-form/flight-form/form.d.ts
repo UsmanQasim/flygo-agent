@@ -27,3 +27,19 @@ interface ICityProps {
   airport: string;
   button: string;
 }
+
+interface IFlightCityProps {
+  flighData: IFlightProps[];
+  value: string;
+  placeHolder?: string;
+  onChange: Function;
+}
+
+interface IFlightProps {
+  VENDOR_CODE: string;
+  POI_NAME: string;
+  CITY_NAME?: string;
+  COUNTRY_CODE: string;
+  LATITUDE: string;
+  LONGITUDE: string;
+}

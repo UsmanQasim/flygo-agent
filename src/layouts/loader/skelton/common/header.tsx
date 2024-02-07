@@ -47,9 +47,9 @@ const SkeletonHeader: FC = () => {
         <div className="row">
           <div className="col">
             <div className="menu">
-              <div className="brand-logo">
+              <div className="">
                 <Link href="/">
-                  <img src={"/assets/images/logo.png"} alt="" className="img-fluid" />
+                  <img src={"/assets/images/logo.png"} alt="" className="img-fluid"  width={140} height={140}/>
                 </Link>
               </div>
               <nav>

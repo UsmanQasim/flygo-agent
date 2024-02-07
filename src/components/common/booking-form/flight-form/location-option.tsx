@@ -1,8 +1,8 @@
 import { OneWay, RoundTrip, MultiCityRoute } from "@/constant/constant";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
 const LocationOption: FC<LocationOptionProps> = ({
-  isOneWay,
+  isOneWay = true,
   isRoundTrip,
   isMultiCityTrip,
   onOptionChange,
@@ -27,7 +27,7 @@ const LocationOption: FC<LocationOptionProps> = ({
         <input
           className="form-check-input"
           type="radio"
-          name="exampleRadios"
+          name="exampleRadios2"
           id="exampleRadios2"
           value="option2"
           checked={isRoundTrip}
@@ -41,7 +41,7 @@ const LocationOption: FC<LocationOptionProps> = ({
         <input
           className="form-check-input"
           type="radio"
-          name="exampleRadios"
+          name="exampleRadios3"
           id="exampleRadios3"
           value="option3"
           checked={isMultiCityTrip}

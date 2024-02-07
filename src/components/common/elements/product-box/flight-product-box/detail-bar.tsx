@@ -14,7 +14,7 @@ const DetailBar: FC<IFlightProductBoxProps> = ({
   const { symbol, currencyValue } = useSelector(
     (state: RootState) => state.currency
   );
-  FlightCard
+  FlightCard;
   const [activeItem, setActiveItem] = useState<number | null>(null);
 
   const handleDetailWrapClick = (item: any) => {
@@ -24,9 +24,12 @@ const DetailBar: FC<IFlightProductBoxProps> = ({
       setActiveItem(item.id ?? null);
     }
   };
+
   const convertMinutesToHoursAndMinutes = (minutes: number | undefined) => {
-    const hours = Math.floor(minutes || 0 / 60);
-    const remainingMinutes = minutes || 0 % 60;
+    if (!minutes) return;
+
+    const hours = Math.floor(minutes / 60);
+    const remainingMinutes = minutes % 60;
 
     const hoursText = hours > 0 ? hours + " hr" + (hours > 1 ? "s" : "") : "";
     const minutesText =
@@ -44,7 +47,7 @@ const DetailBar: FC<IFlightProductBoxProps> = ({
   return (
     <div className="detail-bar">
       {flights &&
-        flights.map((itinerary) => {
+        flights.map((itinerary, id) => {
           let legDescriptions = itinerary.legs[0];
 
           let originAirport = airports?.find(
@@ -97,7 +100,14 @@ const DetailBar: FC<IFlightProductBoxProps> = ({
           };
 
           return (
-           <FlightCard currencyValue={currencyValue} symbol={symbol} flight={data} activeItem={activeItem} handleDetailWrapClick={handleDetailWrapClick}/>
+            <FlightCard
+              key={id}
+              currencyValue={currencyValue}
+              symbol={symbol}
+              flight={data}
+              activeItem={activeItem}
+              handleDetailWrapClick={handleDetailWrapClick}
+            />
           );
         })}
     </div>

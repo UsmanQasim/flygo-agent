@@ -9,7 +9,11 @@ interface IBreadcrumbTwoProps {
 const BreadcrumbTwo: FC<IBreadcrumbTwoProps> = ({ title, subTitle }) => {
   return (
     <section className="breadcrumb-section small-sec flight-sec pt-0">
-      <Img src="/assets/images/flights/flight-breadcrumb2.jpg" className="bg-img img-fluid " alt="" />
+      <Img
+        src="/assets/images/new/flight-breadcrumb2.jpg"
+        className="bg-img img-fluid "
+        alt=""
+      />
       <div className="content-bottom">
         <div className="container">
           <div className="row">
@@ -23,7 +27,13 @@ const BreadcrumbTwo: FC<IBreadcrumbTwoProps> = ({ title, subTitle }) => {
                     <Link href="/flight/listing/right-sidebar">flights</Link>
                   </li>
                   <li className="breadcrumb-item">{title}</li>
-                  {subTitle && <li className={`breadcrumb-item ${subTitle ? "active" : ""}`}>{subTitle}</li>}
+                  {subTitle && (
+                    <li
+                      className={`breadcrumb-item ${subTitle ? "active" : ""}`}
+                    >
+                      {subTitle}
+                    </li>
+                  )}
                 </ol>
               </nav>
             </div>

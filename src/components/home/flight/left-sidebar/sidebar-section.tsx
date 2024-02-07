@@ -1,7 +1,7 @@
 "use client";
 import { useState, FC } from "react";
 import LocationOption from "@/components/common/booking-form/flight-form/location-option";
-import { cityData } from "@/data/home/flight/flight-data";
+// import { cityfligData } from "@/data/home/flight/flight-data";
 import DatePickerComponent from "@/components/common/date-picker";
 import Button from "@/components/common/btn";
 import SelectTraveler from "@/components/common/booking-form/flight-form/select-taraveler";
@@ -50,11 +50,11 @@ const SidebarSection: FC = () => {
             >
               <div className="col-xl-12 col-md-6 form-group">
                 <label>From</label>
-                <SelectCity value="From" cityData={cityData} />
+                {/* <SelectCity value="From" cityData={cityData} /> */}
               </div>
               <div className="col-xl-12 col-md-6 form-group">
                 <label>To</label>
-                <SelectCity value="From" cityData={cityData} />
+                {/* <SelectCity value="From" cityData={cityData} /> */}
               </div>
               <div className="col-xl-12 col-md-6">
                 <div className="form-group">
@@ -82,7 +82,7 @@ const SidebarSection: FC = () => {
               )}
               <div className="col-xl-12 col-md-6 form-group">
                 <label>Traveller & Class</label>
-                <SelectTraveler />
+                {/* <SelectTraveler /> */}
               </div>
               <div className="col-12">
                 <Link

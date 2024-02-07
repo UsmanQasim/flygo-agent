@@ -27,17 +27,27 @@ interface CustomLayoutProps {
   loader?: string;
 }
 
-const CustomLayout: React.FC<CustomLayoutProps> = ({ children, title, logo, footerPlace, userBgClass, footer, coupon, hideFooter, loader }) => {
+const CustomLayout: React.FC<CustomLayoutProps> = ({
+  children,
+  title,
+  logo,
+  footerPlace,
+  userBgClass,
+  footer,
+  coupon,
+  hideFooter,
+  loader,
+}) => {
   return (
     <>
       {loader === "food" ? (
         <LoaderFood loaderTimeout={5000} />
       ) : loader === "pre" ? (
-        <PreLoader loaderTimeout={5000} side={"left"} />
+        <Loader loaderTimeout={4000} />
       ) : loader === "right" ? (
-        <PreLoader loaderTimeout={5000} side={"right"} />
+        <Loader loaderTimeout={4000} />
       ) : loader === "no-sidebar" ? (
-        <PreLoader loaderTimeout={5000} side={"no"} />
+        <Loader loaderTimeout={4000} />
       ) : loader === "map-loader" ? (
         <MapLoader loaderTimeout={5000} side={"right"} />
       ) : loader === "map-left" ? (
@@ -51,21 +61,27 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({ children, title, logo, foot
       ) : (
         <Loader loaderTimeout={5000} />
       )}
-      <header className={title}>
+      <header className={title + " bg-secondary bg-opacity-25"}>
         <div className="container">
           <div className="row">
             <div className="col">
               <div className="menu">
                 <Logo logo={logo} />
                 <Sidebar />
-                {coupon ? <CoupenCode /> : <HeaderRight userBgClass={userBgClass} />}
+                {coupon ? (
+                  <CoupenCode />
+                ) : (
+                  <HeaderRight userBgClass={userBgClass} />
+                )}
               </div>
             </div>
           </div>
         </div>
       </header>
       {children}
-      {!hideFooter && <FooterMain footerType={footer} footerPlaceCom={footerPlace} />}
+      {!hideFooter && (
+        <FooterMain footerType={footer} footerPlaceCom={footerPlace} />
+      )}
       <TapToTop />
       <CustomizePage />
     </>

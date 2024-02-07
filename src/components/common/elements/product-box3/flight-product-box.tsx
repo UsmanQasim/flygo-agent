@@ -1,9 +1,14 @@
 import { FC } from "react";
 import DetailBar from "../product-box/flight-product-box/detail-bar";
 
-const FlightProductBox: FC<IFlightProductBoxProps> = ({flights, data, cardToShow, grid }) => {
+const FlightProductBox: FC<IFlightProductBoxProps> = ({
+  flights,
+  data,
+  cardToShow,
+  grid,
+}) => {
   return (
-    <div className="flight-detail-sec">
+    <div className="flight-detail-sec m-0">
       <div className="title-bar">
         <div className="row">
           <div className="col-3">
@@ -17,7 +22,12 @@ const FlightProductBox: FC<IFlightProductBoxProps> = ({flights, data, cardToShow
           </div>
         </div>
       </div>
-      <DetailBar flights={flights} data={data} cardToShow={cardToShow} grid={grid} />
+      <DetailBar
+        flights={flights}
+        data={data}
+        cardToShow={cardToShow}
+        grid={grid}
+      />
     </div>
   );
 };
