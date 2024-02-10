@@ -8,21 +8,51 @@ import GridView from "@/components/common/grid-page/grid/grid-view";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/redux-toolkit/store";
 import { getFlights } from "@/redux-toolkit/flight-api";
-import FlightData from './flightData.json'
+import FlightData from "./flightData.json";
+import { postFlight } from "@/src/services/login.service";
 
 const LeftSidebar: FC = () => {
-  const [flights, setFlights] = useState(FlightData)
-  const dispatch = useDispatch<AppDispatch>();
+  const [flights, setFlights] = useState([]);
   const { data } = useSelector((state: RootState) => state.flight);
+
+  const getFlightsList = async () => {
+    const postData = {
+      originDest: [
+        {
+          origin: "DMM",
+          destination: "ISB",
+          depart_date: "2024-02-07",
+        },
+      ],
+      passengers: {
+        adults: 2,
+        children: 1,
+        infants: 1,
+      },
+    };
+    const res = await postFlight(postData);
+    // console.log(res, "ress");
+    if (res?.success) {
+      setFlights(res?.data);
+    }
+  };
+
   useEffect(() => {
-    dispatch(getFlights());
-  }, [dispatch]);
+    getFlightsList();
+  }, []);
 
   return (
     <CustomLayout title="light_header custom-user-header" loader="pre">
       <BannerBreadcrumbs />
       <SearchSection />
-      <GridView flights={flights} side={"left"} value={data} type={"flight"} schedule={true} latestFilter />
+      <GridView
+        flights={flights}
+        side={"left"}
+        value={data}
+        type={"flight"}
+        schedule={true}
+        latestFilter
+      />
     </CustomLayout>
   );
 };

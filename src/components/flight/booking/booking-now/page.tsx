@@ -2,53 +2,109 @@ import { ContinueBooking } from "@/constant/constant";
 import FlightDetail from "./flight-detail";
 import TravelDetail from "./travel-detail";
 import TravelInsurance from "./travel-insurance";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import InformationPage from "@/components/common/booking-page/information";
 import Summary from "@/components/common/booking-page/summary";
 import Coupon from "@/components/common/booking-page/coupon";
 import { useRouter } from "next/navigation";
 
-export interface FormData {
-  adult1: {
-    title: string;
-    firstName: string;
-    lastName: string;
-    dateOfBirth: string;
-    nationality: string;
-    passport: string;
-    expirationDate: string;
-    type: string;
-    issueCountry: string;
+export interface IBookingDetails {
+  bookingCode: string;
+  price: {
+    main: string;
+    decimals: number;
+    currency: string;
   };
-  email: string;
-  phoneNumber: string;
+}
+
+export interface IStoredFormData {
+  trip_type: string;
+  origin: string;
+  destination: string;
+  depart_date: string;
+  return_date: string;
+  passengers: {
+    adults: number;
+    children: number;
+    infants: number;
+  };
+  multiCityFlights: [];
 }
 
 const BookingNowComponent: FC = () => {
   const router = useRouter();
-  const [formData, setFormData] = useState<FormData>({
-    adult1: {
-      title: "",
-      firstName: "",
-      lastName: "",
-      dateOfBirth: "",
-      nationality: "",
-      passport: "",
-      expirationDate: "",
-      type: "",
-      issueCountry: "",
-    },
+  const [storedFormData, setStoredFormData] = useState<
+    IStoredFormData | undefined
+  >();
+  const [bookingDetails, setBookingDetails] = useState<
+    IBookingDetails | undefined
+  >();
+
+  const [passengerData, setPassengerData] = useState({
+    adults: [
+      {
+        title: "",
+        firstName: "",
+        lastName: "",
+        dateOfBirth: "",
+        nationality: "",
+        passport: "",
+        expirationDate: "",
+        type: "",
+        issueCountry: "",
+      },
+    ],
+    children: [
+      {
+        title: "",
+        firstName: "",
+        lastName: "",
+        dateOfBirth: "",
+        nationality: "",
+        passport: "",
+        expirationDate: "",
+        type: "",
+        issueCountry: "",
+      },
+    ],
+    infants: [
+      {
+        title: "",
+        firstName: "",
+        lastName: "",
+        dateOfBirth: "",
+        nationality: "",
+        passport: "",
+        expirationDate: "",
+        type: "",
+        issueCountry: "",
+      },
+    ],
+  });
+
+  const [customerData, setCustomerData] = useState({
     email: "",
     phoneNumber: "",
   });
 
   const handleSubmit = (event: React.FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    console.log(formData);
-    // Add any further logic here, such as submitting the data to a server
 
     router.push("/flight/booking/add-ons");
   };
+
+  useEffect(() => {
+    const storedFormData = sessionStorage.getItem("formData");
+    const booking_details = sessionStorage.getItem("booking_details");
+
+    if (storedFormData && booking_details) {
+      const parsedFormData = JSON.parse(storedFormData);
+      const parsedBookingDetails = JSON.parse(booking_details);
+
+      setStoredFormData(parsedFormData);
+      setBookingDetails(parsedBookingDetails);
+    }
+  }, []);
 
   return (
     <section className="small-section">
@@ -58,14 +114,20 @@ const BookingNowComponent: FC = () => {
             <div className="review-section">
               <FlightDetail />
               {/* <InformationPage type="flight" /> */}
-              <TravelDetail setFormData={setFormData} formData={formData} />
+              <TravelDetail
+                setPassengerData={setPassengerData}
+                passengerData={passengerData}
+                customerData={customerData}
+                setCustomerData={setCustomerData}
+                storedFormData={storedFormData}
+              />
               {/* <TravelInsurance /> */}
             </div>
           </div>
           <div className="col-lg-4 res-margin">
             <div className="sticky-cls-top">
               <div className="review-section">
-                <Summary />
+                <Summary bookingDetails={bookingDetails} />
                 {/* <Coupon /> */}
               </div>
             </div>

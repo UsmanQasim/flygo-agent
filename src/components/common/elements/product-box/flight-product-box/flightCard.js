@@ -121,13 +121,17 @@ const FlightCard = ({
           <div className="book-flight">
             <button onClick={togglePackages} className="btn btn-solid color1">
               View Detail{" "}
-             {arePackagesVisible ? <img
-                src="/top_arrow.png"
-                style={{ width: "16px", height: "16px" }}
-              />: <img
-                src="/bottom_arrow.png"
-                style={{ width: "16px", height: "16px" }}
-              />}
+              {arePackagesVisible ? (
+                <img
+                  src="/top_arrow.png"
+                  style={{ width: "16px", height: "16px" }}
+                />
+              ) : (
+                <img
+                  src="/bottom_arrow.png"
+                  style={{ width: "16px", height: "16px" }}
+                />
+              )}
             </button>
           </div>
         </div>
@@ -197,13 +201,14 @@ const FlightCard = ({
               alignItems: "start",
               gap: "10px",
               margin: 5,
+              flexWrap: "wrap",
             }}
           >
             <PackageCard
               titleColor="white"
               bgColor="grey"
               textColor="black"
-              title={flight_classes[0].bookingCode}
+              title={flight_classes[0]?.bookingCode}
               price={{ main: basePrice, decimals: 74, currency: symbol }}
               flightSchedules={flightSchedules}
             >
@@ -233,7 +238,7 @@ const FlightCard = ({
               titleColor="white"
               bgColor="#253A74"
               textColor="black"
-              title={flight_classes[1].bookingCode}
+              title={flight_classes[1]?.bookingCode}
               price={{ main: 747, decimals: 24, currency: symbol }}
               recommended
               flightSchedules={flightSchedules}
@@ -279,7 +284,7 @@ const FlightCard = ({
               titleColor="white"
               bgColor="#3BA746"
               textColor="black"
-              title={flight_classes[2].bookingCode}
+              title={flight_classes[2]?.bookingCode}
               price={{ main: 876, decimals: 85, currency: symbol }}
               flightSchedules={flightSchedules}
             >
@@ -334,10 +339,10 @@ function PackageCard({
         style={{
           borderRadius: "8px",
           overflow: "hidden",
-          width: "300px",
           border: "1px solid",
           borderColor: `${bgColor}`,
           cursor: "pointer",
+          width: "200px",
         }}
         className="card"
         onClick={() => {

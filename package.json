@@ -68,7 +68,8 @@
     "swiper": "^10.1.0",
     "timepicker-ui": "^2.6.1",
     "typescript": "5.0.4",
-    "typewriter-effect": "^2.19.0"
+    "typewriter-effect": "^2.19.0",
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",

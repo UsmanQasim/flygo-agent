@@ -1,5 +1,5 @@
 "use client";
-import { FC, useState } from "react";
+import { FC, useState, useEffect, useRef } from "react";
 import { RootState } from "@/redux-toolkit/store";
 import { useSelector } from "react-redux";
 import { airports } from "@/src/utils/bookingData/airports";
@@ -14,9 +14,54 @@ const DetailBar: FC<IFlightProductBoxProps> = ({
   const { symbol, currencyValue } = useSelector(
     (state: RootState) => state.currency
   );
-  FlightCard;
   const [activeItem, setActiveItem] = useState<number | null>(null);
+  const [visibleFlights, setVisibleFlights] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+  const detailBarRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    // Initially, show 10 flights
+    if (flights) {
+      setVisibleFlights(flights.slice(0, 20));
+    }
+  }, [flights]);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (
+  //       detailBarRef.current &&
+  //       detailBarRef.current.scrollHeight - detailBarRef.current.scrollTop ===
+  //         detailBarRef.current.clientHeight &&
+  //       !loading
+  //     ) {
+  //       loadMoreFlights();
+  //     }
+  //   };
+
+  //   if (detailBarRef.current) {
+  //     detailBarRef.current.addEventListener("scroll", handleScroll);
+  //   }
+
+  //   return () => {
+  //     if (detailBarRef.current) {
+  //       detailBarRef.current.removeEventListener("scroll", handleScroll);
+  //     }
+  //   };
+  // }, [loading]);
+
+  const loadMoreFlights = () => {
+    setLoading(true);
+    // You can implement your logic to fetch more flights here
+    // For simplicity, I'll just add the next 10 flights from the list
+    if (flights) {
+      const currentLength = visibleFlights.length;
+      const nextFlights = flights.slice(currentLength, currentLength + 20);
+      setTimeout(() => {
+        setVisibleFlights((prevFlights) => [...prevFlights, ...nextFlights]);
+        setLoading(false);
+      }, 1000); // Simulating a delay for loading
+    }
+  };
   const handleDetailWrapClick = (item: any) => {
     if (activeItem === item.id) {
       setActiveItem(null);
@@ -45,71 +90,92 @@ const DetailBar: FC<IFlightProductBoxProps> = ({
   };
 
   return (
-    <div className="detail-bar">
-      {flights &&
-        flights.map((itinerary, id) => {
-          let legDescriptions = itinerary.legs[0];
+    <div style={{ marginBottom: "20vh" }}>
+      <div
+        className="detail-bar"
+        // ref={detailBarRef}
+        // style={{ overflowY: "auto", overflowX: "hidden", maxHeight: "1200px" }}
+      >
+        {visibleFlights &&
+          visibleFlights?.map((itinerary, id) => {
+            let legDescriptions = itinerary.legs[0];
 
-          let originAirport = airports?.find(
-            (a: { VENDOR_CODE: any }) =>
-              a.VENDOR_CODE === legDescriptions.schedules[0].departure.airport
-          );
+            let originAirport = airports?.find(
+              (a: { VENDOR_CODE: any }) =>
+                a.VENDOR_CODE === legDescriptions.schedules[0].departure.airport
+            );
 
-          let destinationAirport = airports.find(
-            (a: { VENDOR_CODE: any }) =>
-              a.VENDOR_CODE ===
-              legDescriptions.schedules[legDescriptions.schedules.length - 1]
-                .arrival.airport
-          );
+            let destinationAirport = airports.find(
+              (a: { VENDOR_CODE: any }) =>
+                a.VENDOR_CODE ===
+                legDescriptions.schedules[legDescriptions.schedules.length - 1]
+                  .arrival.airport
+            );
 
-          let flight_classes = legDescriptions.flight_classes;
-          let depart_date = legDescriptions.schedules[0].departure.date;
-          let arrival_date = legDescriptions.schedules[0].arrival.date;
-          let legs = itinerary.legs;
-          let basePrice = `${itinerary.baseFareAmount}`;
-          let flight_stops,
-            totalMinutes,
-            flightSchedules: any[] = [];
+            let flight_classes = legDescriptions.flight_classes;
+            let depart_date = legDescriptions.schedules[0].departure.date;
+            let arrival_date = legDescriptions.schedules[0].arrival.date;
+            let legs = itinerary.legs;
+            let basePrice = `${itinerary.baseFareAmount}`;
+            let flight_stops,
+              totalMinutes,
+              flightSchedules: any[] = [];
 
-          legs.forEach(
-            (leg: {
-              schedules: any;
-              duration: any;
-              connecting_flights: any;
-            }) => {
-              let schedules = leg.schedules;
-              schedules.forEach((sc: any) => {
-                flightSchedules.push(sc);
-              });
-              totalMinutes = leg.duration;
-              flight_stops = leg.connecting_flights;
-            }
-          );
+            legs.forEach(
+              (leg: {
+                schedules: any;
+                duration: any;
+                connecting_flights: any;
+              }) => {
+                let schedules = leg.schedules;
+                schedules.forEach((sc: any) => {
+                  flightSchedules.push(sc);
+                });
+                totalMinutes = leg.duration;
+                flight_stops = leg.connecting_flights;
+              }
+            );
 
-          let data = {
-            id: itinerary.id,
-            basePrice,
-            destination: destinationAirport,
-            origin: originAirport,
-            total_time: convertMinutesToHoursAndMinutes(totalMinutes),
-            flight_stops,
-            flightSchedules,
-            arrival_date,
-            depart_date,
-            flight_classes,
-          };
+            let data = {
+              id: itinerary.id,
+              basePrice,
+              destination: destinationAirport,
+              origin: originAirport,
+              total_time: convertMinutesToHoursAndMinutes(totalMinutes),
+              flight_stops,
+              flightSchedules,
+              arrival_date,
+              depart_date,
+              flight_classes,
+            };
 
-          return (
-            <FlightCard
-              key={id}
-              currencyValue={currencyValue}
-              symbol={symbol}
-              flight={data}
-              activeItem={activeItem}
-              handleDetailWrapClick={handleDetailWrapClick}
-            />
-          );
-        })}
+            return (
+              <FlightCard
+                key={id}
+                currencyValue={currencyValue}
+                symbol={symbol}
+                flight={data}
+                activeItem={activeItem}
+                handleDetailWrapClick={handleDetailWrapClick}
+              />
+            );
+          })}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "30px",
+        }}
+      >
+        {loading && <h4>Loading...</h4>}
+        {!loading && flights && visibleFlights.length < flights.length && (
+          <button className="btn btn-solid color1" onClick={loadMoreFlights}>
+            Load More
+          </button>
+        )}
+      </div>
     </div>
   );
 };

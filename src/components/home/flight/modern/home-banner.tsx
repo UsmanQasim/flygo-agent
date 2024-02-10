@@ -13,7 +13,6 @@ const HomeBanner: FC = () => {
   const handleBookNow = (formData: any) => {
     sessionStorage.setItem("formData", JSON.stringify(formData));
     router.push("/flight/listing/left-sidebar");
-    console.log("Form data stored:", formData);
   };
 
   return (
