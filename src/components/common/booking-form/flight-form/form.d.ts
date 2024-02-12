@@ -32,7 +32,8 @@ interface IFlightCityProps {
   flighData: IFlightProps[];
   value: string;
   placeHolder?: string;
-  onChange: Function;
+  onChange?: Function;
+  onSelectedCityChange?: (city: string) => void;
 }
 
 interface IFlightProps {

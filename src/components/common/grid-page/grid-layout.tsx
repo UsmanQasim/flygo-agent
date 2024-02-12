@@ -192,7 +192,7 @@ const GridLayout: FC<IGridLayoutProps> = ({
         </div>
       </div>
 
-      <Pagination totalPages1={totalPages} />
+      {/* <Pagination totalPages1={totalPages} /> */}
     </>
   );
 };

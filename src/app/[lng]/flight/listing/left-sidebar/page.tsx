@@ -1,19 +1,14 @@
 "use client";
 import { FC, useEffect, useState } from "react";
 import BannerBreadcrumbs from "@/components/flight/sidebar/left-sidebar/page";
-// import "@/public/assets/scss/color1.scss";
 import CustomLayout from "@/layouts/layout";
 import SearchSection from "@/components/flight/sidebar/left-sidebar/search-section/search-section.tsx";
 import GridView from "@/components/common/grid-page/grid/grid-view";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "@/redux-toolkit/store";
-import { getFlights } from "@/redux-toolkit/flight-api";
-import FlightData from "./flightData.json";
-import { postFlight } from "@/src/services/login.service";
+import { IAirlineDetails, searchFlight } from "@/services/flights";
+import NotFound from "@/components/flight/sidebar/no-sidebar/not-found";
 
 const LeftSidebar: FC = () => {
-  const [flights, setFlights] = useState([]);
-  const { data } = useSelector((state: RootState) => state.flight);
+  const [flights, setFlights] = useState<IAirlineDetails[]>([]);
 
   const getFlightsList = async () => {
     const postData = {
@@ -21,7 +16,7 @@ const LeftSidebar: FC = () => {
         {
           origin: "DMM",
           destination: "ISB",
-          depart_date: "2024-02-07",
+          depart_date: "2024-02-14",
         },
       ],
       passengers: {
@@ -30,11 +25,16 @@ const LeftSidebar: FC = () => {
         infants: 1,
       },
     };
-    const res = await postFlight(postData);
-    // console.log(res, "ress");
-    if (res?.success) {
-      setFlights(res?.data);
-    }
+
+    searchFlight(postData)
+      .then((res) => {
+        if (res?.success) {
+          setFlights(res?.data);
+        }
+      })
+      .catch((error: Error) => {
+        console.log(error);
+      });
   };
 
   useEffect(() => {
@@ -45,14 +45,17 @@ const LeftSidebar: FC = () => {
     <CustomLayout title="light_header custom-user-header" loader="pre">
       <BannerBreadcrumbs />
       <SearchSection />
-      <GridView
-        flights={flights}
-        side={"left"}
-        value={data}
-        type={"flight"}
-        schedule={true}
-        latestFilter
-      />
+      {flights.length > 0 ? (
+        <GridView
+          flights={flights}
+          side={"left"}
+          type={"flight"}
+          schedule={true}
+          latestFilter
+        />
+      ) : (
+        <NotFound />
+      )}
     </CustomLayout>
   );
 };

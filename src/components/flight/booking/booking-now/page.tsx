@@ -113,7 +113,7 @@ const BookingNowComponent: FC = () => {
           <div className="col-lg-8">
             <div className="review-section">
               <FlightDetail />
-              {/* <InformationPage type="flight" /> */}
+              <InformationPage type="flight" />
               <TravelDetail
                 setPassengerData={setPassengerData}
                 passengerData={passengerData}

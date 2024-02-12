@@ -1,6 +1,10 @@
-import { BaggagePolicy, CancellationCharges, Information, RescheduleCharges } from "@/constant/constant";
+import {
+  BaggagePolicy,
+  CancellationCharges,
+  Information,
+  RescheduleCharges,
+} from "@/constant/constant";
 import { FC } from "react";
-
 
 const InformationPage: FC<IInformationProps> = ({ type }) => {
   return (
@@ -18,7 +22,10 @@ const InformationPage: FC<IInformationProps> = ({ type }) => {
                   <li>
                     airline fee : <span>$2012</span>
                   </li>
-                  <li>This airline allows cancellation only before 2 hrs from departure time.</li>
+                  <li>
+                    This airline allows cancellation only before 2 hrs from
+                    departure time.
+                  </li>
                 </ul>
               </div>
               <div className="boxes">
@@ -27,13 +34,19 @@ const InformationPage: FC<IInformationProps> = ({ type }) => {
                   <li>
                     airline fee : <span>$2012</span>
                   </li>
-                  <li>This airline allows reschedule only before 2 hrs from departure time.</li>
+                  <li>
+                    This airline allows reschedule only before 2 hrs from
+                    departure time.
+                  </li>
                 </ul>
               </div>
               {type === "flight" && (
                 <div className="boxes">
                   <h6>{BaggagePolicy}</h6>
                   <ul>
+                    <li>
+                      Flight Code : <span>15 kg</span>
+                    </li>
                     <li>
                       Check-in Baggage : <span>15 kg</span>
                     </li>

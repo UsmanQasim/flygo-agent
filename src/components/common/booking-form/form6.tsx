@@ -1,9 +1,8 @@
 "use client";
 import { FC, useState } from "react";
 import Button from "../btn";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { login } from "@/src/services/login.service";
+import { loginAgent } from "@/services/login";
 
 const LoginForm: FC = () => {
   const router = useRouter();
@@ -15,16 +14,16 @@ const LoginForm: FC = () => {
       email: email,
       password: password,
     };
-    const res = await login(data);
-    if (res?.success) {
-      console.log(res, "res");
-      window.localStorage.setItem("userData", JSON.stringify(res.data));
-      window.localStorage.setItem(
-        "accessToken",
-        JSON.stringify(res.data?.accessToken)
-      );
-      router.push("/home/flight/modern");
-    }
+    loginAgent(data).then((res) => {
+      if (res?.success) {
+        window.localStorage.setItem("userData", JSON.stringify(res.data));
+        window.localStorage.setItem(
+          "accessToken",
+          JSON.stringify(res.data?.accessToken)
+        );
+        router.push("/home/flight/modern");
+      }
+    });
   };
 
   return (

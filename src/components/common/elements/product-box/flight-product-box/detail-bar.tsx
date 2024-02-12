@@ -20,46 +20,20 @@ const DetailBar: FC<IFlightProductBoxProps> = ({
   const detailBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Initially, show 10 flights
     if (flights) {
       setVisibleFlights(flights.slice(0, 20));
     }
   }, [flights]);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (
-  //       detailBarRef.current &&
-  //       detailBarRef.current.scrollHeight - detailBarRef.current.scrollTop ===
-  //         detailBarRef.current.clientHeight &&
-  //       !loading
-  //     ) {
-  //       loadMoreFlights();
-  //     }
-  //   };
-
-  //   if (detailBarRef.current) {
-  //     detailBarRef.current.addEventListener("scroll", handleScroll);
-  //   }
-
-  //   return () => {
-  //     if (detailBarRef.current) {
-  //       detailBarRef.current.removeEventListener("scroll", handleScroll);
-  //     }
-  //   };
-  // }, [loading]);
-
   const loadMoreFlights = () => {
     setLoading(true);
-    // You can implement your logic to fetch more flights here
-    // For simplicity, I'll just add the next 10 flights from the list
     if (flights) {
       const currentLength = visibleFlights.length;
       const nextFlights = flights.slice(currentLength, currentLength + 20);
       setTimeout(() => {
         setVisibleFlights((prevFlights) => [...prevFlights, ...nextFlights]);
         setLoading(false);
-      }, 1000); // Simulating a delay for loading
+      }, 1000);
     }
   };
   const handleDetailWrapClick = (item: any) => {
@@ -91,11 +65,7 @@ const DetailBar: FC<IFlightProductBoxProps> = ({
 
   return (
     <div style={{ marginBottom: "20vh" }}>
-      <div
-        className="detail-bar"
-        // ref={detailBarRef}
-        // style={{ overflowY: "auto", overflowX: "hidden", maxHeight: "1200px" }}
-      >
+      <div className="detail-bar">
         {visibleFlights &&
           visibleFlights?.map((itinerary, id) => {
             let legDescriptions = itinerary.legs[0];
@@ -154,6 +124,7 @@ const DetailBar: FC<IFlightProductBoxProps> = ({
                 key={id}
                 currencyValue={currencyValue}
                 symbol={symbol}
+                flightsData={flights}
                 flight={data}
                 activeItem={activeItem}
                 handleDetailWrapClick={handleDetailWrapClick}

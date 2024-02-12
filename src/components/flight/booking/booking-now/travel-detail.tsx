@@ -1,6 +1,8 @@
 import { FC, useEffect, useState } from "react";
 import { IStoredFormData } from "./page";
 
+const SESSION_STORAGE_KEY = "formData";
+
 interface IPersonDetails {
   title: string;
   firstName: string;
@@ -12,6 +14,18 @@ interface IPersonDetails {
   type: string;
   issueCountry: string;
 }
+
+const initialValue: IPersonDetails = {
+  title: "",
+  firstName: "",
+  lastName: "",
+  dateOfBirth: "",
+  nationality: "",
+  passport: "",
+  expirationDate: "",
+  type: "",
+  issueCountry: "",
+};
 
 interface IPassengerData {
   adults: IPersonDetails[];
@@ -27,6 +41,12 @@ interface ITravelDetailsProps {
   storedFormData: IStoredFormData | undefined;
 }
 
+type PassengerType = "adults" | "children" | "infants";
+
+type Passengers = {
+  [key in PassengerType]: IPersonDetails[];
+};
+
 const TravelDetail: FC<ITravelDetailsProps> = ({
   passengerData,
   customerData,
@@ -34,24 +54,41 @@ const TravelDetail: FC<ITravelDetailsProps> = ({
   setPassengerData,
   storedFormData,
 }) => {
-  const [formData, setFormData] = useState({
-    passengers: {
-      adults: 0,
-      children: 0,
-      infants: 0,
-    },
+  const [passengers, setPassengers] = useState<Passengers>({
+    adults: [],
+    children: [],
+    infants: [],
   });
 
   useEffect(() => {
-    if (storedFormData) {
-      setFormData((prev) => ({
-        ...prev,
-        passengers: storedFormData.passengers,
-      }));
+    const rawData = sessionStorage.getItem(SESSION_STORAGE_KEY);
+    if (!rawData) {
+      // Bye bye here
+      return;
     }
 
-    // console.log(storedFormData);
-  }, [storedFormData]);
+    const parsedData = JSON.parse(rawData);
+    if (!parsedData) {
+      // Bye bye here
+      return;
+    }
+
+    const { passengers } = parsedData;
+    if (!passengers) {
+      // Bye bye here
+      return;
+    }
+
+    setPassengers({
+      adults: createEmptyPassengers(passengers.adults || 0),
+      children: createEmptyPassengers(passengers.children || 0),
+      infants: createEmptyPassengers(passengers.infants || 0),
+    });
+  }, []);
+
+  const createEmptyPassengers = (length: number): IPersonDetails[] => {
+    return new Array<IPersonDetails>(length).fill(initialValue);
+  };
 
   const updateField = (
     passengerType: string,
@@ -60,20 +97,12 @@ const TravelDetail: FC<ITravelDetailsProps> = ({
     value: string
   ) => {
     setPassengerData((prev: any) => {
-      const dataForThisPassengerType = prev[passengerType];
-      const updatedDataForThisPassengerType = dataForThisPassengerType.map(
-        (x: any, i: number) => {
-          if (i === index) {
-            const newItems = { ...x, [label]: value };
-            return newItems;
-          }
-          return x;
-        }
-      );
+      const dataForThisPassengerType = prev[passengerType][0];
+      dataForThisPassengerType[label] = value;
 
       const newPassengerData = {
         ...prev,
-        [passengerType]: updatedDataForThisPassengerType,
+        [passengerType]: [dataForThisPassengerType],
       };
 
       return newPassengerData;
@@ -88,32 +117,41 @@ const TravelDetail: FC<ITravelDetailsProps> = ({
     }));
   };
 
+  useEffect(() => {
+    sessionStorage.setItem("passengers", JSON.stringify(passengers));
+    sessionStorage.setItem("customer_info", JSON.stringify(customerData));
+  }, [passengers, customerData]);
+
+  const getTitle = (passengerType: string, index: number): string => {
+    return `${passengerType.charAt(0).toUpperCase()}${
+      passengerType === "adults"
+        ? "dult"
+        : passengerType === "children"
+        ? "hild"
+        : "nfant"
+    } ${index + 1}`;
+  };
+
   return (
     <>
-      {formData &&
-        Object.entries(formData.passengers)
-          .map(([passengerType, count]) =>
-            Array(count)
-              .fill("")
-              .map((_, index) => (
-                <PassengerBox
-                  title={`${passengerType.charAt(0).toUpperCase()}${
-                    passengerType === "adults"
-                      ? "dult"
-                      : passengerType === "children"
-                      ? "hild"
-                      : "nfant"
-                  } ${index + 1}`}
-                  key={`${passengerType}_${index}`}
-                  index={index}
-                  passengerData={passengerData.adults[0]}
-                  onChange={(label: string, value: string) =>
-                    updateField(passengerType, index, label, value)
-                  }
-                />
-              ))
-          )
-          .flat()}
+      {Object.entries(passengers).map(([passengerType, passengerData]) =>
+        passengerData.map((passenger, index) => (
+          <PassengerBox
+            title={getTitle(passengerType, index)}
+            key={`${passengerType}_${index}`}
+            index={index}
+            onChange={(label: string, value: string) => {
+              setPassengers((prev) => ({
+                ...prev,
+                [passengerType]: (
+                  prev[passengerType as PassengerType] as IPersonDetails[]
+                ).map((p, i) => (index === i ? { ...p, [label]: value } : p)),
+              }));
+            }}
+            passengerData={passenger}
+          />
+        ))
+      )}
 
       {/* Customer BOX */}
       <div className="review_box">
@@ -144,7 +182,7 @@ const TravelDetail: FC<ITravelDetailsProps> = ({
                   <div className="form-group col-md-6">
                     <label htmlFor="inputnumber">Phone no:</label>
                     <input
-                      type="number"
+                      type="text"
                       className="form-control"
                       id="inputnumber"
                       name="phoneNumber"
@@ -199,7 +237,9 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                     onChange={(event) => onChange("title", event.target.value)}
                     value={passengerData.title}
                   >
-                    <option>Choose...</option>
+                    <option value="" disabled>
+                      Choose...
+                    </option>
                     <option>Mr.</option>
                     <option>Ms.</option>
                     <option>Mrs.</option>
@@ -255,10 +295,12 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                     }
                     value={passengerData.nationality}
                   >
-                    <option selected></option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="" disabled>
+                      Nationality
+                    </option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Saudia Arabia">Saudia Arabia</option>
+                    <option value="Brazil">Brazil</option>
                   </select>
                 </div>
               </div>
@@ -312,10 +354,12 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                     }
                     value={passengerData.issueCountry}
                   >
-                    <option selected></option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="" disabled>
+                      Issue Country
+                    </option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Uganda">Uganda</option>
                   </select>
                 </div>
               </div>

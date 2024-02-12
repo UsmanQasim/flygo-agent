@@ -28,9 +28,9 @@ const SearchSection: FC = () => {
               </a>
             </div>
           </div>
-          <div className={`flight-search-detail  ${formOpen ?" show":""}`}>
+          {/* <div className={`flight-search-detail  ${formOpen ?" show":""}`}>
             <SearchForm toggleForm={toggleForm}  />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

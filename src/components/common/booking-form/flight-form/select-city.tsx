@@ -6,12 +6,11 @@ import { FC, useState, useRef, useEffect } from "react";
 const SelectCity: FC<IFlightCityProps> = ({
   value,
   flighData,
-  onChange,
   placeHolder,
+  onSelectedCityChange,
 }) => {
   const { ref, isComponentVisible, setIsComponentVisible } =
     useOutsideDropdown(false);
-  const [selectedCity, setSelectedCity] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [citiesPerPage] = useState<number>(5); // Number of cities to load per page
   const [loading, setLoading] = useState<boolean>(false);
@@ -70,13 +69,13 @@ const SelectCity: FC<IFlightCityProps> = ({
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
-    setSelectedCity(inputValue);
+    if (onSelectedCityChange) onSelectedCityChange(inputValue);
     setSearchTerm(inputValue);
     setCurrentPage(1);
   };
 
   const handleCitySelect = (city: string) => {
-    setSelectedCity(city);
+    if (onSelectedCityChange) onSelectedCityChange(city);
     setIsComponentVisible(false);
   };
 
@@ -87,7 +86,7 @@ const SelectCity: FC<IFlightCityProps> = ({
         className="form-control open-select"
         id="exampleInputEmail1"
         placeholder={placeHolder}
-        value={selectedCity} // Use selectedCity as the value
+        value={value} // Use selectedCity as the value
         onClick={() => setIsComponentVisible(!isComponentVisible)}
         onChange={handleSearchChange}
       />
@@ -109,7 +108,7 @@ const SelectCity: FC<IFlightCityProps> = ({
         <ul>
           {currentCities.map((data: IFlightProps, index) => (
             <li key={index}>
-              <a href="#" onClick={() => handleCitySelect(data.POI_NAME)}>
+              <a href="#" onClick={() => handleCitySelect(data.VENDOR_CODE)}>
                 <h5>{data.COUNTRY_CODE}</h5>
                 <h6>{data.POI_NAME}</h6>
                 <span>{data.VENDOR_CODE}</span>

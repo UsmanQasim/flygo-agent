@@ -6,9 +6,9 @@ import DatePickerComponent from "../date-picker";
 import SelectCity from "@/components/common/booking-form/flight-form/select-city";
 import SelectTraveler from "./flight-form/select-taraveler";
 import LocationOption from "./flight-form/location-option";
-import Link from "next/link";
 
 import { uuid } from "uuidv4";
+import { useRouter } from "next/navigation";
 
 interface CityInputProps {
   value?: string;
@@ -21,80 +21,82 @@ const CityInput: FC<CityInputProps> = ({
   onCityChange,
   placeholder,
 }) => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onCityChange(event.target.value);
-  };
   return (
     <div className="col">
       <SelectCity
         value={value || ""}
         flighData={airports}
-        onChange={handleChange}
+        onSelectedCityChange={onCityChange}
         placeHolder={placeholder}
       />
     </div>
   );
 };
 
-interface IMultiCityInputProps {
-  index: number;
-  addMoreCity: () => void;
-  onRemove: (index: number) => void;
-  onChange: (data: any) => void;
-}
+// interface IMultiCityInputProps {
+//   index: number;
+//   addMoreCity: () => void;
+//   onRemove: (index: number) => void;
+//   onChange: (data: any) => void;
+// }
 
 type MultiCityInputProps = {
   city: CityData;
   addCityData: () => void;
   removeCityData: (id: string) => void;
+  updateCitiesData: (city: CityData) => void;
+  isLast?: boolean;
 };
 
 const MultiCityInput: FC<MultiCityInputProps> = (props) => {
-  const { city, addCityData, removeCityData } = props;
-
-  // const [departureDate, setDepartureDate] = useState(new Date());
-
-  // const handleDepartureDateChange = (date: Date) => {
-  //   setDepartureDate(date);
-  //   onChange({
-  //     from: "",
-  //     to: "",
-  //     departureDate: date.toISOString().split("T")[0],
-  //   });
-  // };
+  const {
+    city,
+    addCityData,
+    removeCityData,
+    updateCitiesData,
+    isLast = false,
+  } = props;
 
   return (
     <div className="row flight-form-input mb-2">
-      <CityInput value={city.from} onCityChange={() => {}} placeholder="From" />
-      {/* <CityInput
+      <CityInput
+        value={city.from}
+        onCityChange={(from) => updateCitiesData({ ...city, from })}
+        placeholder="From"
+      />
+      <CityInput
         value={city.to}
-        onCityChange={() => void}
+        onCityChange={(to) => updateCitiesData({ ...city, to })}
         placeholder="To"
-      /> */}
-      {/* <div className="col mb-1">
-        <div className="form-control">
-          <DatePickerComponent
-            setStart={() => {}}
-            start={city.data}
-          />
+      />
+      {city.date && (
+        <div className="col mb-1">
+          <div className="form-control">
+            <DatePickerComponent
+              setStart={(date: Date) => updateCitiesData({ ...city, date })}
+              start={city.date}
+            />
+          </div>
         </div>
-      </div>
+      )}
       <div className="btn-group gap-2">
+        {isLast && (
+          <button
+            type="button"
+            onClick={() => addCityData()}
+            className="btn btn-solid color1"
+          >
+            +
+          </button>
+        )}
         <button
           type="button"
-          onClick={addMoreCity}
           className="btn btn-solid color1"
-        >
-          +
-        </button>
-        <button
-          type="button"
-          className="btn btn-solid color1"
-          onClick={() => onRemove(index)}
+          onClick={() => removeCityData(city.id)}
         >
           -
         </button>
-      </div> */}
+      </div>
     </div>
   );
 };
@@ -106,15 +108,13 @@ type CityData = {
   date?: Date;
 };
 
-const FlightThree: FC<{ onBookNow: (formData: any) => void }> = ({
-  onBookNow,
-}) => {
+const FlightThree: FC = ({}) => {
+  const router = useRouter();
   const [startDate, setStartDate] = useState(new Date());
   const [startDate1, setStartDate1] = useState(new Date());
   const [isOneWay, setIsOneWay] = useState(true);
   const [isRoundTrip, setIsRoundTrip] = useState(false);
   const [isMultiCityTrip, setIsMultiCityTrip] = useState(false);
-  const [multiCities, setMultiCities] = useState<JSX.Element[]>([]);
   const [origin, setOrigin] = useState("");
   const [destination, setDestination] = useState("");
 
@@ -154,59 +154,55 @@ const FlightThree: FC<{ onBookNow: (formData: any) => void }> = ({
     }
   };
 
-  // const addCity = () => {
-  //   setMultiCities([
-  //     ...multiCities,
-  //     <MultiCityInput
-  //       key={multiCities.length}
-  //       index={multiCities.length}
-  //       onRemove={removeCity}
-  //       addMoreCity={addCity}
-  //       onChange={(data) => handleMultiCityChange(multiCities.length, data)}
-  //     />,
-  //   ]);
-  // };
-
-  const removeCity = (index: number) => {
-    setMultiCities((prevCities) => {
-      if (index === prevCities.length - 1) {
-        return prevCities.slice(0, -1); // Remove the last element
-      }
-      return prevCities.filter((_, i) => i !== index);
-    });
-  };
-
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const formDataForSession = {
-      trip_type: isOneWay
-        ? "oneway"
-        : isRoundTrip
-        ? "round"
-        : isMultiCityTrip
-        ? "multicity"
-        : "",
-      origin: "",
-      destination: "",
-      depart_date: startDate.toISOString().split("T")[0],
-      return_date: isRoundTrip
-        ? startDate1.toISOString().split("T")[0]
-        : startDate.toISOString().split("T")[0],
-      passengers: {
-        adults: formData.passengers.adults,
-        children: formData.passengers.children,
-        infants: formData.passengers.infants,
-      },
-      multiCityFlights: multiCities.map((city) => ({
-        origin: "",
-        destination: "",
-        depart_date: "",
-      })),
-    };
+    let formDataForSession = {};
+
+    if (isMultiCityTrip) {
+      formDataForSession = {
+        trip_type: "multicity",
+        origin: citiesData.length > 0 ? citiesData[0].from : "",
+        destination:
+          citiesData.length > 0 ? citiesData[citiesData.length - 1].to : "",
+        depart_date: startDate.toISOString().split("T")[0],
+        return_date: "", // Not applicable for multicity trip
+        passengers: {
+          adults: formData.passengers.adults,
+          children: formData.passengers.children,
+          infants: formData.passengers.infants,
+        },
+        multiCityFlights: [
+          {
+            origin,
+            destination,
+            depart_date: startDate.toISOString().split("T")[0],
+          },
+          ...citiesData.map((city) => ({
+            origin: city.from,
+            destination: city.to,
+            depart_date: city.date?.toISOString().split("T")[0],
+          })),
+        ],
+      };
+    } else {
+      formDataForSession = {
+        trip_type: isOneWay ? "oneway" : "round",
+        origin: origin,
+        destination: destination,
+        depart_date: startDate.toISOString().split("T")[0],
+        return_date: isRoundTrip ? startDate1.toISOString().split("T")[0] : "",
+        passengers: {
+          adults: formData.passengers.adults,
+          children: formData.passengers.children,
+          infants: formData.passengers.infants,
+        },
+        multiCityFlights: [],
+      };
+    }
 
     sessionStorage.setItem("formData", JSON.stringify(formDataForSession));
-    onBookNow(formDataForSession);
+    router.push("/flight/listing");
   };
 
   const handlePassengerChange = (
@@ -218,22 +214,6 @@ const FlightThree: FC<{ onBookNow: (formData: any) => void }> = ({
       ...prevFormData,
       passengers: { adults, children, infants },
     }));
-  };
-
-  const handleMultiCityChange = (index: number, data: any) => {
-    setMultiCities((prevCities) => {
-      const updatedCities = [...prevCities];
-      updatedCities[index] = data;
-      return updatedCities;
-    });
-  };
-
-  const handleOriginChange = (value: string) => {
-    setOrigin(value);
-  };
-
-  const handleDestinationChange = (value: string) => {
-    setDestination(value);
   };
 
   return (
@@ -248,12 +228,12 @@ const FlightThree: FC<{ onBookNow: (formData: any) => void }> = ({
         <>
           <CityInput
             value={origin}
-            onCityChange={handleOriginChange}
+            onCityChange={setOrigin}
             placeholder="From"
           />
           <CityInput
             value={destination}
-            onCityChange={handleDestinationChange}
+            onCityChange={setDestination}
             placeholder="To"
           />
         </>
@@ -262,15 +242,15 @@ const FlightThree: FC<{ onBookNow: (formData: any) => void }> = ({
           <div className="row flight-form-input">
             <CityInput
               value={origin}
-              onCityChange={handleOriginChange}
+              onCityChange={setOrigin}
               placeholder="From"
             />
             <CityInput
               value={destination}
-              onCityChange={handleDestinationChange}
+              onCityChange={setDestination}
               placeholder="To"
             />
-            <div className="col">
+            <div className="col ">
               <div className="form-control">
                 <DatePickerComponent
                   setStart={setStartDate}
@@ -279,15 +259,6 @@ const FlightThree: FC<{ onBookNow: (formData: any) => void }> = ({
               </div>
             </div>
           </div>
-          {/* {multiCities.map((city, index) => (
-            <MultiCityInput
-              key={index}
-              index={index}
-              onRemove={removeCity}
-              addMoreCity={addCity}
-              onChange={(data) => handleMultiCityChange(index, data)}
-            />
-          ))} */}
           <ManageMultiCities
             citiesData={citiesData}
             setCitiesData={setCitiesData}
@@ -295,10 +266,10 @@ const FlightThree: FC<{ onBookNow: (formData: any) => void }> = ({
         </>
       )}
 
-      <div className="form-group row mb-4 flight-form-input">
+      <div className="form-group row mb-4 flight-form-input mx-0">
         {!isMultiCityTrip && (
-          <div className="col">
-            <div className="form-control">
+          <div className="col px-0">
+            <div className="form-control ">
               <DatePickerComponent setStart={setStartDate} start={startDate} />
             </div>
           </div>
@@ -348,7 +319,9 @@ function ManageMultiCities(props: ManageMultiCitiesProps) {
     setCitiesData((prev) => prev.filter((city) => city.id !== id));
   };
 
-  const updateCitiesData = () => {};
+  const updateCitiesData = (city: CityData) => {
+    setCitiesData((prev) => prev.map((c) => (c.id === city.id ? city : c)));
+  };
 
   return (
     <>
@@ -358,10 +331,12 @@ function ManageMultiCities(props: ManageMultiCitiesProps) {
           city={city}
           addCityData={addCityData}
           removeCityData={removeCityData}
+          updateCitiesData={updateCitiesData}
+          isLast={citiesData.length - 1 === index}
         />
       ))}
       {citiesData.length === 0 && (
-        <div className="row flight-form-input mb-4">
+        <div className="row flight-form-input m-0">
           <button
             type="button"
             onClick={() => addCityData()}
@@ -374,85 +349,3 @@ function ManageMultiCities(props: ManageMultiCitiesProps) {
     </>
   );
 }
-
-// "use client";
-// import { useState, FC } from "react";
-// import { cityData } from "@/data/home/flight/flight-data";
-// import DatePickerComponent from "../date-picker";
-// import SelectCity from "@/components/common/booking-form/flight-form/select-city";
-// import SelectTraveler from "./flight-form/select-taraveler";
-// // import SelectRoute from "./flight-form/select-route";
-// import LocationOption from "./flight-form/location-option";
-
-// const FlightThree: FC = () => {
-//   const [startDate, setStartDate] = useState(new Date());
-//   const [startDate1, setStartDate1] = useState(new Date());
-//   const [isOneWay, setIsOneWay] = useState(true);
-//   const [isRoundTrip, setIsRoundTrip] = useState(false);
-//   const [isMultiCityTrip, setIsMultiCityTrip] = useState(false);
-
-//   const handleOptionChange = (route: string) => {
-//     if (route === "round") {
-//       setIsOneWay(false);
-//       setIsRoundTrip(true);
-//       setIsMultiCityTrip(false);
-//     } else if (route === "multi") {
-//       setIsOneWay(false);
-//       setIsRoundTrip(false);
-//       setIsMultiCityTrip(true);
-//     } else {
-//       setIsOneWay(true);
-//       setIsRoundTrip(false);
-//       setIsMultiCityTrip(false);
-//     }
-//   };
-
-//   return (
-//     <>
-//       <form
-//         onSubmit={(event: React.FormEvent<HTMLFormElement>) =>
-//           event.preventDefault()
-//         }
-//       >
-//         <LocationOption
-//           isOneWay={isOneWay}
-//           isRoundTrip={isRoundTrip}
-//           isMultiCityTrip={isMultiCityTrip}
-//           onOptionChange={handleOptionChange}
-//         />
-//         <SelectCity value="From" cityData={cityData} />
-//         <SelectCity value="To" cityData={cityData} />
-//         {isMultiCityTrip && (
-//           <div className="col">
-//             <SelectCity value="From" cityData={cityData} />
-//             <SelectCity value="To" cityData={cityData} />
-//           </div>
-//         )}
-
-//         <div className="form-group row mb-4 flight-form-input">
-//           <div className="col">
-//             <div className="form-control">
-//               <DatePickerComponent setStart={setStartDate} start={startDate} />
-//             </div>
-//           </div>
-//           {isRoundTrip && (
-//             <div className="col">
-//               <div className="form-control">
-//                 <DatePickerComponent
-//                   setStart={setStartDate1}
-//                   start={startDate1}
-//                 />
-//               </div>
-//             </div>
-//           )}
-//         </div>
-//         <div className="col">
-//           <SelectTraveler />
-//         </div>
-//       </form>
-//       {/* <SelectRoute /> */}
-//     </>
-//   );
-// };
-
-// export default FlightThree;

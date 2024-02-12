@@ -1,10 +1,18 @@
+"useClient";
 import Button from "@/components/common/btn";
 import { DownloadInvoice } from "@/constant/constant";
-import { CloudBack, CloudFront, CloudMiddle, PlaneSVG } from "@/data/svg/flight-svg";
+import {
+  CloudBack,
+  CloudFront,
+  CloudMiddle,
+  PlaneSVG,
+} from "@/data/svg/flight-svg";
 import Img from "@/utils/BackgroundImageRatio";
 import { FC } from "react";
 
 const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
+  // const getBookingCode = sessionStorage.getItem("BookingCode");
+
   return (
     <section className="section-b-space success-section">
       <div className="container">
@@ -21,7 +29,11 @@ const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
           <div className="col">
             <Img src={img} className="img-fluid" alt="" />
             <h2>{title}</h2>
-            <p>thank you for you payment. we have received your payment successfully. your transaction ID is "SHJG12155215", you will get an email invoice soon!</p>
+            <p>
+              thank you for you payment. we have received your payment
+              successfully. your transaction ID is "{"getBookingCode"}", you
+              will get an email invoice soon!
+            </p>
             <Button btnClass="btn btn-solid color1" name={DownloadInvoice} />
           </div>
         </div>

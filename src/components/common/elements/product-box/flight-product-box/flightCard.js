@@ -11,6 +11,7 @@ const FlightCard = ({
   activeItem,
   flight,
   handleDetailWrapClick,
+  flightsData,
 }) => {
   const {
     destination,
@@ -33,7 +34,6 @@ const FlightCard = ({
     return b.join(":");
   };
 
-  // TODO: Need to implement real data
   return (
     <div
       className={`detail-wrap wow fadeInUp ${
@@ -42,10 +42,10 @@ const FlightCard = ({
       key={flight.id}
       onClick={() => handleDetailWrapClick(flight)}
     >
-      <div className="row">
-        <div className="col-md-1">
-          <div className="logo-sec" style={{ paddingLeft: "16px" }}>
-            {/* <ul>
+      <div className="row justify-content-center">
+        <div className="col-1">
+          {/* <div className="logo-sec" style={{ paddingLeft: "16px" }}> */}
+          {/* <ul>
               {flightSchedules?.map((sch) => (
                 <div style={{ fontSize: "14px" }} key={sch.id}>
                   {airlines
@@ -73,7 +73,7 @@ const FlightCard = ({
                 </div>
               ))}
             </ul> */}
-          </div>
+          {/* </div> */}
         </div>
         <div className="col-md-6">
           <div className="airport-part">
@@ -117,7 +117,7 @@ const FlightCard = ({
             </div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-2">
           <div className="book-flight">
             <button onClick={togglePackages} className="btn btn-solid color1">
               View Detail{" "}
@@ -135,6 +135,7 @@ const FlightCard = ({
             </button>
           </div>
         </div>
+        <div className="col-1"></div>
       </div>
       {arePackagesVisible && (
         <div
@@ -156,41 +157,71 @@ const FlightCard = ({
             style={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "center",
               flexWrap: "wrap",
-              width: "90%",
+              width: "100%",
             }}
           >
-            {flightSchedules?.map((sch, index) => (
-              <div style={{ fontSize: "14px" }} key={sch.id}>
-                {airlines
-                  ?.filter((a) => a.id === sch.carrier.marketing)
-                  .map((a, airlineIndex) => (
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "1rem",
-                      }}
-                      key={airlineIndex}
-                    >
-                      <img
-                        src={a.logo}
-                        style={{ width: "35px", height: "35px" }}
-                      />
-                      <h6 style={{ textAlign: "left" }}>
-                        {a.name}
-                        <br />[{sch.carrier.marketing}
-                        {sch.carrier.marketingFlightNumber}]
-                      </h6>
-                      {index !== flightSchedules?.length - 1 && (
-                        <img
-                          src="/right_arrow.png"
-                          style={{ width: "60px", height: "30px" }}
-                        />
-                      )}
+            {flightSchedules?.map((flight, index) => (
+              <div style={{ fontSize: "14px", width: "100%" }} key={index}>
+                <div>
+                  {index < flightSchedules.length - 1 && (
+                    <div className="container">
+                      <br />
+                      <div className="d-flex align-items-center justify-content-between w-100 g-3">
+                        <div className="d-flex align-items-center justify-content-center gap-3 w-25">
+                          <img
+                            src={flight.airline.logo}
+                            style={{ width: "35px", height: "35px" }}
+                          />
+                          <div className="d-flex flex-column justify-content-start align-items-start">
+                            <h6 className="m-0">{flight.airline.name}</h6>
+                            <div className="d-flex justify-content-start align-items-start gap-2">
+                              <h6 className="m-0">
+                                {`[`}
+                                {flightSchedules[index].carrier.marketing}
+                              </h6>
+                              <h6 className="m-0">
+                                {
+                                  flightSchedules[index].carrier
+                                    .marketingFlightNumber
+                                }
+                                {`]`}
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="w-50">
+                          <hr />
+                        </div>
+                        <div className="d-flex align-items-center justify-content-center gap-3 w-25">
+                          <img
+                            src={flightSchedules[index + 1].airline.logo}
+                            style={{ width: "35px", height: "35px" }}
+                          />
+                          <div className="d-flex flex-column justify-content-start align-items-start">
+                            <h6 className="m-0">
+                              {flightSchedules[index + 1].airline.name}
+                            </h6>
+                            <div className="d-flex justify-content-start align-items-start gap-2">
+                              <h6 className="m-0">
+                                {`[`}
+                                {flightSchedules[index + 1].carrier.marketing}
+                              </h6>
+                              <h6 className="m-0">
+                                {
+                                  flightSchedules[index + 1].carrier
+                                    .marketingFlightNumber
+                                }
+                                {`]`}
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  ))}
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -211,6 +242,7 @@ const FlightCard = ({
               title={flight_classes[0]?.bookingCode}
               price={{ main: basePrice, decimals: 74, currency: symbol }}
               flightSchedules={flightSchedules}
+              flight={flight}
             >
               <PackageItemCard
                 icon={
@@ -242,6 +274,7 @@ const FlightCard = ({
               price={{ main: 747, decimals: 24, currency: symbol }}
               recommended
               flightSchedules={flightSchedules}
+              flight={flight}
             >
               <PackageItemCard
                 icon={
@@ -280,7 +313,7 @@ const FlightCard = ({
               />
             </PackageCard>
 
-            <PackageCard
+            {/* <PackageCard
               titleColor="white"
               bgColor="#3BA746"
               textColor="black"
@@ -313,7 +346,7 @@ const FlightCard = ({
                 title="Cancel booking"
                 amount="150 SAR"
               />
-            </PackageCard>
+            </PackageCard> */}
           </div>
         </div>
       )}
@@ -332,6 +365,7 @@ function PackageCard({
   children,
   flightSchedules,
   titleColor,
+  flight,
 }) {
   return (
     <Link href="/flight/booking/booking-now">
@@ -367,6 +401,7 @@ function PackageCard({
           });
 
           sessionStorage.setItem("flights", JSON.stringify(flights));
+          sessionStorage.setItem("flight", JSON.stringify(flight));
           sessionStorage.setItem(
             "booking_details",
             JSON.stringify(bookingDetails)

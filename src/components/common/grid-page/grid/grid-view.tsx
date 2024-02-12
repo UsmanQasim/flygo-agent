@@ -62,7 +62,6 @@ const GridView: FC<IGridViewProps> = ({
         <div className="row">
           {topFilter && type === "flight" ? (
             <div className="col-12">
-              {" "}
               <TopFilter
                 value={filteredMenu}
                 setShowFilter={setShowSidebar}

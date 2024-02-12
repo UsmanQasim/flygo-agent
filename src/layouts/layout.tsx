@@ -61,7 +61,7 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({
       ) : (
         <Loader loaderTimeout={5000} />
       )}
-      <header className={title + " bg-secondary bg-opacity-25"}>
+      <header className={title + " bg-white bg-opacity-25"}>
         <div className="container">
           <div className="row">
             <div className="col">

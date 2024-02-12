@@ -8,13 +8,13 @@ const FlightProductBox: FC<IFlightProductBoxProps> = ({
   grid,
 }) => {
   return (
-    <div className="flight-detail-sec m-0">
+    <div className="flight-detail-sec">
       <div className="title-bar">
         <div className="row">
-          <div className="col-3">
-            <p>Airline</p>
+          <div className="col-1">
+            {/* <p>Airline</p> */}
           </div>
-          <div className="col-5">
+          <div className="col-6 ">
             <p>departure & arrival</p>
           </div>
           <div className="col-2">

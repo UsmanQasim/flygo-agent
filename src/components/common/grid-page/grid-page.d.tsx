@@ -11,19 +11,25 @@ export interface IGridReducerProps {
 }
 
 export interface IGridLayoutProps {
-  value: IBaseProps[] | any;
+  value?: IBaseProps[] | any;
   grid: IGridReducerProps | any;
   type?: string;
   view?: string;
   trip?: string;
-  flights?: any[]
+  flights?: any[];
 }
 
 export interface IGridListProps {
   grid: IGridReducerProps;
   gridStyle: string | undefined;
   topFilter: boolean | undefined;
-  value: IHotelProps[] | ITravelProps[] | IFlightProps[] | ICabProps[] | IRestaurantProps[] | undefined;
+  value:
+    | IHotelProps[]
+    | ITravelProps[]
+    | IFlightProps[]
+    | ICabProps[]
+    | IRestaurantProps[]
+    | undefined;
   mapModal?: boolean;
   grid4Img?: boolean;
   side?: string;
