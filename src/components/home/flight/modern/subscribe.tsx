@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const SubscribeComp: FC = () => {
   return (
-    <BackgroundSection titleClass="subscribe-footer zig-zag-effect" img="/assets/images/flights/footer-bg.jpg" imgWidth={1519} imgHeight={128} position={"center"}>
+    <BackgroundSection titleClass="subscribe-footer zig-zag-effect" img="/assets/images/footer-bg-blue.jpg" imgWidth={1519} imgHeight={128} position={"center"}>
       <div className="container">
         <div className="row">
           <div className="col">

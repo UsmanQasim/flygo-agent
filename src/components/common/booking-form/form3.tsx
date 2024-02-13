@@ -58,7 +58,14 @@ const MultiCityInput: FC<MultiCityInputProps> = (props) => {
   } = props;
 
   return (
-    <div className="row flight-form-input mb-2">
+    <div
+      className="row flight-form-input mb-2 border border-primary "
+      style={{
+        marginLeft: "0px !important",
+        marginRight: "0px !important",
+        background: "red",
+      }}
+    >
       <CityInput
         value={city.from}
         onCityChange={(from) => updateCitiesData({ ...city, from })}
@@ -85,6 +92,7 @@ const MultiCityInput: FC<MultiCityInputProps> = (props) => {
             type="button"
             onClick={() => addCityData()}
             className="btn btn-solid color1"
+            style={{ background: "green" }}
           >
             +
           </button>
@@ -92,6 +100,7 @@ const MultiCityInput: FC<MultiCityInputProps> = (props) => {
         <button
           type="button"
           className="btn btn-solid color1"
+          style={{ background: "orange" }}
           onClick={() => removeCityData(city.id)}
         >
           -
@@ -217,7 +226,7 @@ const FlightThree: FC = ({}) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ padding: 20 }}>
       <LocationOption
         isOneWay={isOneWay}
         isRoundTrip={isRoundTrip}
@@ -290,7 +299,11 @@ const FlightThree: FC = ({}) => {
       <div className="col">
         <SelectTraveler onPassengerChange={handlePassengerChange} />
       </div>
-      <button className="btn btn-rounded color1" type="submit">
+      <button
+        className="btn btn-rounded color1"
+        type="submit"
+        style={{ background: "orange" }}
+      >
         Book Now
       </button>
     </form>
@@ -341,6 +354,7 @@ function ManageMultiCities(props: ManageMultiCitiesProps) {
             type="button"
             onClick={() => addCityData()}
             className="btn btn-solid color1"
+            style={{ background: "green" }}
           >
             +
           </button>

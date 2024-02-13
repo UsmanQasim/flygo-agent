@@ -8,7 +8,7 @@ const StartComponent: FC = () => {
     <section className="about-section pt-0 section-b-space bg-white">
       <div className="container">
         <div className="title-1 detail-title">
-          <h2>why choose rica?</h2>
+          <h2>why choose FlyGo?</h2>
           <p>{Lorem}</p>
         </div>
         <div className="highlight-section">

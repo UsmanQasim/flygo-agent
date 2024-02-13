@@ -21772,8 +21772,8 @@ export const airports = [
     },
     {
         "VENDOR_CODE": "PAZ",
-        "POI_NAME": "Poza Rica",
-        "CITY_NAME": "Poza Rica",
+        "POI_NAME": "Poza FlyGo",
+        "CITY_NAME": "Poza FlyGo",
         "COUNTRY_CODE": "MX",
         "LATITUDE": "20.600000000000001",
         "LONGITUDE": "-97.466667000000001"

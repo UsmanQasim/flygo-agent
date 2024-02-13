@@ -16,11 +16,11 @@ const SelectTraveler: FC<SelectTravelerProps> = ({ onPassengerChange }) => {
   const { ref, isComponentVisible, setIsComponentVisible } =
     useOutsideDropdown(false);
   const [selectedCity, setSelectedCity] = useState(
-    "1 Adult, 1 Child, 1 Infant"
+    "1 Adult, 0 Child, 0 Infant"
   );
   const [adultQuantity, setAdultQuantity] = useState(1);
-  const [childrenQuantity, setChildrenQuantity] = useState(1);
-  const [infantQuantity, setInfantQuantity] = useState(1);
+  const [childrenQuantity, setChildrenQuantity] = useState(0);
+  const [infantQuantity, setInfantQuantity] = useState(0);
 
   const handleApply = () => {
     setSelectedCity(

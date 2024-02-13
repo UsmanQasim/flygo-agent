@@ -32,7 +32,7 @@ const BannerContent: FC<IBannerContentProps> = ({ type }) => {
         <h2>
           {Discount} <span>20-30%</span>
         </h2>
-        <p>{Lorem}</p>
+        <p>Unlock unbeatable savings of 20% to 30% on all flight bookings! Don't miss out on this exclusive discount for your next journey."</p>
         <h2 className="price">
           {type === "tour" && (
             <del>
@@ -42,7 +42,7 @@ const BannerContent: FC<IBannerContentProps> = ({ type }) => {
           )} {symbol}{(currencyValue * 420).toFixed(0)}
         </h2>
         <div className="bottom-section">
-          <Link href="/tour/booking/booking-page" className="btn btn-rounded btn-sm color1">
+          <Link href="" className="btn btn-rounded btn-sm color1">
             {BuyNow}
           </Link>
           <div className="info-btn"><h6>7 days &nbsp; | &nbsp; 8 nights</h6></div>

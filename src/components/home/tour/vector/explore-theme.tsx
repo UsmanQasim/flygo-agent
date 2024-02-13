@@ -11,7 +11,7 @@ const ExploreTheme: FC = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <TitleComponent titleClass="title-3" title="rica" subTitle="Explore through Themes" span="best" />
+              <TitleComponent titleClass="title-3" title="FlyGo" subTitle="Explore through Themes" span="best" />
               <SliderOne slideClass="slide-6 no-arrow" tourData={tourExploreThemeData} classTitle="tourBox wow zoomIn" slideCom={slide6} />
             </div>
           </div>

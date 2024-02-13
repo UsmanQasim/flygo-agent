@@ -48,37 +48,37 @@ export const cityData = [
 export const destinationData = [
   {
     id: 1,
-    img: "/assets/images/flights/destination/1.jpg",
+    img: "/assets/images/paris.jpg",
     country: "france country",
     place: "paris",
     from: 851,
   },
   {
     id: 2,
-    img: "/assets/images/flights/destination/2.jpg",
+    img: "/assets/images/londonEye.jpg",
     country: "united kingdom",
     place: "london",
     from: 369,
   },
   {
     id: 3,
-    img: "/assets/images/flights/destination/3.jpg",
+    img: "/assets/images/zurich.jpg",
     country: "switzerland",
     place: "zurich",
     from: 256,
   },
   {
     id: 4,
-    img: "/assets/images/flights/destination/2.jpg",
-    country: "united kingdom",
-    place: "london",
+    img: "/assets/images/newYork.jpg",
+    country: "USA",
+    place: "New York",
     from: 581,
   },
   {
     id: 5,
-    img: "/assets/images/flights/destination/3.jpg",
-    country: "switzerland",
-    place: "zurich",
+    img: "/assets/images/china.png",
+    country: "China",
+    place: "Beijing",
     from: 256,
   },
 ];
@@ -86,7 +86,7 @@ export const destinationData = [
 export const airDetailData = [
   {
     id: 1,
-    title: "rica airlines",
+    title: "FlyGo airlines",
     offer: "student offer",
   },
   {
@@ -96,7 +96,7 @@ export const airDetailData = [
   },
   {
     id: 3,
-    title: "rica airlines",
+    title: "FlyGo airlines",
     offer: "New offer",
   },
 ];
@@ -104,25 +104,25 @@ export const airDetailData = [
 export const topDealData = [
   {
     id: 1,
-    image: "/assets/images/flights/destination/4.jpg",
+    image: "/assets/images/londontomosscow.jpg",
     title: "london to moscow",
     discount: "-30%",
   },
   {
     id: 2,
-    image: "/assets/images/flights/destination/5.jpg",
+    image: "/assets/images/milantostockholm.jpg",
     title: "milan to stockholm",
     discount: "limited time",
   },
   {
     id: 3,
-    image: "/assets/images/flights/destination/6.jpg",
+    image: "/assets/images/maridtoprague.jpg",
     title: "marid to prague",
     discount: "-30%",
   },
   {
     id: 4,
-    image: "/assets/images/flights/destination/7.jpg",
+    image: "/assets/images/humburgtoparis.jpg",
     title: "humburg to paris",
     discount: "sunday",
   },
@@ -131,7 +131,7 @@ export const topDealData = [
 export const ticketData = [
   {
     id: 1,
-    image: "/assets/images/flights/destination/8.jpg",
+    image: "/assets/images/london.jpg",
     title: "london",
     place: [
       { city: "paris", price: 200 },
@@ -141,7 +141,7 @@ export const ticketData = [
   },
   {
     id: 2,
-    image: "/assets/images/flights/destination/9.jpg",
+    image: "/assets/images/budva.jpg",
     title: "budva",
     place: [
       { city: "atlanta", price: 200 },
@@ -151,7 +151,7 @@ export const ticketData = [
   },
   {
     id: 3,
-    image: "/assets/images/flights/destination/10.jpg",
+    image: "/assets/images/venice.jpg",
     title: "venice",
     place: [
       { city: "vienna", price: 500 },
@@ -161,8 +161,8 @@ export const ticketData = [
   },
   {
     id: 4,
-    image: "/assets/images/flights/destination/9.jpg",
-    title: "budva",
+    image: "/assets/images/beiging.png",
+    title: "Beijing",
     place: [
       { city: "atlanta", price: 800 },
       { city: "miami", price: 800 },
@@ -279,40 +279,40 @@ export const topDestinationData = [
 export const flightBlogData = [
   {
     id: 1,
-    img: "/assets/images/flights/blog/1.jpg",
-    date: "05",
+    img: "/assets/images/turky.jpg",
+    date: "04",
     month: "nov",
     location: "phonics, Turkey",
     title: "Twice profit than before you",
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.`,
+    desc: `Immerse yourself in Turkey's rich tapestry of history, culture, and natural beauty. From the vibrant streets of Istanbul to the ancient wonders of Ephesus, every corner offers an unforgettable adventure.`,
   },
   {
     id: 2,
-    img: "/assets/images/flights/blog/2.jpg",
-    date: "05",
-    month: "nov",
+    img: "/assets/images/newyork2.jpg",
+    date: "09",
+    month: "oct",
     location: "phonics, newyork",
     title: "Twice profit than before you",
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.`,
+    desc: `Experience the vibrant energy of New York City - a melting pot of culture, art, and culinary delights. From iconic landmarks to hidden gems, discover the endless possibilities waiting to be explored in the Big Apple.`,
   },
   {
     id: 3,
-    img: "/assets/images/flights/blog/3.jpg",
+    img: "/assets/images/uk.jpg",
     date: "05",
-    month: "nov",
-    location: "phonics, UK",
+    month: "feb",
+    location: "phonics, China",
     title: "Twice profit than before you",
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.`,
+    desc: `Discover the wonders of China: from the iconic Great Wall to the vibrant streets of Shanghai, immerse yourself in a land rich with history and culture. Let our blog be your guide to unlocking the treasures.`,
   },
-  {
-    id: 4,
-    img: "/assets/images/flights/blog/1.jpg",
-    date: "09",
-    month: "nov",
-    location: "phonics, newyork",
-    title: "Twice profit than before you",
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.`,
-  },
+  // {
+  //   id: 4,
+  //   img: "/assets/images/londonEye.jpg",
+  //   date: "09",
+  //   month: "nov",
+  //   location: "phonics, UK",
+  //   title: "Twice profit than before you",
+  //   desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.`,
+  // },
 ];
 
 export const subscribeData = [
@@ -520,7 +520,7 @@ export const blogData = [
 export const dealData = [
   {
     id: 1,
-    title: "rica airlines",
+    title: "FlyGo airlines",
     desc: "student new offer",
   },
   {
@@ -530,7 +530,7 @@ export const dealData = [
   },
   {
     id: 3,
-    title: "rica airlines",
+    title: "FlyGo airlines",
     desc: "student new offer",
   },
   {
@@ -540,7 +540,7 @@ export const dealData = [
   },
   {
     id: 5,
-    title: "rica airlines",
+    title: "FlyGo airlines",
     desc: "student new offer",
   },
 ];

@@ -20,14 +20,14 @@ const Modern: FC = () => {
       userBgClass="user rounded5"
     >
       <HomeBanner />
-      {/* <Destination />
+      <Destination />
       <AirlinesDetail />
       <FlightRoute />
       <FullBanner />
       <AirlineTickets />
       <TopDestination />
       <Blog />
-      <SubscribeComp /> */}
+      <SubscribeComp />
     </CustomLayout>
   );
 };

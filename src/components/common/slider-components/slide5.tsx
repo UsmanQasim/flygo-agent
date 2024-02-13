@@ -25,7 +25,7 @@ const SliderFive: FC<ISliderFiveProps> = ({ slideData, round, iconColor }) => {
                 <i className={`fas fa-map-marker-alt ${iconColor && "color-1"}`}></i>
                 {data.location}
               </h6>
-              <Link href="/pages/element-pages/blog">
+              <Link href="">
                 <h5>{data.title}</h5>
               </Link>
               <p>{data.desc}</p>

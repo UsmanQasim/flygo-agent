@@ -26,8 +26,8 @@ const AddressContent: FC<IAddressProps> = ({ colClass }) => {
           </div>
           <div className="contact_content">
             <ul>
-              <li>Support@rica.com</li>
-              <li>info@rica.com</li>
+              <li>Support@FlyGo.com</li>
+              <li>info@FlyGo.com</li>
             </ul>
           </div>
         </div>

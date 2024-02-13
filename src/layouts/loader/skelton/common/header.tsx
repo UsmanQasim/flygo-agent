@@ -16,8 +16,12 @@ const SkeletonHeader: FC = () => {
 
   const renderMenuItems = () => {
     return menuItems.map((item, index) => (
-      <li key={index} className="dropdown">
-        <a href={item.link} className="nav-link menu-title">
+      <li key={index}>
+        <a
+          href={item.link}
+          className="nav-link menu-title"
+          style={{ color: "black !important" }}
+        >
           {t(item.title)}
         </a>
       </li>
@@ -25,18 +29,13 @@ const SkeletonHeader: FC = () => {
   };
 
   const renderSelectOptions = (options: SelectOption[], type: string) => {
-    
     if (type === "lang") {
       return options.map((option, index) => (
-        <option key={index}  >
-          {option.label}
-        </option>
+        <option key={index}>{option.label}</option>
       ));
     } else {
       return options.map((option, index) => (
-        <option key={index}  >
-          {option.label}
-        </option>
+        <option key={index}>{option.label}</option>
       ));
     }
   };
@@ -49,7 +48,13 @@ const SkeletonHeader: FC = () => {
             <div className="menu">
               <div className="">
                 <Link href="/">
-                  <img src={"/assets/images/logo.png"} alt="" className="img-fluid"  width={140} height={140}/>
+                  <img
+                    src={"/assets/images/logo.png"}
+                    alt=""
+                    className="img-fluid"
+                    width={140}
+                    height={140}
+                  />
                 </Link>
               </div>
               <nav>
@@ -65,10 +70,14 @@ const SkeletonHeader: FC = () => {
               </nav>
               <ul className="header-right">
                 <li className="front-setting">
-                  <select>{renderSelectOptions(settingsOptions, "currency")}</select>
+                  <select>
+                    {renderSelectOptions(settingsOptions, "currency")}
+                  </select>
                 </li>
                 <li className="front-setting">
-                  <select>{renderSelectOptions(languageOptions, "lang")}</select>
+                  <select>
+                    {renderSelectOptions(languageOptions, "lang")}
+                  </select>
                 </li>
                 <li className="user user-light">
                   <a href="#">
@@ -81,10 +90,14 @@ const SkeletonHeader: FC = () => {
                   </a>
                   <ul className="setting-open">
                     <li className="front-setting">
-                      <select>{renderSelectOptions(settingsOptions, "currency")}</select>
+                      <select>
+                        {renderSelectOptions(settingsOptions, "currency")}
+                      </select>
                     </li>
                     <li className="front-setting">
-                      <select>{renderSelectOptions(languageOptions, "lang")}</select>
+                      <select>
+                        {renderSelectOptions(languageOptions, "lang")}
+                      </select>
                     </li>
                   </ul>
                 </li>

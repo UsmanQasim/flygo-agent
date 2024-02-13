@@ -21,7 +21,7 @@ const Banner: FC = () => {
                   <div className="home-content pt-0 mix-layout mrg-cls">
                     <div>
                       <h1>
-                        splendid spain<span>rica</span>
+                        splendid spain<span>FlyGo</span>
                       </h1>
                     </div>
                   </div>

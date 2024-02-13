@@ -25,7 +25,7 @@ const About: FC = () => {
                 <h5>
                   special couple <span>dinner</span> offer.....
                 </h5>
-                <h2>rica restaurant</h2>
+                <h2>FlyGo restaurant</h2>
                 <p>{Lorem}..</p>
                 <div className="about_bottom">
                   <Link href="/pages/other-pages/about-us-1"><Button btnClass="btn btn-rounded color1" name="Read More" /></Link>

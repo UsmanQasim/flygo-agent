@@ -9,7 +9,7 @@ const Testimonial: FC = () => {
   return (
     <section className="testimonial_section section-b-space">
       <div className="container">
-        <TitleComponent title="why choose rica?" subTitle={OurHappyCustomer} titleClass="title-1 detail-title" />
+        <TitleComponent title="why choose FlyGo?" subTitle={OurHappyCustomer} titleClass="title-1 detail-title" />
         <div className="row">
           <div className="offset-lg-1 col-lg-10">
             <SliderFour sliderData={testimonialData} />

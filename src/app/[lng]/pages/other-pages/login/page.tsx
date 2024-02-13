@@ -8,9 +8,9 @@ const Login: FC = () => {
   return (
     <CustomLayout title="inner-page" userBgClass="user user-light">
       <Breadcrumb
-        title={"home"}
-        subTitle={"login"}
-        bannerImg={"/assets/images/new/login.jpg"}
+        title={"Welcome To FlyGO"}
+        subTitle={"Login with your credentials below"}
+        bannerImg={"/assets/images/new/log.jpg"}
       />
       <LoginPage title="login" />
     </CustomLayout>

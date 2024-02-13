@@ -4,24 +4,24 @@ export const banners = [
   {
     id: 1,
     img: "/assets/images/hotel-bg.jpg",
-    title: "rica",
-    subTitle: "rica hotel",
+    title: "FlyGo",
+    subTitle: "FlyGo hotel",
     description: "welcome",
     btn: "book now",
   },
   {
     id: 2,
     img: "/assets/images/hotel-bg.jpg",
-    title: "rica",
-    subTitle: "rica hotel",
+    title: "FlyGo",
+    subTitle: "FlyGo hotel",
     description: "welcome",
     btn: "book now",
   },
   {
     id: 3,
     img: "/assets/images/hotel-bg.jpg",
-    title: "rica",
-    subTitle: "rica hotel",
+    title: "FlyGo",
+    subTitle: "FlyGo hotel",
     description: "welcome",
     btn: "book now",
   },
@@ -373,22 +373,22 @@ export const startData = [
   {
     svg: <Capa2 />,
     title: "4500 + exclusive hotels",
-    desc: "4500 + exclusive hotels are included in rica hotel.",
+    desc: "4500 + exclusive hotels are included in FlyGo hotel.",
   },
   {
     svg: <HappyClient />,
     title: "3,00,000 happy client",
-    desc: "rica cab has more than 3 lakhs happy customer",
+    desc: "FlyGo cab has more than 3 lakhs happy customer",
   },
   {
     svg: <Location />,
     title: "4500 + exclusive hotels",
-    desc: "rica cab has more than 45k location at different countries",
+    desc: "FlyGo cab has more than 45k location at different countries",
   },
   {
     svg: <Booking />,
     title: "1.5m bookings",
-    desc: "rica hotels has more than 1.5 hotel bookings.",
+    desc: "FlyGo hotels has more than 1.5 hotel bookings.",
   },
 ];
 

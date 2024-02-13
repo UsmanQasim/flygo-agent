@@ -1,4 +1,7 @@
-import { selectCurrency, setCurrencyChange } from "@/redux-toolkit/reducers/currency";
+import {
+  selectCurrency,
+  setCurrencyChange,
+} from "@/redux-toolkit/reducers/currency";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -19,10 +22,19 @@ const Currency: React.FC<ICurrencyProps> = ({ value }) => {
   }, [dispatch]);
 
   return (
-    <li className="front-setting">
-      <select onChange={handleCurrencyChange} value={currency}>
-        {value?.type?.map((currencyType,index) => (
-          <option key={index} value={currencyType.name}>
+    <li className="front-setting rounded" style={{ border: "1px solid orange",backgroundColor:'orange' }}>
+      <select
+        onChange={handleCurrencyChange}
+        value={currency}
+        style={{ color: "white" }}
+      >
+        {value?.type?.map((currencyType, index) => (
+          <option
+            key={index}
+            value={currencyType.name}
+            className=""
+            style={{ color: "orange" }}
+          >
             {currencyType.name}
           </option>
         ))}

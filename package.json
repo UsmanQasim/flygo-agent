@@ -1,5 +1,5 @@
 {
-  "name": "rica",
+  "name": "FlyGo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -28,6 +28,7 @@
     "apexcharts": "^3.41.1",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.11.3",
     "eslint": "8.39.0",
     "eslint-config-next": "13.4.0",
     "i18next": "^23.2.11",

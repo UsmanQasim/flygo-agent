@@ -1,4 +1,4 @@
-"useClient";
+"use client";
 import Button from "@/components/common/btn";
 import { DownloadInvoice } from "@/constant/constant";
 import {
@@ -8,10 +8,30 @@ import {
   PlaneSVG,
 } from "@/data/svg/flight-svg";
 import Img from "@/utils/BackgroundImageRatio";
-import { FC } from "react";
+import Link from "next/link";
+import { FC, useEffect, useState } from "react";
 
 const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
-  // const getBookingCode = sessionStorage.getItem("BookingCode");
+  const [code, setCode] = useState("");
+  const [token, setToken] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const bookingCode = sessionStorage.getItem("BookingCode");
+    if (!bookingCode) return;
+
+    const parsedCode = JSON.parse(bookingCode);
+
+    if (parsedCode) setCode(parsedCode);
+  }, []);
+
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+    if (!token) return;
+
+    const parsedToken = JSON.parse(token);
+
+    if (parsedToken) setToken(parsedToken);
+  }, []);
 
   return (
     <section className="section-b-space success-section">
@@ -31,10 +51,25 @@ const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
             <h2>{title}</h2>
             <p>
               thank you for you payment. we have received your payment
-              successfully. your transaction ID is "{"getBookingCode"}", you
-              will get an email invoice soon!
+              successfully. your transaction ID is "{code}", you will get an
+              email invoice soon!
             </p>
-            <Button btnClass="btn btn-solid color1" name={DownloadInvoice} />
+            <div className="d-flex gap-2 justify-content-center">
+              {token && (
+                <Link
+                  href={`https://flygo-admin.vercel.app/auth/accept-redirects?__t=${encodeURI(
+                    token
+                  )} `}
+                  target="_blank"
+                >
+                  <Button
+                    btnClass="btn btn-solid color1"
+                    name={"View Booking History "}
+                  />
+                </Link>
+              )}
+              <Button btnClass="btn btn-solid color1" name={DownloadInvoice} />
+            </div>
           </div>
         </div>
       </div>

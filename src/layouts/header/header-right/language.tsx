@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const Language: React.FC<ILanguageProps> = ({ value }) => {
-
   const { i18LangStatus } = useSelector((state: RootState) => state.language);
   const { i18n } = useTranslation(i18LangStatus);
 
@@ -33,16 +32,18 @@ const Language: React.FC<ILanguageProps> = ({ value }) => {
   }, []);
 
   return (
-    <li className="front-setting">
+    <li className="front-setting rounded" style={{ border: "1px solid green",backgroundColor:'green' }}>
       <select
         value={i18LangStatus}
+        style={{ color: "white" }}
         onChange={(e) => {
           changeLng(e.target.value);
           i18n.changeLanguage(e.target.value);
-        }}>
-        {value?.option?.map((elem,index) => {
+        }}
+      >
+        {value?.option?.map((elem, index) => {
           return (
-            <option key={index} value={elem.lang}>
+            <option key={index} value={elem.lang} style={{ color: "green" }}>
               {elem.language}
             </option>
           );

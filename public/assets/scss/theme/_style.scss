@@ -1222,7 +1222,7 @@ header {
     .menu {
       .header-right {
         .front-setting {
-          background-color: rgb(243, 243, 245);
+          // background-color: rgb(243, 243, 245);
 
           select {
             color: $grey-darker;
@@ -1232,7 +1232,7 @@ header {
 
         .user {
           &.user-light {
-            background-color: rgb(243, 243, 245);
+            // background-color: rgb(243, 243, 245);
 
             i {
               color: black;
@@ -1241,7 +1241,7 @@ header {
         }
 
         .setting {
-          background-color: rgb(243, 243, 245);
+          // background-color: rgb(243, 243, 245);
 
           i {
             color: black;
@@ -15515,7 +15515,7 @@ section {
   .header-right {
     li {
       &:nth-child(3) {
-        background-color: rgb(243, 243, 245);
+        // background-color: rgb(243, 243, 245);
         padding: 6px 12px;
 
         i {

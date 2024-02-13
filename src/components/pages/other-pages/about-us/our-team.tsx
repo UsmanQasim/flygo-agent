@@ -14,7 +14,7 @@ const OurTeamContent: FC = () => {
       <Img src="/assets/images/cab/grey-bg.jpg" alt="" className="img-fluid bg-img" />
       <Animation />
       <div className="container">
-        <TitleThree classTitle={"title-1"} title="rica" subTitle={OurTeam} />
+        <TitleThree classTitle={"title-1"} title="FlyGo" subTitle={OurTeam} />
         <div className="row">
           <div className="col">
             <Slider {...slide3} className="team-slider no-arrow">

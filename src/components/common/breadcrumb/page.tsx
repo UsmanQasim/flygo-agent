@@ -13,11 +13,27 @@ interface IBreadcrumbProps {
   class1?: string;
   class2?: string;
 }
-const Breadcrumb: FC<IBreadcrumbProps> = ({ title, subTitle, bannerImg, mainTitle, animation, class1, class2, videoPath }) => {
+const Breadcrumb: FC<IBreadcrumbProps> = ({
+  title,
+  subTitle,
+  bannerImg,
+  mainTitle,
+  animation,
+  class1,
+  class2,
+  videoPath,
+}) => {
   return (
-    <section className={`breadcrumb-section pt-0 ${class1 && class1}`}>
+    <section className={`breadcrumb-section pt-8 ${class1 && class1}`}>
       {videoPath ? (
-        <video autoPlay muted loop id="block" className="bg-video" style={{ width: "100%" }}>
+        <video
+          autoPlay
+          muted
+          loop
+          id="block"
+          className="bg-video"
+          style={{ width: "100%" }}
+        >
           <source src={videoPath} type="video/mp4" />
         </video>
       ) : (
@@ -26,12 +42,12 @@ const Breadcrumb: FC<IBreadcrumbProps> = ({ title, subTitle, bannerImg, mainTitl
 
       <div className={`breadcrumb-content ${class2 && class2}`}>
         <div>
-          {mainTitle ? <h2>{mainTitle}</h2> : <h2>{subTitle}</h2>}
+          {mainTitle ? <h2>{mainTitle}</h2> : <h2>{title}</h2>}
           <nav aria-label="breadcrumb" className="theme-breadcrumb">
             <ol className="breadcrumb">
-              <li className="breadcrumb-item">
+              {/* <li className="breadcrumb-item">
                 <Link href="/">{title}</Link>
-              </li>
+              </li> */}
               <li className="breadcrumb-item active" aria-current="page">
                 {subTitle}
               </li>
@@ -45,7 +61,7 @@ const Breadcrumb: FC<IBreadcrumbProps> = ({ title, subTitle, bannerImg, mainTitl
         </div>
       </div>
       {animation && <BirdAnimation />}
-      <div className="title-breadcrumb">Rica</div>
+      <div className="title-breadcrumb">FlyGo</div>
     </section>
   );
 };

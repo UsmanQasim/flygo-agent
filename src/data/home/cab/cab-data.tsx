@@ -45,7 +45,7 @@ export const videoCabData = [
     img: "/assets/images/cab/video-image.jpg",
     price: 120,
     per: "/ per day",
-    title: "Rica Cab is great taxi servicing agency !",
+    title: "FlyGo Cab is great taxi servicing agency !",
     description: "Lorem Ipsum is the simply dummy text of the printing is of and type the setting the industry. Lorem Ipsum of is has since the..........",
     btn: "contact us",
     responsiveDesc: "drive detail",
@@ -56,7 +56,7 @@ export const videoCabData = [
     img: "/assets/images/cab/video-image1.jpg",
     price: 140,
     per: "/ per day",
-    title: "Rica Cab is great taxi servicing agency !",
+    title: "FlyGo Cab is great taxi servicing agency !",
     description: "Lorem Ipsum is the simply dummy text of the printing is of and type the setting the industry. Lorem Ipsum of is has since the..........",
     btn: "contact us",
     responsiveDesc: "drive detail",
@@ -150,22 +150,22 @@ export const aboutClassicData = [
   {
     svg: <CarSvg />,
     title: "4500 + Raides Daily",
-    desc: "Every Day More Than 4500 Customer Take Rides With Rica Cab.",
+    desc: "Every Day More Than 4500 Customer Take Rides With FlyGo Cab.",
   },
   {
     svg: <HappyClient />,
     title: "3,00,000 happy client",
-    desc: "Till Today Rica Cab Has More Than Three Lakhs Happy Customer",
+    desc: "Till Today FlyGo Cab Has More Than Three Lakhs Happy Customer",
   },
   {
     svg: <Location />,
     title: "4500 + exclusive hotels",
-    desc: "Rica Cab Has More Than 45k Location At Different Countries & Citys",
+    desc: "FlyGo Cab Has More Than 45k Location At Different Countries & Citys",
   },
   {
     svg: <BookingSvg />,
     title: "1.5m bookings",
-    desc: "Rica Cab Has More Than 10000 Cabs Which Include Luxury Cabs Too.",
+    desc: "FlyGo Cab Has More Than 10000 Cabs Which Include Luxury Cabs Too.",
   },
 ];
 

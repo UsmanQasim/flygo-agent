@@ -1,13 +1,23 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import SuccessBtn from "@/components/hotels/booking/checkout/payment-section/success-btn";
 import { SelectYourWallet } from "@/constant/constant";
 import { options } from "@/data/hotels/booking";
+import { UserInfoType } from "@/layouts/header/header-right/page";
 
 const MyWallet: FC = () => {
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [selectedOption, setSelectedOption] = useState<boolean>(false);
+  const [userInfo, setUserInfo] = useState<UserInfoType | null>(null);
 
-  const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedOption(event.target.id);
+  useEffect(() => {
+    const userInfoLocal = localStorage.getItem("userData");
+    if (!userInfoLocal) return;
+
+    const userInfoParsed = JSON.parse(userInfoLocal);
+    setUserInfo(userInfoParsed);
+  }, []);
+
+  const handleOptionChange = () => {
+    setSelectedOption(!selectedOption);
   };
 
   return (
@@ -18,8 +28,24 @@ const MyWallet: FC = () => {
           event.preventDefault()
         }
       >
-        <h6>{SelectYourWallet}</h6>
-        <div className="row">
+        {/* <h6>{SelectYourWallet}</h6> */}
+        <div
+          className={` ${
+            selectedOption && "border-primary"
+          } border d-flex flex-column gap-4 align-items-center justify-content-end rounded p-2 w-25 `}
+          style={{ height: "120px" }}
+        >
+          <b> SAR {userInfo?.wallet}</b>
+          <input
+            className="form-check-input radio_animated"
+            type="checkbox"
+            name="wallet"
+            id="wallet"
+            checked={selectedOption}
+            onChange={handleOptionChange}
+          />
+        </div>
+        {/* <div className="row">
           {options.map((option, index) => (
             <div className="form-check col-md-6" key={index}>
               <input
@@ -36,8 +62,8 @@ const MyWallet: FC = () => {
               </label>
             </div>
           ))}
-        </div>
-        {/* <SuccessBtn /> */}
+        </div> */}
+        {selectedOption && <SuccessBtn />}
       </form>
     </div>
   );

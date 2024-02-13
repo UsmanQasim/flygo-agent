@@ -13,12 +13,12 @@ const FlightRoute: FC = () => {
   return (
     <section className="routes-section ratio_landscape section-b-space">
       <div className="container">
-        <TitleThree classTitle={"title-2"} subTitle="top flight routes..." span="within usa" desc="Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum has been standard......." />
+        <TitleThree classTitle={"title-2"} subTitle="top flight routes..."  desc="Explore our top-tier air routes for superior travel convenience and comfort." />
         <div className="row">
           {topDealData.map((data: ITopProps,index) => (
             <div className="col-lg-3 col-6" key={index}>
               <div className="routes-box">
-                <Link href="/flight/listing/left-sidebar" className="routes-img">
+                <Link href="" className="routes-img">
                   <Img src={data.image} alt="" className="img-fluid bg-img" />
                   <div className="price-round">
                     <div>

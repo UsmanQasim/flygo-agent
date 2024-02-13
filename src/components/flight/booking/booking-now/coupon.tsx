@@ -23,10 +23,10 @@ const Coupon: FC = () => {
                                     checked />
                                 <div>
                                     <label className="form-check-label title" htmlFor="exampleRadios3">
-                                        RICA500
+                                    FlyGo
                                     </label>
                                     <label className="form-check-label" htmlFor="exampleRadios3">
-                                        Use RICA50, and get $50 off on first booking
+                                        Use FlyGo, and get $50 off on first booking
                                     </label>
                                 </div>
                             </div>

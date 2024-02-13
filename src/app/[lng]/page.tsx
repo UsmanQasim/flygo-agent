@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const Home = () => {
   const router = useRouter();
   useEffect(() => {
-    router.push("/home/flight/modern");
+    router.push("/home");
   }, []);
 
   return <></>;

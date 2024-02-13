@@ -14,7 +14,7 @@ const Review: FC<IReviewSliderProps> = ({ fullSlide }) => {
       <div className="review-box">
         <Rating rang="Excellent Arrangements" />
         <h6>by xyz, jun 18, 2023</h6>
-        <p>Rica holidays planned our family trip to Spain, it was so perfect. Everything was flawless, in-case if any confusions there was always someone to assist us at any point. Had a wonderful experience and thanks to these guys for making it happen. I would really recommend them for further vacation planning.</p>
+        <p>FlyGo holidays planned our family trip to Spain, it was so perfect. Everything was flawless, in-case if any confusions there was always someone to assist us at any point. Had a wonderful experience and thanks to these guys for making it happen. I would really recommend them for further vacation planning.</p>
       </div>
       <div className="review-box">
         <Rating rang="Best getaway destination with family" />

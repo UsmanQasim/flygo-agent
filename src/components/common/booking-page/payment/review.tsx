@@ -4,7 +4,12 @@ import { FC, useState } from "react";
 import DebitCard from "./debit";
 import NetBanking from "./net-banking";
 import MyWallet from "./my-wallet";
-import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from "reactstrap";
+import {
+  Accordion,
+  AccordionBody,
+  AccordionHeader,
+  AccordionItem,
+} from "reactstrap";
 
 const ReviewSection: FC = () => {
   const [open, setOpen] = useState("1");
@@ -17,27 +22,27 @@ const ReviewSection: FC = () => {
       <div className="accordion default-accordion" id="accordionExample">
         <Accordion open={open} toggle={toggle} className="dark-accordion">
           <AccordionItem>
-            <AccordionHeader targetId="1">Debit Card</AccordionHeader>
+            <AccordionHeader targetId="1">My wallet</AccordionHeader>
             <AccordionBody accordionId="1">
-              <DebitCard />
+              <MyWallet />
             </AccordionBody>
           </AccordionItem>
           <AccordionItem>
-            <AccordionHeader targetId="2">Credit Card</AccordionHeader>
+            <AccordionHeader targetId="2">Debit Card</AccordionHeader>
             <AccordionBody accordionId="2">
               <DebitCard />
             </AccordionBody>
           </AccordionItem>
           <AccordionItem>
-            <AccordionHeader targetId="3">Net Banking</AccordionHeader>
+            <AccordionHeader targetId="3">Credit Card</AccordionHeader>
             <AccordionBody accordionId="3">
-              <NetBanking />
+              <DebitCard />
             </AccordionBody>
           </AccordionItem>
           <AccordionItem>
-            <AccordionHeader targetId="4">my wallet</AccordionHeader>
+            <AccordionHeader targetId="4">Net Banking</AccordionHeader>
             <AccordionBody accordionId="4">
-              <MyWallet />
+              <NetBanking />
             </AccordionBody>
           </AccordionItem>
         </Accordion>

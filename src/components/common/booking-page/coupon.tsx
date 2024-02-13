@@ -25,10 +25,10 @@ const Coupon: FC = () => {
                 <input className="form-check-input radio_animated" type="radio" name="radiocls2" id="radio1" defaultValue="option1" defaultChecked/>
                 <div>
                   <label className="form-check-label title" htmlFor="radio1">
-                    RICA500
+                  FlyGo
                   </label>
                   <label className="form-check-label" htmlFor="radio1">
-                    Use RICA50, and get $50 off on first booking
+                    Use FlyGo, and get $50 off on first booking
                   </label>
                 </div>
               </div>

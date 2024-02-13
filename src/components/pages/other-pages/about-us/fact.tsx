@@ -10,7 +10,7 @@ const FactsContent: FC = () => {
       <Img src="/assets/images/cab/grey-bg.jpg" alt="" className="img-fluid bg-img" />
       <Animation />
       <div className="container">
-        <TitleThree classTitle={"title-1"} title="rica" subTitle={"no stories, facts only"} />
+        <TitleThree classTitle={"title-1"} title="FlyGo" subTitle={"no stories, facts only"} />
         <div className="row">
           {factsData.map((fact: IFactProps, index: number) => (
             <div key={index} className="col-lg-3 col-6">

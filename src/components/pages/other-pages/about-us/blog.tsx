@@ -7,7 +7,7 @@ const Blog: FC = () => {
   return (
     <section className="blog_section section-b-space ratio_55">
       <div className="container">
-        <TitleThree classTitle={"title-1"} title="rica" subTitle="latest blog" />
+        <TitleThree classTitle={"title-1"} title="FlyGo" subTitle="latest blog" />
         <SliderFive slideData={flightBlogData} />
       </div>
     </section>

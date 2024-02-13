@@ -10,10 +10,10 @@ interface ICurrencyProps {
 }
 
 const initialState: ICurrencyProps = {
-  currency: "USD",
-  name: "dollar",
-  symbol: "$",
-  currencyValue: 1,
+  currency: "SAR",
+  name: "sar",
+  symbol: "SAR",
+  currencyValue: 3.75,
 };
 
 const currencySlice = createSlice({

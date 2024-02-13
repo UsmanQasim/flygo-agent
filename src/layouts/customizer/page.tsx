@@ -29,13 +29,12 @@ const CustomizePage: FC = () => {
 
   const onChangeLayout = (newLayout: string) => {
     // document.body.classList.remove(layout);
-    if(newLayout == 'dark'){
-      document.body.classList.add('dark');
-      document.body.classList.remove('light');
-    }
-    else{
-      document.body.classList.remove('dark');
-      document.body.classList.add('light');
+    if (newLayout == "dark") {
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+    } else {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
     }
 
     localStorage.setItem("layout", newLayout);
@@ -44,14 +43,36 @@ const CustomizePage: FC = () => {
 
   return (
     <div className="theme-setting">
-      <div className="dark">
-        <input className="tgl tgl-skewed" id="dark"  type="checkbox" checked={layout === "dark"} onChange={(e) => onChangeLayout(e.target.checked ? "dark" : "light")} />
-        <label className="tgl-btn" data-tg-off="Dark" data-tg-on="Light" htmlFor="dark"></label>
+      {/* <div className="dark">
+        <input
+          className="tgl tgl-skewed"
+          id="dark"
+          type="checkbox"
+          checked={layout === "dark"}
+          onChange={(e) => onChangeLayout(e.target.checked ? "dark" : "light")}
+        />
+        <label
+          className="tgl-btn"
+          data-tg-off="Dark"
+          data-tg-on="Light"
+          htmlFor="dark"
+        ></label>
       </div>
       <div className="rtl">
-        <input className="tgl tgl-skewed" id="rtl" type="checkbox" checked={type === "rtl"} onChange={(e) => onChangeType(e.target.checked ? "rtl" : "ltr")} />
-        <label className="tgl-btn" data-tg-off="RTL" data-tg-on="LTR" htmlFor="rtl"></label>
-      </div>
+        <input
+          className="tgl tgl-skewed"
+          id="rtl"
+          type="checkbox"
+          checked={type === "rtl"}
+          onChange={(e) => onChangeType(e.target.checked ? "rtl" : "ltr")}
+        />
+        <label
+          className="tgl-btn"
+          data-tg-off="RTL"
+          data-tg-on="LTR"
+          htmlFor="rtl"
+        ></label>
+      </div> */}
     </div>
   );
 };

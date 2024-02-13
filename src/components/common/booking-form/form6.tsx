@@ -3,6 +3,7 @@ import { FC, useState } from "react";
 import Button from "../btn";
 import { useRouter } from "next/navigation";
 import { loginAgent } from "@/services/login";
+import { Toast } from "reactstrap";
 
 const LoginForm: FC = () => {
   const router = useRouter();
@@ -16,12 +17,14 @@ const LoginForm: FC = () => {
     };
     loginAgent(data).then((res) => {
       if (res?.success) {
-        window.localStorage.setItem("userData", JSON.stringify(res.data));
-        window.localStorage.setItem(
+        localStorage.setItem("userData", JSON.stringify(res.data));
+        localStorage.setItem(
           "accessToken",
           JSON.stringify(res.data?.accessToken)
         );
-        router.push("/home/flight/modern");
+        router.push("/home/flight");
+      } else {
+        console.log("failed");
       }
     });
   };
