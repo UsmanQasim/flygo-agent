@@ -22,7 +22,10 @@ const Currency: React.FC<ICurrencyProps> = ({ value }) => {
   }, [dispatch]);
 
   return (
-    <li className="front-setting rounded" style={{ border: "1px solid orange",backgroundColor:'orange' }}>
+    <li
+      className="front-setting rounded"
+      style={{ border: "1px solid #E77C2B", backgroundColor: "orange" }}
+    >
       <select
         onChange={handleCurrencyChange}
         value={currency}

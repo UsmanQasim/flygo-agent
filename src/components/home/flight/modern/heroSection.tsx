@@ -1,17 +1,31 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { FC } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux-toolkit/store";
 import { destinationData } from "@/data/home/flight/flight-data";
 import Button from "@/components/common/btn";
 import Link from "next/link";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+declare global {
+  interface Window {
+    bootstrap: {
+      Carousel: any; // Adjust the type if you have a specific type for Carousel
+    };
+  }
+}
 
 const HeroSection: FC = () => {
   const { symbol, currencyValue } = useSelector(
     (state: RootState) => state.currency
   );
+
+  useEffect(() => {
+    // Initialize the carousel when the component mounts
+    const carousel = document.querySelector(".carousel");
+    new window.bootstrap.Carousel(carousel);
+  }, []); // Run only once on component mount
+
   const paragraphStyle = {
     fontSize: "46px",
     color: "#233972",
@@ -33,7 +47,7 @@ const HeroSection: FC = () => {
   return (
     <div
       id="carouselExampleControls"
-      className="carousel  slide"
+      className="carousel slide"
       data-bs-ride="carousel"
     >
       <div className="carousel-inner">
@@ -74,19 +88,19 @@ const HeroSection: FC = () => {
                   "Discover Your Next Adventure: Explore, Dream, Travel!"
                 </p>
               </div>
-              <a href="/home/flight">
-              <button
-                type="button"
-                className="btn p-3"
-                style={{
-                  borderRadius: "8px",
-                  backgroundColor: "#273c",
-                  color: "white",
-                }}
-              >
-                Book Now
-              </button>
-              </a>
+              <Link href="https://flygo-admin.vercel.app/auth/login">
+                <button
+                  type="button"
+                  className="btn p-3"
+                  style={{
+                    borderRadius: "8px",
+                    backgroundColor: "#273c",
+                    color: "white",
+                  }}
+                >
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -126,19 +140,19 @@ const HeroSection: FC = () => {
                   FlyGO - Your Passport to Unforgettable Adventures
                 </p>
               </div>
-              <a href="/home/flight">
-              <button
-                type="button"
-                className="btn p-3"
-                style={{
-                  borderRadius: "8px",
-                  backgroundColor: "#273c",
-                  color: "white",
-                }}
-              >
-                Book Now
-              </button>
-              </a>
+              <Link href="https://flygo-admin.vercel.app/auth/login">
+                <button
+                  type="button"
+                  className="btn p-3"
+                  style={{
+                    borderRadius: "8px",
+                    backgroundColor: "#273c",
+                    color: "white",
+                  }}
+                >
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -178,19 +192,19 @@ const HeroSection: FC = () => {
                   Where Comfort Meets Adventure: Your Journey, Our Promise
                 </p>
               </div>
-              <a href="/home/flight">
-              <button
-                type="button"
-                className="btn p-3"
-                style={{
-                  borderRadius: "8px",
-                  backgroundColor: "#273c",
-                  color: "white",
-                }}
-              >
-                Book Now
-              </button>
-              </a>
+              <Link href="https://flygo-admin.vercel.app/auth/login">
+                <button
+                  type="button"
+                  className="btn p-3"
+                  style={{
+                    borderRadius: "8px",
+                    backgroundColor: "#273c",
+                    color: "white",
+                  }}
+                >
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
         </div>

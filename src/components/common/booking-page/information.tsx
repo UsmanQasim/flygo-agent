@@ -20,7 +20,7 @@ const InformationPage: FC<IInformationProps> = ({ type }) => {
                 <h6>{CancellationCharges}</h6>
                 <ul>
                   <li>
-                    airline fee : <span>$2012</span>
+                    airline fee : <span>SAR 2012</span>
                   </li>
                   <li>
                     This airline allows cancellation only before 2 hrs from
@@ -32,7 +32,7 @@ const InformationPage: FC<IInformationProps> = ({ type }) => {
                 <h6>{RescheduleCharges}</h6>
                 <ul>
                   <li>
-                    airline fee : <span>$2012</span>
+                    airline fee : <span>SAR 2012</span>
                   </li>
                   <li>
                     This airline allows reschedule only before 2 hrs from

@@ -59,11 +59,10 @@ const MultiCityInput: FC<MultiCityInputProps> = (props) => {
 
   return (
     <div
-      className="row flight-form-input mb-2 border border-primary "
+      className="row flight-form-input mb-2  "
       style={{
         marginLeft: "0px !important",
         marginRight: "0px !important",
-        background: "red",
       }}
     >
       <CityInput
@@ -92,15 +91,14 @@ const MultiCityInput: FC<MultiCityInputProps> = (props) => {
             type="button"
             onClick={() => addCityData()}
             className="btn btn-solid color1"
-            style={{ background: "green" }}
           >
             +
           </button>
         )}
         <button
           type="button"
-          className="btn btn-solid color1"
-          style={{ background: "orange" }}
+          className="btn btn-solid color1 bold font-8"
+          style={{ background: "#E77C2B" }}
           onClick={() => removeCityData(city.id)}
         >
           -
@@ -137,8 +135,8 @@ const FlightThree: FC = ({}) => {
     return_date: new Date(),
     passengers: {
       adults: 1,
-      children: 1,
-      infants: 1,
+      children: 0,
+      infants: 0,
     },
     multiCityFlights: [{ origin: "", destination: "", depart_date: "" }],
   });
@@ -302,7 +300,7 @@ const FlightThree: FC = ({}) => {
       <button
         className="btn btn-rounded color1"
         type="submit"
-        style={{ background: "orange" }}
+        style={{ background: "#E77C2B", color: "white" }}
       >
         Book Now
       </button>

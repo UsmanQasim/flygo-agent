@@ -19,7 +19,7 @@ const Home: FC = () => {
       userBgClass="user rounded5"
     >
       {/* <TopHeader /> */}
-      {/* <HeroSection /> */}
+      <HeroSection />
       <Destination />
       <AirlinesDetail />
       <FlightRoute />

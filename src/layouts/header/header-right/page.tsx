@@ -52,7 +52,7 @@ const HeaderRight: React.FC<IHeaderRightProps> = ({ userBgClass }) => {
           {value.title === "user" && (
             <li className={`${userBgClass && userBgClass}`}>
               <Link
-                href="/pages/other-pages/login"
+                href={"https://flygo-admin.vercel.app/dashboard"}
                 className="border rounded p-2"
                 style={{
                   display: "flex",

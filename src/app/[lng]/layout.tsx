@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export async function generateStaticParams() {
-  return languages.map((lng) => ({ lng }))
+  return languages.map((lng) => ({ lng }));
 }
 const RootLayout = ({
   children,
@@ -18,16 +18,51 @@ const RootLayout = ({
   params: { lng: string };
 }) => {
   return (
-    <html lang={lng} >
+    <html lang={lng}>
       <head>
-        <link href="https://fonts.googleapis.com/css?family=Vampiro+One&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;0,900;1,700&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet"/>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"
+          integrity="..."
+          crossOrigin="anonymous"
+        ></script>
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.3/css/bootstrap.min.css"
+          integrity="..."
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Vampiro+One&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;0,900;1,700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Bangers&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
         <Providers>

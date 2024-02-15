@@ -36,15 +36,15 @@ const Summary = ({ bookingDetails }: ISummary) => {
                   </tr>
                   <tr>
                     <td>total taxes</td>
-                    <td>$0</td>
+                    <td>0</td>
                   </tr>
                   <tr>
                     <td>Insurance</td>
-                    <td>$0</td>
+                    <td>0</td>
                   </tr>
                   <tr>
                     <td>Convenience fee</td>
-                    <td>$0</td>
+                    <td>0</td>
                   </tr>
                 </tbody>
               </table>

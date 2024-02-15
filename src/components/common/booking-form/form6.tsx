@@ -3,7 +3,8 @@ import { FC, useState } from "react";
 import Button from "../btn";
 import { useRouter } from "next/navigation";
 import { loginAgent } from "@/services/login";
-import { Toast } from "reactstrap";
+import { setCookie } from "nookies";
+import { toast } from "react-toastify";
 
 const LoginForm: FC = () => {
   const router = useRouter();
@@ -15,16 +16,48 @@ const LoginForm: FC = () => {
       email: email,
       password: password,
     };
+
     loginAgent(data).then((res) => {
-      if (res?.success) {
-        localStorage.setItem("userData", JSON.stringify(res.data));
-        localStorage.setItem(
-          "accessToken",
-          JSON.stringify(res.data?.accessToken)
-        );
-        router.push("/home/flight");
+      if (
+        res?.success &&
+        res.data.accessToken &&
+        res.data &&
+        res.data.role &&
+        res.data.representativeName
+      ) {
+        setCookie(null, "token", "true", { path: "/" });
+        setCookie(null, "user", "true", { path: "/" });
+        // setCookie(
+        //   null,
+        //   "userData",
+        //   JSON.stringify(res.data.representativeName),
+        //   {
+        //     path: "/",
+        //   }
+        // );
+        setCookie(null, "role", res.data.role, { path: "/" });
+
+        // Store user data and access token in cookies
+        setCookie(null, "userData", JSON.stringify(res.data), {
+          maxAge: 30 * 24 * 60 * 60, // 30 days
+          path: "/", // Cookie accessible from all paths
+        });
+        setCookie(null, "accessToken", res.data?.accessToken, {
+          maxAge: 30 * 24 * 60 * 60, // 30 days
+          path: "/", // Cookie accessible from all paths
+        });
+
+        // router.push("/home/flight");
+
+        const redirectURL = `https://flygo-admin.vercel.app/dashboard`;
+
+        // Redirect the user
+        window.location.href = redirectURL;
+
+        toast.success("Login successful");
       } else {
         console.log("failed");
+        toast.error("Login failed");
       }
     });
   };
