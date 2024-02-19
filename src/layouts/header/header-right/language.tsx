@@ -41,10 +41,10 @@ const Language: React.FC<ILanguageProps> = ({ value }) => {
         marginLeft: "10px",
         minWidth: "80px",
       }}
-      
     >
       <input
         type="text"
+        readOnly
         className="form-control dropdown-toggle "
         value={i18LangStatus}
         style={{

@@ -18,11 +18,9 @@ const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
 
   useEffect(() => {
     const bookingCode = sessionStorage.getItem("BookingCode");
-    if (!bookingCode) return;
-
-    const parsedCode = JSON.parse(bookingCode);
-
-    if (parsedCode) setCode(parsedCode);
+    if (bookingCode && bookingCode?.length > 0 && bookingCode !== undefined) {
+      setCode(bookingCode);
+    }
   }, []);
 
   useEffect(() => {
@@ -30,7 +28,7 @@ const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
     const token = cookies.accessToken;
     if (!token) return;
 
-    const parsedToken = JSON.parse(token);
+    const parsedToken = decodeURI(token);
 
     if (parsedToken) setToken(parsedToken);
   }, []);

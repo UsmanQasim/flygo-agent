@@ -23,8 +23,6 @@ const Modern: FC = () => {
       setCookie(null, "role", role, { path: "/", secure: true });
 
       // window.location.href = "/home/flight";
-    } else {
-      window.location.href = "/";
     }
 
     console.table(cookies);

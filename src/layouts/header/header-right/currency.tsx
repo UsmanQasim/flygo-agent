@@ -24,12 +24,18 @@ const Currency: React.FC<ICurrencyProps> = ({ value }) => {
   return (
     <div
       className="btn-group "
-      style={{ width: "80px", cursor: "pointer",position:'relative' ,minWidth:"80px"}}
+      style={{
+        width: "80px",
+        cursor: "pointer",
+        position: "relative",
+        minWidth: "80px",
+      }}
       data-bs-toggle="dropdown"
       aria-expanded="false"
     >
       <input
         type="text"
+        readOnly
         className="form-control dropdown-toggle "
         value={currency}
         style={{
@@ -37,13 +43,13 @@ const Currency: React.FC<ICurrencyProps> = ({ value }) => {
           cursor: "pointer",
           border: "1px solid #E77C2B",
           backgroundColor: "#E77C2B",
-          color: "white",textTransform:'uppercase'
+          color: "white",
+          textTransform: "uppercase",
         }}
         name="currency"
       />
       <div
-      id="currency"
-
+        id="currency"
         className="input-group-text dropdown-toggle absolute bg-transparent border-0 right-0 bottom-0 h-100 text-white"
         style={{
           position: "absolute",

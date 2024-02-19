@@ -20,11 +20,11 @@ export class AxiosProvider {
       AxiosProvider.instance.interceptors.request.use(
         (config: InternalAxiosRequestConfig) => {
           const cookies = parseCookies();
-          const rawToken = cookies.accessToken;
-
-          if (rawToken) {
-            const token = JSON.parse(rawToken);
-            config.headers.Authorization = `Bearer ${token}`;
+          if (cookies.accessToken) {
+            const token = decodeURI(cookies.accessToken);
+            if (token) {
+              config.headers.Authorization = `Bearer ${token}`;
+            }
           }
 
           return config;

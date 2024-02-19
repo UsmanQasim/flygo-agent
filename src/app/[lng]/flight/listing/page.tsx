@@ -36,9 +36,9 @@ const FlightListing: FC = () => {
 
   useEffect(() => {
     const form = sessionStorage.getItem("formData");
-
     try {
       if (form) {
+        console.log(form);
         const parsedFormData = JSON.parse(form);
         setFormData(parsedFormData);
       }
