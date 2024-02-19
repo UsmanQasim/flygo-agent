@@ -27,8 +27,14 @@ const FlightDetail: FC = () => {
                 <p> {flightDetails?.arrival_date}</p>
               </div>
               <div className="airport-progress">
-                <i className="fas fa-plane-departure float-start"></i>
-                <i className="fas fa-plane-arrival float-end"></i>
+                <i
+                  className="fas fa-plane-departure float-start"
+                  style={{ color: "#253c72" }}
+                ></i>
+                <i
+                  className="fas fa-plane-arrival float-end"
+                  style={{ color: "#253c72" }}
+                ></i>
               </div>
               <div className="airport-name arrival">
                 <h6>{flightDetails?.destination?.CITY_NAME}</h6>

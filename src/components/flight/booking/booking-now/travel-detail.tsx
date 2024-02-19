@@ -183,7 +183,7 @@ const TravelDetail: FC<ITravelDetailsProps> = ({
                   <div className="form-group col-md-6">
                     <label htmlFor="inputnumber">Phone no:</label>
                     <input
-                      type="text"
+                      type="number"
                       className="form-control"
                       id="inputnumber"
                       name="phoneNumber"
@@ -287,7 +287,7 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                 </div>
                 <div className="form-group col-md-4">
                   <label htmlFor="last">Nationality</label>
-                  <select
+                  {/* <select
                     className="form-select"
                     aria-label="Default select example"
                     name="adult1-nationality"
@@ -301,15 +301,64 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                     </option>
                     {countries.map((data, i) => {
                       return (
-                        <option key={i} value={data.name}>
+                        <option key={i} value={data.name} className="selectOption">
                           {data.name}
                         </option>
                       );
                     })}
+                  </select> */}
+                  <div
+                    className="btn-group w-100"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style={{cursor:'pointer'}}
 
-                    {/* <option value="Saudia Arabia">Saudia Arabia</option>
-                    <option value="Brazil">Brazil</option> */}
-                  </select>
+                  >
+                    <input
+                      type="text"
+                      className="form-control dropdown-toggle w-100"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      value={passengerData.nationality}
+                      style={{ position: "relative", cursor: "pointer" }}
+                      name="adult1-nationality"
+                    />
+                    <span
+                      className="input-group-text dropdown-toggle absolute bg-transparent border-0 right-0 bottom-0 h-100"
+                      style={{
+                        position: "absolute",
+                        bottom: 0,
+                        right: 0,
+                        border: "0px",
+                      }}
+                    >
+                      <i className="bi bi-person-fill"></i>
+                    </span>
+                    <ul
+                      className="dropdown-menu"
+                      style={{
+                        width: "100%",
+                        height: "280px",
+                        overflowX: "hidden",
+                        overflowY: "auto",
+                      }}
+                    >
+                      {countries.map((data, i) => {
+                        return (
+                          <li
+                            onClick={(event) =>
+                              onChange("nationality", data.name)
+                            }
+                            key={i}
+                            value={data.name}
+                            className="dropdown-item"
+                          >
+                            {data.name}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
                 </div>
               </div>
               <h6 className="mt-4">Documents</h6>
@@ -353,7 +402,7 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
 
                 <div className="form-group col-md-4">
                   <label htmlFor="last">Issue Country</label>
-                  <select
+                  {/* <select
                     className="form-select"
                     aria-label="Default select example"
                     name="adult1-issueCountry"
@@ -372,10 +421,61 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                         </option>
                       );
                     })}
-                    {/* <option value="Pakistan">Pakistan</option>
+                    <option value="Pakistan">Pakistan</option>
                     <option value="Saudi Arabia">Saudi Arabia</option>
-                    <option value="Uganda">Uganda</option> */}
-                  </select>
+                    <option value="Uganda">Uganda</option> 
+                  </select> */}
+                  <div
+                    className="btn-group w-100"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style={{cursor:'pointer'}}
+                  >
+                    <input
+                      type="text"
+                      className="form-control dropdown-toggle w-100"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      value={passengerData.issueCountry}
+                      style={{ position: "relative", cursor: "pointer" }}
+                      name="adult1-issueCountry"
+                    />
+                    <span
+                      className="input-group-text dropdown-toggle absolute bg-transparent border-0 right-0 bottom-0 h-100"
+                      style={{
+                        position: "absolute",
+                        bottom: 0,
+                        right: 0,
+                        border: "0px",
+                      }}
+                    >
+                      <i className="bi bi-person-fill"></i>
+                    </span>
+                    <ul
+                      className="dropdown-menu"
+                      style={{
+                        width: "100%",
+                        height: "280px",
+                        overflowX: "hidden",
+                        overflowY: "auto",
+                      }}
+                    >
+                      {countries.map((data, i) => {
+                        return (
+                          <li
+                            onClick={(event) =>
+                              onChange("issueCountry", data.name)
+                            }
+                            key={i}
+                            value={data.name}
+                            className="dropdown-item"
+                          >
+                            {data.name}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </form>

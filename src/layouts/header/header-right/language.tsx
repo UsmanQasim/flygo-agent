@@ -32,27 +32,88 @@ const Language: React.FC<ILanguageProps> = ({ value }) => {
   }, []);
 
   return (
-    <li
+    <div
       className="front-setting rounded"
-      style={{ border: "1px solid #3FA34B", backgroundColor: "#3FA34B" }}
+      style={{
+        width: "80px",
+        cursor: "pointer",
+        position: "relative",
+        marginLeft: "10px",
+        minWidth: "80px",
+      }}
+      
     >
-      <select
+      <input
+        type="text"
+        className="form-control dropdown-toggle "
         value={i18LangStatus}
-        style={{ color: "white" }}
-        onChange={(e) => {
-          changeLng(e.target.value);
-          i18n.changeLanguage(e.target.value);
+        style={{
+          position: "relative",
+          cursor: "pointer",
+          border: "1px solid #3FA34B",
+          backgroundColor: "#3FA34B",
+          color: "white",
+          textTransform: "uppercase",
+        }}
+        name="language"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      />
+      <div
+        className="input-group-text dropdown-toggle absolute bg-transparent border-0 right-0 bottom-0 h-100 text-white"
+        style={{
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+          border: "0px",
         }}
       >
-        {value?.option?.map((elem, index) => {
-          return (
-            <option key={index} value={elem.lang}>
-              {elem.language}
-            </option>
-          );
-        })}
-      </select>
-    </li>
+        <i className="bi bi-person-fill"></i>
+      </div>
+      <ul
+        className="dropdown-menu"
+        style={{
+          width: "80px",
+          minWidth: "80px !important",
+        }}
+      >
+        {value?.option?.map((elem, index) => (
+          <li
+            key={index}
+            onClick={() => {
+              changeLng(elem.lang);
+              i18n.changeLanguage(elem.lang);
+            }}
+            value={elem.lang}
+            className="dropdown-item"
+            style={{ marginLeft: "0px" }}
+          >
+            {elem.language}
+          </li>
+        ))}
+      </ul>
+    </div>
+    // <li
+    //   className="front-setting rounded"
+    //   style={{ border: "1px solid #3FA34B", backgroundColor: "#3FA34B" }}
+    // >
+    //   <select
+    //     value={i18LangStatus}
+    //     style={{ color: "white" }}
+    //     onChange={(e) => {
+    //       changeLng(e.target.value);
+    //       i18n.changeLanguage(e.target.value);
+    //     }}
+    //   >
+    //     {value?.option?.map((elem, index) => {
+    //       return (
+    //         <option key={index} value={elem.lang}>
+    //           {elem.language}
+    //         </option>
+    //       );
+    //     })}
+    //   </select>
+    // </li>
   );
 };
 

@@ -1226,7 +1226,7 @@ header {
 
           select {
             color: $grey-darker;
-            background: url(../../images/icon/down-black.png) no-repeat 80%;
+            // background: url(../../images/icon/down-black.png) no-repeat 80%;
           }
         }
 
@@ -16119,8 +16119,8 @@ section {
 
     .title-top {
       padding: 20px 30px;
-      background-color: $inner-bg;
-
+      background-color:#e87c29;
+        color: white;
       h5 {
         margin-bottom: 0;
         text-transform: capitalize;
@@ -22263,4 +22263,41 @@ $c-loader-front: #cee4e7;
       background-color: hsl(200, 20%, 95%);
     }
   }
+}
+
+// .selectOption:hover {
+//   background-color: red !important;
+// }
+.dropdown-item:hover{
+  background-color: #243b72;
+  color:white
+}
+.dropdown-item:active{
+  background-color: #243b72;
+  color:white
+}
+.dropdown-menu{
+  min-width: 80px !important;
+}
+
+.down-arrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid black; /* Adjust the size as needed */
+}
+
+.down-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Adjust the position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid black; /* Adjust the size as needed */
 }

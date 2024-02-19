@@ -18,7 +18,7 @@ const Summary = ({ bookingDetails }: ISummary) => {
     <>
       {bookingDetails && bookingDetails.price && (
         <div className="review_box">
-          <div className="title-top">
+          <div className="title-top" >
             <h5>{BookingSummary}</h5>
           </div>
           <div className="flight_detail">
