@@ -3,31 +3,37 @@ const MENUITEMS: IMenuItemProps[] = [
     title: "home",
     type: "sub",
     megaMenu: false,
+    path: "/",
   },
   {
     title: "Service",
     type: "sub",
     megaMenu: false,
+    path: "/",
   },
   {
     title: "Top Deals",
     type: "sub",
     megaMenu: false,
+    path: "/",
   },
   {
     title: "Package",
     type: "sub",
     megaMenu: false,
+    path: "/",
   },
   {
     title: "Blog",
     type: "sub",
     megaMenu: false,
+    path: "/",
   },
   {
     title: "Contact",
     type: "sub",
     megaMenu: false,
+    path: "/pages/other-pages/contact-us-2",
   },
 ];
 

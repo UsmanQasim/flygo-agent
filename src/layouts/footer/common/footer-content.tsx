@@ -10,7 +10,13 @@ import TopPlace from "./top-place";
 const FooterContent: React.FC<IFooterComponentProps> = ({ place }) => {
   return (
     <>
-      <div className="footer section-b-space section-t-space">
+      <div
+        className="footer section-b-space section-t-space"
+        style={{
+          background:
+            "linear-gradient(1deg, rgba(36, 57, 115, 1) 50%, rgb(28 92 8 / 62%) 100%)",
+        }}
+      >
         <div className="container">
           <div className="row order-row">
             <ContactUs />

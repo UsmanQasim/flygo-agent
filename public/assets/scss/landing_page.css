@@ -1,6 +1,6 @@
 :root {
-  --theme-color1: 239, 63, 62;
-  --theme-color2: 0, 162, 247;
+  --theme-color1: 231, 124, 43;
+  --theme-color2: 36, 59, 113;
 }
 
 /*=====================
@@ -96,14 +96,14 @@ header {
   font-weight: 600;
 }
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #3dc1ff;
+  color: #243B71;
   transition: all 0.5s ease;
 }
 .navbar-light .navbar-nav .nav-item a {
   text-transform: capitalize;
 }
 .navbar-light .navbar-nav .nav-item a.active {
-  color: #3dc1ff;
+  color: #243B71;
   transition: all 0.5s ease;
 }
 .navbar-light .navbar-toggler:focus {
@@ -135,7 +135,7 @@ header {
 .purchase-btn {
   letter-spacing: 0.5em;
   color: #ffffff;
-  background: #3dc1ff;
+  background: #243B71;
   width: 160px;
   height: 65px;
   font-weight: 500;
@@ -443,7 +443,7 @@ body .animated-section .animation-section {
 .demo-section .arrow-classic .slick-next:before,
 .demo-section .arrow-classic .slick-prev:before {
   padding: 12px;
-  color: #3dc1ff;
+  color: #243B71;
 }
 
 .intro-section {
@@ -484,7 +484,7 @@ body .animated-section .animation-section {
 .slide-center-3.arrow-classic .slick-next:before,
 .slide-center-3.arrow-classic .slick-prev:before {
   padding: 12px;
-  color: #3dc1ff;
+  color: #243B71;
 }
 .slide-center-3 .slick-list {
   margin-left: -20px;
@@ -558,7 +558,7 @@ body .animated-section .animation-section {
   transition: all 0.5s ease;
 }
 .main-feature .key-feature .theme-collection:hover h5 {
-  color: #3dc1ff;
+  color: #243B71;
   transition: all 0.3s ease;
 }
 .main-feature .key-feature .theme-collection:hover img {
@@ -680,7 +680,7 @@ body .animated-section .animation-section {
 .portfolio-3.arrow-classic .slick-next:before,
 .portfolio-3.arrow-classic .slick-prev:before {
   padding: 12px;
-  color: #3dc1ff;
+  color: #243B71;
 }
 
 .blog-landing {

@@ -10,12 +10,20 @@ interface ITitleThreeProps {
   h2Class?: string;
 }
 
-const TitleThree: FC<ITitleThreeProps> = ({ title, subTitle, desc, classTitle, span, pClass, h2Class }) => {
+const TitleThree: FC<ITitleThreeProps> = ({
+  title,
+  subTitle,
+  desc,
+  classTitle,
+  span,
+  pClass,
+  h2Class,
+}) => {
   return (
     <div className={classTitle}>
       {title && <span className="title-label">{title}</span>}
       <h2 className={h2Class && h2Class}>
-        {subTitle} {span && <span>{span}</span>}
+        {subTitle} {span && <span style={{ color: "#213B70" }}>{span}</span>}
       </h2>
       <p className={pClass && pClass}>{desc}</p>
     </div>

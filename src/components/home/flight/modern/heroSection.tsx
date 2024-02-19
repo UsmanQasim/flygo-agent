@@ -22,8 +22,12 @@ const HeroSection: FC = () => {
 
   useEffect(() => {
     // Initialize the carousel when the component mounts
-    const carousel = document.querySelector(".carousel");
-    new window.bootstrap.Carousel(carousel);
+    var myCarousel = document.querySelector(".carousel");
+    new window.bootstrap.Carousel(myCarousel, {
+      interval: 5000,
+      wrap: true,
+    });
+    // new window.bootstrap.Carousel(carousel);
   }, []); // Run only once on component mount
 
   const paragraphStyle = {
@@ -46,10 +50,33 @@ const HeroSection: FC = () => {
 
   return (
     <div
-      id="carouselExampleControls"
+      id="carouselExampleIndicators"
       className="carousel slide"
       data-bs-ride="carousel"
     >
+      <div className="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="carouselExampleIndicators"
+          data-bs-slide-to="0"
+          className="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
       <div className="carousel-inner">
         <div className="carousel-item active">
           <div
@@ -84,9 +111,9 @@ const HeroSection: FC = () => {
                 }}
                 className="my-5 "
               >
-                <p style={paragraphStyle}>
+                <span style={paragraphStyle}>
                   "Discover Your Next Adventure: Explore, Dream, Travel!"
-                </p>
+                </span>
               </div>
               <Link href="https://flygo-admin.vercel.app/auth/login">
                 <button
@@ -136,9 +163,9 @@ const HeroSection: FC = () => {
                 }}
                 className="my-5 "
               >
-                <p style={paragraphStyle}>
+                <span style={paragraphStyle}>
                   FlyGO - Your Passport to Unforgettable Adventures
-                </p>
+                </span>
               </div>
               <Link href="https://flygo-admin.vercel.app/auth/login">
                 <button
@@ -178,6 +205,7 @@ const HeroSection: FC = () => {
                 flexDirection: "column",
               }}
             >
+              <span></span>
               <div
                 style={{
                   backgroundColor: "#fbfcfb82",
@@ -188,9 +216,9 @@ const HeroSection: FC = () => {
                 }}
                 className="my-5 "
               >
-                <p style={paragraphStyle2}>
+                <span style={paragraphStyle2}>
                   Where Comfort Meets Adventure: Your Journey, Our Promise
-                </p>
+                </span>
               </div>
               <Link href="https://flygo-admin.vercel.app/auth/login">
                 <button
@@ -212,7 +240,7 @@ const HeroSection: FC = () => {
       <button
         className="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselExampleControls"
+        data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev"
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -221,7 +249,7 @@ const HeroSection: FC = () => {
       <button
         className="carousel-control-next"
         type="button"
-        data-bs-target="#carouselExampleControls"
+        data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next"
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>

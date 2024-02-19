@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { IStoredFormData } from "./page";
+import { countries } from "./country";
 
 const SESSION_STORAGE_KEY = "formData";
 
@@ -298,9 +299,16 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                     <option value="" disabled>
                       Nationality
                     </option>
-                    <option value="Pakistan">Pakistan</option>
-                    <option value="Saudia Arabia">Saudia Arabia</option>
-                    <option value="Brazil">Brazil</option>
+                    {countries.map((data, i) => {
+                      return (
+                        <option key={i} value={data.name}>
+                          {data.name}
+                        </option>
+                      );
+                    })}
+
+                    {/* <option value="Saudia Arabia">Saudia Arabia</option>
+                    <option value="Brazil">Brazil</option> */}
                   </select>
                 </div>
               </div>
@@ -357,9 +365,16 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                     <option value="" disabled>
                       Issue Country
                     </option>
-                    <option value="Pakistan">Pakistan</option>
+                    {countries.map((data, i) => {
+                      return (
+                        <option key={i} value={data.name} className="select">
+                          {data.name}
+                        </option>
+                      );
+                    })}
+                    {/* <option value="Pakistan">Pakistan</option>
                     <option value="Saudi Arabia">Saudi Arabia</option>
-                    <option value="Uganda">Uganda</option>
+                    <option value="Uganda">Uganda</option> */}
                   </select>
                 </div>
               </div>

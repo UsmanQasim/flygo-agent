@@ -19,7 +19,10 @@ const LocationOption: FC<LocationOptionProps> = ({
           checked={isOneWay}
           onChange={() => onOptionChange("oneway")}
         />
-        <label className="text-dark form-check-label" htmlFor="exampleRadios1">
+        <label
+          className="text-dark form-check-label text-white"
+          htmlFor="exampleRadios1"
+        >
           {OneWay}
         </label>
       </div>
@@ -33,11 +36,14 @@ const LocationOption: FC<LocationOptionProps> = ({
           checked={isRoundTrip}
           onChange={() => onOptionChange("round")}
         />
-        <label className="text-dark form-check-label" htmlFor="exampleRadios2">
+        <label
+          className="text-dark form-check-label text-white"
+          htmlFor="exampleRadios2"
+        >
           {RoundTrip}
         </label>
       </div>
-      <div className="form-check form-check-inline">
+      <div className="form-check form-check-inline ">
         <input
           className="form-check-input"
           type="radio"
@@ -47,7 +53,10 @@ const LocationOption: FC<LocationOptionProps> = ({
           checked={isMultiCityTrip}
           onChange={() => onOptionChange("multi")}
         />
-        <label className="text-dark form-check-label" htmlFor="exampleRadios3">
+        <label
+          className="text-dark form-check-label text-white"
+          htmlFor="exampleRadios3"
+        >
           {MultiCityRoute}
         </label>
       </div>

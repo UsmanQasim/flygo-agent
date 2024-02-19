@@ -20,29 +20,41 @@ const Sidebar: React.FC = () => {
               onClick={() => setToggleSideBar(!toggleSideBar)}
             ></i>
           </div> */}
-          <div className={`menu-overlay ${toggleSideBar?"show":""}`}></div>
-          <ul className="nav-menu" style={{ right: toggleSideBar ? "0px" : "" }}>
-          <li className="back-btn">
-            <div
-              className="mobile-back text-end"
-              onClick={() => setToggleSideBar(!toggleSideBar)}
-            >
-              <span>{Back}</span>
-              <i aria-hidden="true" className="fa fa-angle-right ps-2"></i>
-            </div>
-          </li>
-          {MENUITEMS.map((item, i) => {
-            return (
-              <Fragment key={i}>
-                {item.megaMenu ? (
-                  <MeghaMenu item={item} isOpen={isOpen} setIsOpen={setIsOpen} />
-                ) : (
-                  <DropdownMenu level={0} item={item} isOpen={isOpen} setIsOpen={setIsOpen} />
-                )}
-              </Fragment>
-            );
-          })}
-        </ul>
+          <div className={`menu-overlay ${toggleSideBar ? "show" : ""}`}></div>
+          <ul
+            className="nav-menu"
+            style={{ right: toggleSideBar ? "0px" : "" }}
+          >
+            <li className="back-btn">
+              <div
+                className="mobile-back text-end"
+                onClick={() => setToggleSideBar(!toggleSideBar)}
+              >
+                <span>{Back}</span>
+                <i aria-hidden="true" className="fa fa-angle-right ps-2"></i>
+              </div>
+            </li>
+            {MENUITEMS.map((item, i) => {
+              return (
+                <Fragment key={i}>
+                  {item.megaMenu ? (
+                    <MeghaMenu
+                      item={item}
+                      isOpen={isOpen}
+                      setIsOpen={setIsOpen}
+                    />
+                  ) : (
+                    <DropdownMenu
+                      level={0}
+                      item={item}
+                      isOpen={isOpen}
+                      setIsOpen={setIsOpen}
+                    />
+                  )}
+                </Fragment>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </nav>

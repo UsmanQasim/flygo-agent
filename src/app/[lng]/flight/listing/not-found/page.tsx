@@ -8,18 +8,31 @@ import Banner from "@/components/common/banner/image-banner";
 
 const NoSidebar: FC = () => {
   useEffect(() => {
-    document.documentElement.style.setProperty("--theme-color1", "66, 145, 184");
+    document.documentElement.style.setProperty("--theme-color1", "36, 59, 113");
     document.documentElement.style.setProperty("--theme-color2", "239, 63, 62");
 
     return () => {
-      document.documentElement.style.setProperty("--theme-color1","239, 63, 62");
-      document.documentElement.style.setProperty("--theme-color2","0, 162, 247");
+      document.documentElement.style.setProperty(
+        "--theme-color1",
+        "239, 63, 62"
+      );
+      document.documentElement.style.setProperty(
+        "--theme-color2",
+        "0, 162, 247"
+      );
     };
   }, []);
-  
+
   return (
-    <CustomLayout title="light_header custom-user-header" loader="flight" logo="dark">
-      <Banner classSection={"breadcrumb-section small-sec pt-0"} img={"/assets/images/flights/flight-breadcrumb2.jpg"} />
+    <CustomLayout
+      title="light_header custom-user-header"
+      loader="flight"
+      logo="dark"
+    >
+      <Banner
+        classSection={"breadcrumb-section small-sec pt-0"}
+        img={"/assets/images/flights/flight-breadcrumb2.jpg"}
+      />
       <SearchSection />
       <NotFound />
     </CustomLayout>

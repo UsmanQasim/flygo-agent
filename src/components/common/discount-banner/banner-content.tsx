@@ -9,7 +9,9 @@ interface IBannerContentProps {
   type?: string;
 }
 const BannerContent: FC<IBannerContentProps> = ({ type }) => {
-  const { symbol, currencyValue } = useSelector((state: RootState) => state.currency);
+  const { symbol, currencyValue } = useSelector(
+    (state: RootState) => state.currency
+  );
   return (
     <div className="banner-content">
       <div>
@@ -32,20 +34,27 @@ const BannerContent: FC<IBannerContentProps> = ({ type }) => {
         <h2>
           {Discount} <span>20-30%</span>
         </h2>
-        <p>Unlock unbeatable savings of 20% to 30% on all flight bookings! Don't miss out on this exclusive discount for your next journey."</p>
+        <p>
+          Unlock unbeatable savings of 20% to 30% on all flight bookings! Don't
+          miss out on this exclusive discount for your next journey."
+        </p>
         <h2 className="price">
           {type === "tour" && (
             <del>
               {symbol}
               {(currencyValue * 600).toFixed(0)}
             </del>
-          )} {symbol}{(currencyValue * 420).toFixed(0)}
+          )}{" "}
+          {symbol}
+          {(currencyValue * 420).toFixed(0)}
         </h2>
         <div className="bottom-section">
           <Link href="" className="btn btn-rounded btn-sm color1">
             {BuyNow}
           </Link>
-          <div className="info-btn"><h6>7 days &nbsp; | &nbsp; 8 nights</h6></div>
+          <div className="info-btn">
+            <h6>7 days &nbsp; | &nbsp; 8 nights</h6>
+          </div>
         </div>
       </div>
     </div>

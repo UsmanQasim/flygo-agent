@@ -4,6 +4,7 @@ interface IMenuItemProps {
   type: string;
   megaMenu?: boolean;
   children?: IMenuChildProps[];
+  url?: string;
 }
 
 interface IMenuChildProps {

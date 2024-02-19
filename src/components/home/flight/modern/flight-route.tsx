@@ -6,21 +6,30 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux-toolkit/store";
 import Rating from "@/components/common/rating";
 import Img from "@/utils/BackgroundImageRatio";
-import Link from 'next/link';
+import Link from "next/link";
 
 const FlightRoute: FC = () => {
-  const { symbol, currencyValue } = useSelector((state: RootState) => state.currency);
+  const { symbol, currencyValue } = useSelector(
+    (state: RootState) => state.currency
+  );
   return (
     <section className="routes-section ratio_landscape section-b-space">
       <div className="container">
-        <TitleThree classTitle={"title-2"} subTitle="top flight routes..."  desc="Explore our top-tier air routes for superior travel convenience and comfort." />
+        <TitleThree
+          classTitle={"title-2"}
+          subTitle="top flight routes..."
+          desc="Explore our top-tier air routes for superior travel convenience and comfort."
+        />
         <div className="row">
-          {topDealData.map((data: ITopProps,index) => (
+          {topDealData.map((data: ITopProps, index) => (
             <div className="col-lg-3 col-6" key={index}>
               <div className="routes-box">
                 <Link href="" className="routes-img">
                   <Img src={data.image} alt="" className="img-fluid bg-img" />
-                  <div className="price-round">
+                  <div
+                    className="price-round"
+                    style={{ background: "#213B70" }}
+                  >
                     <div>
                       <h6>
                         <del>

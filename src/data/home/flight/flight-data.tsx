@@ -320,7 +320,7 @@ export const subscribeData = [
     id: 1,
     svg: <ServiceBoxSvg />,
     title: "call us",
-    contact: "+91 123-456-7890",
+    contact: "+966 1-4458333 ",
   },
   {
     id: 2,

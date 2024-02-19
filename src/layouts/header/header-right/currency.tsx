@@ -24,7 +24,7 @@ const Currency: React.FC<ICurrencyProps> = ({ value }) => {
   return (
     <li
       className="front-setting rounded"
-      style={{ border: "1px solid #E77C2B", backgroundColor: "orange" }}
+      style={{ border: "1px solid whtie", backgroundColor: "#E77C2B" }}
     >
       <select
         onChange={handleCurrencyChange}
@@ -32,12 +32,7 @@ const Currency: React.FC<ICurrencyProps> = ({ value }) => {
         style={{ color: "white" }}
       >
         {value?.type?.map((currencyType, index) => (
-          <option
-            key={index}
-            value={currencyType.name}
-            className=""
-            style={{ color: "orange" }}
-          >
+          <option key={index} value={currencyType.name} className="">
             {currencyType.name}
           </option>
         ))}

@@ -97,8 +97,7 @@ const MultiCityInput: FC<MultiCityInputProps> = (props) => {
         )}
         <button
           type="button"
-          className="btn btn-solid color1 bold font-8"
-          style={{ background: "#E77C2B" }}
+          className="btn btn-solid color1 bold"
           onClick={() => removeCityData(city.id)}
         >
           -
@@ -297,11 +296,7 @@ const FlightThree: FC = ({}) => {
       <div className="col">
         <SelectTraveler onPassengerChange={handlePassengerChange} />
       </div>
-      <button
-        className="btn btn-rounded color1"
-        type="submit"
-        style={{ background: "#E77C2B", color: "white" }}
-      >
+      <button className="btn btn-rounded color1" type="submit">
         Book Now
       </button>
     </form>
@@ -352,7 +347,7 @@ function ManageMultiCities(props: ManageMultiCitiesProps) {
             type="button"
             onClick={() => addCityData()}
             className="btn btn-solid color1"
-            style={{ background: "green" }}
+            // style={{ background: "green" }}
           >
             +
           </button>

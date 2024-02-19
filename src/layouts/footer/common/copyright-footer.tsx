@@ -3,7 +3,7 @@ import SocialMedia from "./SocialMedia";
 
 const CopyRightFooter: FC = () => {
   return (
-    <div className="sub-footer">
+    <div className="sub-footer" style={{ background: "#E77C2A" }}>
       <div className="container">
         <div className="row">
           <div className="col-xl-6 col-md-6 col-sm-12">
@@ -13,9 +13,9 @@ const CopyRightFooter: FC = () => {
           </div>
           <div className="col-xl-6 col-md-6 col-sm-12">
             <div className="copy-right">
-              <p>
+              <p className="text-white">
                 copyright 2023 Whetstonez{" "}
-                <i className="fas fa-heart" style={{ color: "black" }}></i>
+                <i className="fas fa-heart text-white"></i>
               </p>
             </div>
           </div>

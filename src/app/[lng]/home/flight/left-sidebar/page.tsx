@@ -12,10 +12,7 @@ import FooterComponent from "@/layouts/footer/footer";
 
 const LeftSidebarFlight: FC = () => {
   useEffect(() => {
-    document.documentElement.style.setProperty(
-      "--theme-color1",
-      "66, 145, 184"
-    );
+    document.documentElement.style.setProperty("--theme-color1", "36, 59, 113");
     document.documentElement.style.setProperty("--theme-color2", "239, 63, 62");
 
     return () => {

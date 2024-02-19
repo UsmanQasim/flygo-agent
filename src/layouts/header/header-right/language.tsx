@@ -32,7 +32,10 @@ const Language: React.FC<ILanguageProps> = ({ value }) => {
   }, []);
 
   return (
-    <li className="front-setting rounded" style={{ border: "1px solid green",backgroundColor:'green' }}>
+    <li
+      className="front-setting rounded"
+      style={{ border: "1px solid #3FA34B", backgroundColor: "#3FA34B" }}
+    >
       <select
         value={i18LangStatus}
         style={{ color: "white" }}
@@ -43,7 +46,7 @@ const Language: React.FC<ILanguageProps> = ({ value }) => {
       >
         {value?.option?.map((elem, index) => {
           return (
-            <option key={index} value={elem.lang} style={{ color: "green" }}>
+            <option key={index} value={elem.lang}>
               {elem.language}
             </option>
           );

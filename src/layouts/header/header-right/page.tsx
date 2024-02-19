@@ -53,16 +53,17 @@ const HeaderRight: React.FC<IHeaderRightProps> = ({ userBgClass }) => {
             <li className={`${userBgClass && userBgClass}`}>
               <Link
                 href={"https://flygo-admin.vercel.app/dashboard"}
-                className="border rounded p-2"
+                className="rounded p-2"
                 style={{
                   display: "flex",
                   gap: 10,
                   justifyContent: "space-between",
                   alignItems: "center",
+                  border: "1px solid #213B70",
                 }}
               >
-                <i className="fas fa-user " color="#233A6F"></i>
-                <b>{user?.representativeName}</b>
+                <i className="fas fa-user " color="#213B70"></i>
+                <b style={{ color: "#213B70" }}>{user?.representativeName}</b>
               </Link>
             </li>
           )}

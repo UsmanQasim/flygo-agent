@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { FC, useEffect } from "react";
 import CustomLayout from "@/layouts/layout";
 
@@ -11,22 +11,35 @@ import BlogsComponent from "@/components/home/flight/minimal/blog";
 
 const MinimalFlight: FC = () => {
   useEffect(() => {
-    document.documentElement.style.setProperty("--theme-color1", "66, 145, 184");
+    document.documentElement.style.setProperty("--theme-color1", "36, 59, 113");
     document.documentElement.style.setProperty("--theme-color2", "239, 63, 62");
 
     return () => {
-      document.documentElement.style.setProperty("--theme-color1","239, 63, 62");
-      document.documentElement.style.setProperty("--theme-color2","0, 162, 247");
+      document.documentElement.style.setProperty(
+        "--theme-color1",
+        "239, 63, 62"
+      );
+      document.documentElement.style.setProperty(
+        "--theme-color2",
+        "0, 162, 247"
+      );
     };
   }, []);
   return (
-    <CustomLayout title="overlay-white" footerPlace={true} userBgClass="user user-light">
+    <CustomLayout
+      title="overlay-white"
+      footerPlace={true}
+      userBgClass="user user-light"
+    >
       <HomeBanner />
       <HolidayPackage />
       <DiscountBanner />
       <BestOffer />
       <AppOffer />
-      <BlogsComponent btnClass="btn btn-rounded btn-sm color1" sectionClass="dark-cls bg-size blur-up lazyloaded" />
+      <BlogsComponent
+        btnClass="btn btn-rounded btn-sm color1"
+        sectionClass="dark-cls bg-size blur-up lazyloaded"
+      />
     </CustomLayout>
   );
 };
