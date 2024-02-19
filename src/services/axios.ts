@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, InternalAxiosRequestConfig } from "axios";
-// import nookies from "nookies";
+import { parseCookies } from "nookies";
 
 export class AxiosProvider {
   private static instance: AxiosInstance | null = null;
@@ -19,11 +19,11 @@ export class AxiosProvider {
 
       AxiosProvider.instance.interceptors.request.use(
         (config: InternalAxiosRequestConfig) => {
-          const rawToken = localStorage.getItem("accessToken");
+          const cookies = parseCookies();
+          const rawToken = cookies.accessToken;
 
           if (rawToken) {
             const token = JSON.parse(rawToken);
-
             config.headers.Authorization = `Bearer ${token}`;
           }
 

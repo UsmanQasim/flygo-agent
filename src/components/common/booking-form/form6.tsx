@@ -47,12 +47,12 @@ const LoginForm: FC = () => {
           path: "/", // Cookie accessible from all paths
         });
 
-        router.push("/home/flight");
+        // router.push("/home/flight");
 
-        // const redirectURL = `https://flygo-admin.vercel.app/dashboard`;
+        const redirectURL = `https://flygo-admin.vercel.app/dashboard`;
 
         // Redirect the user
-        // window.location.href = redirectURL;
+        window.location.href = redirectURL;
 
         toast.success("Login successful");
       } else {

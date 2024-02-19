@@ -10,6 +10,7 @@ import {
 import Img from "@/utils/BackgroundImageRatio";
 import Link from "next/link";
 import { FC, useEffect, useState } from "react";
+import { parseCookies } from "nookies";
 
 const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
   const [code, setCode] = useState("");
@@ -25,7 +26,8 @@ const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
   }, []);
 
   useEffect(() => {
-    const token = localStorage.getItem("accessToken");
+    const cookies = parseCookies();
+    const token = cookies.accessToken;
     if (!token) return;
 
     const parsedToken = JSON.parse(token);

@@ -9,6 +9,7 @@ import Link from "next/link";
 import Currency from "./currency";
 import Language from "./language";
 import { IHeaderRightProps } from "./header-right";
+import { parseCookies } from "nookies";
 
 export type UserInfoType = {
   id: number;
@@ -38,7 +39,8 @@ const HeaderRight: React.FC<IHeaderRightProps> = ({ userBgClass }) => {
   const [user, setUser] = useState<UserInfoType | null>();
 
   useEffect(() => {
-    const userInfo = localStorage.getItem("userData");
+    const cookies = parseCookies();
+    const userInfo = cookies.userData;
     if (userInfo) setUser(JSON.parse(userInfo));
   }, []);
 
@@ -51,20 +53,37 @@ const HeaderRight: React.FC<IHeaderRightProps> = ({ userBgClass }) => {
           {value.title === "language" && <Language value={value} />}
           {value.title === "user" && (
             <li className={`${userBgClass && userBgClass}`}>
-              <Link
-                href={"https://flygo-admin.vercel.app/dashboard"}
-                className="rounded p-2"
-                style={{
-                  display: "flex",
-                  gap: 10,
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  border: "1px solid #213B70",
-                }}
-              >
-                <i className="fas fa-user " color="#213B70"></i>
-                <b style={{ color: "#213B70" }}>{user?.representativeName}</b>
-              </Link>
+              {user ? (
+                <Link
+                  href={"https://flygo-admin.vercel.app/dashboard"}
+                  className="rounded p-2"
+                  style={{
+                    display: "flex",
+                    gap: 10,
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    border: "1px solid #213B70",
+                  }}
+                >
+                  <i className="fas fa-user " color="#213B70"></i>
+                  <b style={{ color: "#213B70" }}>{user?.representativeName}</b>
+                </Link>
+              ) : (
+                <Link
+                  href={"https://flygo-admin.vercel.app/dashboard"}
+                  className="rounded p-2"
+                  style={{
+                    display: "flex",
+                    gap: 10,
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    border: "1px solid #213B70",
+                  }}
+                >
+                  {/* <i className="fas fa-user " color="#213B70"></i> */}
+                  <b style={{ color: "#213B70" }}>LOGIN</b>
+                </Link>
+              )}
             </li>
           )}
           {value.title === "setting" && (

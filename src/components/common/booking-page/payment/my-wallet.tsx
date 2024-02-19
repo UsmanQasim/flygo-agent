@@ -1,25 +1,24 @@
 import { FC, useEffect, useState } from "react";
-import SuccessBtn from "@/components/hotels/booking/checkout/payment-section/success-btn";
-import { SelectYourWallet } from "@/constant/constant";
-import { options } from "@/data/hotels/booking";
 import { UserInfoType } from "@/layouts/header/header-right/page";
 import {
   ICompleteBookingProps,
   completeBookingFlight,
 } from "@/services/flights";
 import { useRouter } from "next/navigation";
+import { parseCookies } from "nookies";
 
 const MyWallet: FC = () => {
   const router = useRouter();
+  const cookies = parseCookies();
+  const userInfoCookie = cookies.userData;
 
   const [selectedOption, setSelectedOption] = useState<boolean>(false);
   const [userInfo, setUserInfo] = useState<UserInfoType | null>(null);
 
   useEffect(() => {
-    const userInfoLocal = localStorage.getItem("userData");
-    if (!userInfoLocal) return;
+    if (!userInfoCookie) return;
 
-    const userInfoParsed = JSON.parse(userInfoLocal);
+    const userInfoParsed = JSON.parse(userInfoCookie);
     setUserInfo(userInfoParsed);
   }, []);
 
