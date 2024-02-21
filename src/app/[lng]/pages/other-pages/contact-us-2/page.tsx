@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { FC } from "react";
 // import "@/public/assets/scss/color1.scss";
 import CustomLayout from "@/layouts/layout";
@@ -8,7 +8,13 @@ import ContactContent2 from "@/components/pages/other-pages/contact-us/contact-u
 const Contact2: FC = () => {
   return (
     <CustomLayout title="light_header" userBgClass="user user-light">
-      <Breadcrumb title={"home"} subTitle={"about us"} bannerImg={"/assets/images/inner-bg.jpg"} />
+      <Breadcrumb
+        // title={"home"}
+        title={""}
+        subTitle={""}
+        // subTitle={"about us"}
+        bannerImg={"/assets/contact.jpg"}
+      />
       <ContactContent2 />
     </CustomLayout>
   );

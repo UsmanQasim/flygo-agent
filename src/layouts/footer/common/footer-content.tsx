@@ -13,8 +13,8 @@ const FooterContent: React.FC<IFooterComponentProps> = ({ place }) => {
       <div
         className="footer section-b-space section-t-space"
         style={{
-          background:
-            "linear-gradient(1deg, rgba(36, 57, 115, 1) 50%, rgb(28 92 8 / 62%) 100%)",
+          background: "#233972",
+          // "linear-gradient(1deg, rgba(36, 57, 115, 1) 50%, rgb(28 92 8 / 62%) 100%)",
         }}
       >
         <div className="container">
@@ -22,7 +22,7 @@ const FooterContent: React.FC<IFooterComponentProps> = ({ place }) => {
             <ContactUs />
             <About />
             {place ? <TopPlace /> : <Location />}
-            <Links />
+            {/* <Links /> */}
             <Updates />
           </div>
         </div>

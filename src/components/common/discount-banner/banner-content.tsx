@@ -49,7 +49,7 @@ const BannerContent: FC<IBannerContentProps> = ({ type }) => {
           {(currencyValue * 420).toFixed(0)}
         </h2>
         <div className="bottom-section">
-          <Link href="" className="btn btn-rounded btn-sm color1">
+          <Link href="/pages/other-pages/coming-soon-1" className="btn btn-rounded btn-sm color1">
             {BuyNow}
           </Link>
           <div className="info-btn">

@@ -2,12 +2,13 @@ import {
   selectCurrency,
   setCurrencyChange,
 } from "@/redux-toolkit/reducers/currency";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const Currency: React.FC<ICurrencyProps> = ({ value }) => {
   const { currency } = useSelector(selectCurrency);
   const dispatch = useDispatch();
+  const [selectedCurrency, setSelectedCurrency] = useState("");
 
   const handleCurrencyChange = (value: any) => {
     const selectedCurrency = value;
@@ -61,7 +62,7 @@ const Currency: React.FC<ICurrencyProps> = ({ value }) => {
         <i className="bi bi-person-fill"></i>
       </div>
       <ul
-        className="dropdown-menu"
+        className="dropdown-menu languageDrop"
         style={{
           minWidth: "80px !important",
           width: "80px",
@@ -70,9 +71,14 @@ const Currency: React.FC<ICurrencyProps> = ({ value }) => {
         {value?.type?.map((currencyType, index) => (
           <li
             key={index}
-            onClick={() => handleCurrencyChange(currencyType.name)}
+            onClick={() => {
+              handleCurrencyChange(currencyType.name);
+              setSelectedCurrency(currencyType.name); // Set selected currency
+            }}
             value={currencyType.name}
-            className="dropdown-item"
+            className={`dropdown-item ${
+              selectedCurrency === currencyType.name ? "active" : ""
+            }`} // Apply 'active' class to the selected item
             style={{ marginLeft: "0px" }}
           >
             {currencyType.name}

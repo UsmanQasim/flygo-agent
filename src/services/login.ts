@@ -77,3 +77,34 @@ export const loginAgent = async (data: ILoginProps) => {
     console.log(e);
   }
 };
+
+export interface FormData {
+  fullName: string;
+  email: string;
+  password: string;
+  landline: string;
+  mobile: string;
+  country: string;
+  city: string;
+  agentId: string;
+  username: string;
+  companyName: string;
+  representativeName: string;
+  akamaNumber: string;
+  companyLogo?: File | null;
+  documents?: File | null;
+}
+
+
+
+export const registerAgent = async (data: FormData) => {
+  try {
+    const response = await Axios.post<any>(
+      "/agent/register",
+      data
+    );
+    return response.data;
+  } catch (e) {
+    console.log(e);
+  }
+};

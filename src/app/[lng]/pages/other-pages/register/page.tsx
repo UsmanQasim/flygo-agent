@@ -8,7 +8,13 @@ import LoginPage from "@/components/pages/other-pages/login/page";
 const Register: FC = () => {
   return (
     <CustomLayout title="inner-page" userBgClass="user user-light">
-      <Breadcrumb title={"home"} subTitle={"sign up"} bannerImg={"/assets/images/inner-bg.jpg"} />
+      <Breadcrumb
+        title=""
+        subTitle=""
+        // title={"home"}
+        // subTitle={"sign up"}
+        bannerImg={"/assets/signup-s.jpg"}
+      />
       <LoginPage title="sign up" />
     </CustomLayout>
   );

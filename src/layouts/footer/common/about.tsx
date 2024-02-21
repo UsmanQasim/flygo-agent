@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const AboutComponent: React.FC = () => {
   return (
-    <div className="col-xl-2 col-md-3">
+    <div className="col-xl-2 col-md-6">
       <div className="footer-space">
         <div className="footer-title">
           <h5>{About}</h5>
@@ -14,7 +14,7 @@ const AboutComponent: React.FC = () => {
               <li className="text-white">
                 <Link
                   className="text-white"
-                  href="/pages/other-pages/about-us-1"
+                  href="/pages/other-pages/about-us-2"
                 >
                   about us
                 </Link>
@@ -37,7 +37,7 @@ const AboutComponent: React.FC = () => {
               <li className="text-white">
                 <Link
                   className="text-white"
-                  href="/pages/other-pages/user-dashboard"
+                  href="/pages/other-pages/coming-soon-1"
                 >
                   terms & co.
                 </Link>

@@ -30,15 +30,15 @@ const DropdownMenu: React.FC<IDropdownMenuProps> = ({
   return (
     <li className={`${itemClass === "level0" ? "dropdown" : ""}`}>
       <Link
-        onClick={(e) => {
-          if (item.type !== "link") {
-            e.preventDefault();
-          }
-          const temp = isOpen.slice();
-          temp[level] = item.title !== temp[level] && item.title;
-          setIsOpen(temp);
-        }}
-        href={item?.type !== "sub" ? `/${i18LangStatus}${item?.path}` : "#js"}
+        // onClick={(e) => {
+        //   if (item.type !== "link") {
+        //     e.preventDefault();
+        //   }
+        //   const temp = isOpen.slice();
+        //   temp[level] = item.title !== temp[level] && item.title;
+        //   setIsOpen(temp);
+        // }}
+        href={item?.type == "sub" ? `/${i18LangStatus}/${item?.path}` : "#js"}
         className={` ${hasChildren ? "nav-link menu-title " : ""} ${
           isOpen[level] === item.title ? " active" : ""
         } text-black  `}

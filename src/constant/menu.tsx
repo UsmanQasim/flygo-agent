@@ -3,13 +3,13 @@ const MENUITEMS: IMenuItemProps[] = [
     title: "home",
     type: "sub",
     megaMenu: false,
-    path: "/",
+    path: "home",
   },
   {
     title: "Service",
     type: "sub",
     megaMenu: false,
-    path: "/",
+    path: "home/flight",
   },
   {
     title: "Top Deals",
@@ -33,7 +33,7 @@ const MENUITEMS: IMenuItemProps[] = [
     title: "Contact",
     type: "sub",
     megaMenu: false,
-    path: "/pages/other-pages/contact-us-2",
+    path: "pages/other-pages/contact-us-2",
   },
 ];
 

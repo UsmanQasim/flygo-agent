@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Updates: React.FC = () => {
   return (
-    <div className="col-xl-3 col-md-6">
+    <div className="col-xl-4 px-4 col-md-6">
       <div className="footer-title">
         <h5>{NewTopics}</h5>
       </div>

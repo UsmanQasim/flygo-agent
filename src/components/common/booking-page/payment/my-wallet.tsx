@@ -45,6 +45,7 @@ const MyWallet: FC = () => {
     );
 
     if (
+      !userInfo ||
       !userDataLocalStorage ||
       !bookingDetailsSession ||
       !passengersSession ||
@@ -55,7 +56,7 @@ const MyWallet: FC = () => {
       return;
 
     let data = JSON.stringify({
-      agentId: userDataLocalStorage.id,
+      agentId: userInfo.id,
       seatsRequested:
         formDataSession.passengers.adults +
         formDataSession.passengers.children +
@@ -119,9 +120,13 @@ const MyWallet: FC = () => {
 
     completeBookingFlight(parseData)
       .then((res) => {
-        res?.data?.ItineraryRef?.ID &&
-          sessionStorage.setItem("BookingCode", res?.data?.ItineraryRef?.ID);
-        router.push(`${"/flight/booking/success"}`);
+        if (res?.success) {
+          res?.data?.ItineraryRef?.ID &&
+            sessionStorage.setItem("BookingCode", res?.data?.ItineraryRef?.ID);
+          router.push(`${"/flight/booking/success"}`);
+        } else {
+          router.push(`${"/flight/booking/failed"}`);
+        }
       })
       .catch((err) => {
         alert(`something went wrong  , ${err}`);

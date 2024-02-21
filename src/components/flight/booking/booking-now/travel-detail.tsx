@@ -1,6 +1,8 @@
 import { FC, useEffect, useState } from "react";
 import { IStoredFormData } from "./page";
 import { countries } from "./country";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const SESSION_STORAGE_KEY = "formData";
 
@@ -214,6 +216,7 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
   onChange,
   index,
 }) => {
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <div className="review_box">
       <div className="title-top">
@@ -272,9 +275,9 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                     value={passengerData.lastName}
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-4 flex flex-column">
                   <label htmlFor="last">Date of Birth</label>
-                  <input
+                  {/* <input
                     type="date"
                     className="form-control"
                     id="dob"
@@ -283,7 +286,37 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                       onChange("dateOfBirth", event.target.value)
                     }
                     value={passengerData.dateOfBirth}
-                  />
+                  /> */}
+                  <div className="w-100">
+                    <DatePicker
+                      id="dob"
+                      name="adult1-dateOfBirth"
+                      showIcon
+                      selected={
+                        passengerData.dateOfBirth
+                          ? new Date(passengerData.dateOfBirth)
+                          : null
+                      } // Convert string to Date object
+                      onChange={(date) => onChange("dateOfBirth", date)}
+                      // selected={startDate}
+                      // onChange={(date) => setStartDate(date)}
+                      className="dateSelector form-control"
+                      placeholderText="MM/DD/YYYY"
+                      icon={
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          fill="currentColor"
+                          className="bi bi-calendar"
+                          style={{ marginTop: "3px", marginRight: "3px" }}
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                        </svg>
+                      }
+                    />
+                  </div>
                 </div>
                 <div className="form-group col-md-4">
                   <label htmlFor="last">Nationality</label>
@@ -311,8 +344,7 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                     className="btn-group w-100"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{cursor:'pointer'}}
-
+                    style={{ cursor: "pointer" }}
                   >
                     <input
                       type="text"
@@ -376,9 +408,9 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                     value={passengerData.passport}
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-4 flex flex-column">
                   <label htmlFor="first">Expiration Date</label>
-                  <input
+                  {/* <input
                     type="date"
                     className="form-control"
                     name="adult1-expirationDate"
@@ -386,7 +418,36 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                       onChange("expirationDate", event.target.value)
                     }
                     value={passengerData.expirationDate}
-                  />
+                  /> */}
+                  <div className="w-100">
+                    <DatePicker
+                      name="adult1-expirationDate"
+                      showIcon
+                      selected={
+                        passengerData.expirationDate
+                          ? new Date(passengerData.expirationDate)
+                          : null
+                      } // Convert string to Date object
+                      onChange={(date) => onChange("expirationDate", date)}
+                      // selected={startDate}
+                      // onChange={(date) => setStartDate(date)}
+                      className="dateSelector form-control"
+                      placeholderText="MM/DD/YYYY"
+                      icon={
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          fill="currentColor"
+                          className="bi bi-calendar"
+                          style={{ marginTop: "3px", marginRight: "3px" }}
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                        </svg>
+                      }
+                    />
+                  </div>
                 </div>
                 <div className="form-group col-md-4">
                   <label htmlFor="inputState">Type</label>
@@ -429,7 +490,7 @@ const PassengerBox: FC<IPassengerBoxProps> = ({
                     className="btn-group w-100"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{cursor:'pointer'}}
+                    style={{ cursor: "pointer" }}
                   >
                     <input
                       type="text"

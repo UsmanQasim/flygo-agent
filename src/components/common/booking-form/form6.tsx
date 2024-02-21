@@ -1,15 +1,19 @@
 "use client";
 import { FC, useState } from "react";
 import Button from "../btn";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { loginAgent } from "@/services/login";
 import { setCookie } from "nookies";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const LoginForm: FC = () => {
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const router = useRouter();
+  const params = useSearchParams();
+  const returnURL = params.get("returnURL");
 
   const handleLogin = async () => {
     const data = {
@@ -46,18 +50,13 @@ const LoginForm: FC = () => {
           maxAge: 30 * 24 * 60 * 60, // 30 days
           path: "/", // Cookie accessible from all paths
         });
-
-        // router.push("/home/flight");
-
-        const redirectURL = `https://flygo-admin.vercel.app/dashboard`;
-
-        // Redirect the user
-        window.location.href = redirectURL;
-
-        toast.success("Login successful");
+        toast.success("Login successful 🙌");
+        router.push(
+          returnURL ? decodeURI(returnURL) : "/pages/other-pages/user-dashboard"
+        );
       } else {
+        toast.error("Login Failed ");
         console.log("failed");
-        toast.error("Login failed");
       }
     });
   };
@@ -101,17 +100,17 @@ const LoginForm: FC = () => {
         </label>
       </div>
       <div className="button-bottom">
-        {/* <Link href="/en/pages/other-pages/register">
-          <Button btnClass="w-100 btn btn-solid" name="create account" />
-        </Link>
-        <div className="divider">
-          <h6>or</h6>
-        </div> */}
         <Button
           btnClass="w-100 btn btn-solid btn-outline"
           onClick={handleLogin}
           name="login"
         />
+        {/* <div className="divider">
+          <h6>or</h6>
+        </div>
+        <Link href="/en/pages/other-pages/register">
+          <Button btnClass="w-100 btn btn-solid" name="create account" />
+        </Link> */}
       </div>
     </form>
   );

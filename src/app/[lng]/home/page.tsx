@@ -9,6 +9,7 @@ import TopDestination from "@/components/home/flight/modern/top-destination";
 import Blog from "@/components/home/flight/modern/blog";
 import SubscribeComp from "@/components/home/flight/modern/subscribe";
 import HeroSection from "@/components/home/flight/modern/heroSection";
+import FooterComponent from "@/layouts/footer/footer";
 
 const Home: FC = () => {
   return (
@@ -27,7 +28,8 @@ const Home: FC = () => {
       {/* <AirlineTickets /> */}
       {/* <TopDestination /> */}
       <Blog />
-      <SubscribeComp />
+      {/* <SubscribeComp /> */}
+      <FooterComponent />
     </CustomLayout>
   );
 };

@@ -1,6 +1,5 @@
 import { FC } from "react";
 
-
 const AddressContent: FC<IAddressProps> = ({ colClass }) => {
   return (
     <div className="row">
@@ -12,8 +11,8 @@ const AddressContent: FC<IAddressProps> = ({ colClass }) => {
           </div>
           <div className="contact_content">
             <p>
-              549 Sulphur Springs Road <br />
-              Downers Grove, IL 60515
+              Arafat <br />
+              Al-Andalus, Jeddah
             </p>
           </div>
         </div>
@@ -40,8 +39,8 @@ const AddressContent: FC<IAddressProps> = ({ colClass }) => {
           </div>
           <div className="contact_content">
             <ul>
-              <li>+91 123 - 456 - 7890</li>
-              <li>+86 163 - 451 - 7894</li>
+              <li>+96 123 - 456 - 7890</li>
+              <li>+96 163 - 451 - 7894</li>
             </ul>
           </div>
         </div>
@@ -54,8 +53,8 @@ const AddressContent: FC<IAddressProps> = ({ colClass }) => {
           </div>
           <div className="contact_content">
             <ul>
-              <li>+1 212 999 8888</li>
-              <li>+44 1-2222 8888</li>
+              <li>+96 212 999 8888</li>
+              <li>+96 1-2222 8888</li>
             </ul>
           </div>
         </div>

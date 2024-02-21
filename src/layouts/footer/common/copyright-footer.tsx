@@ -14,7 +14,7 @@ const CopyRightFooter: FC = () => {
           <div className="col-xl-6 col-md-6 col-sm-12">
             <div className="copy-right">
               <p className="text-white">
-                copyright 2023 Whetstonez{" "}
+                copyright 2024 Whetstonez{" "}
                 <i className="fas fa-heart text-white"></i>
               </p>
             </div>

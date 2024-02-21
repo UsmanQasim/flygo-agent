@@ -9,7 +9,11 @@ import LoginForm from "@/components/common/booking-form/form6";
 const LoginPage: FC<ILoginPageProps> = ({ title }) => {
   return (
     <section className="section-b-space dark-cls animated-section">
-      <Img src="/assets/images/cab/grey-bg.jpg" alt="" className="img-fluid bg-img" />
+      <Img
+        src="/assets/images/cab/grey-bg.jpg"
+        alt=""
+        className="img-fluid bg-img"
+      />
       <Animation1 />
       <div className="container">
         <div className="row">

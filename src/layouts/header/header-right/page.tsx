@@ -55,7 +55,7 @@ const HeaderRight: React.FC<IHeaderRightProps> = ({ userBgClass }) => {
             <li className={`${userBgClass && userBgClass}`}>
               {user ? (
                 <Link
-                  href={"https://flygo-admin.vercel.app/dashboard"}
+                  href={"/pages/other-pages/user-dashboard"}
                   className="rounded p-2"
                   style={{
                     display: "flex",
@@ -70,7 +70,7 @@ const HeaderRight: React.FC<IHeaderRightProps> = ({ userBgClass }) => {
                 </Link>
               ) : (
                 <Link
-                  href={"https://flygo-admin.vercel.app/dashboard"}
+                  href={"/pages/other-pages/login"}
                   className="rounded p-2"
                   style={{
                     display: "flex",

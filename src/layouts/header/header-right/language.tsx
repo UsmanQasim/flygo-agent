@@ -33,66 +33,101 @@ const Language: React.FC<ILanguageProps> = ({ value }) => {
 
   return (
     <div
-      className="front-setting rounded"
       style={{
         width: "80px",
         cursor: "pointer",
         position: "relative",
         marginLeft: "10px",
         minWidth: "80px",
+        border: "1px solid #3FA34B",
+        backgroundColor: "#3FA34B",
+        borderRadius: "6px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        height: "38px",
       }}
     >
-      <input
-        type="text"
-        readOnly
-        className="form-control dropdown-toggle "
-        value={i18LangStatus}
+      <p
         style={{
-          position: "relative",
-          cursor: "pointer",
-          border: "1px solid #3FA34B",
-          backgroundColor: "#3FA34B",
           color: "white",
-          textTransform: "uppercase",
-        }}
-        name="language"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      />
-      <div
-        className="input-group-text dropdown-toggle absolute bg-transparent border-0 right-0 bottom-0 h-100 text-white"
-        style={{
-          position: "absolute",
-          bottom: 0,
-          right: 0,
-          border: "0px",
+          textAlign: "center",
+          fontSize: "1rem",
+          fontWeight: 400,
+          margin: "0px",
+          padding: "0px",
         }}
       >
-        <i className="bi bi-person-fill"></i>
-      </div>
-      <ul
-        className="dropdown-menu"
-        style={{
-          width: "80px",
-          minWidth: "80px !important",
-        }}
-      >
-        {value?.option?.map((elem, index) => (
-          <li
-            key={index}
-            onClick={() => {
-              changeLng(elem.lang);
-              i18n.changeLanguage(elem.lang);
-            }}
-            value={elem.lang}
-            className="dropdown-item"
-            style={{ marginLeft: "0px" }}
-          >
-            {elem.language}
-          </li>
-        ))}
-      </ul>
+        EN
+      </p>
     </div>
+    // <div
+    //   className="front-setting rounded"
+    //   style={{
+    //     width: "80px",
+    //     cursor: "pointer",
+    //     position: "relative",
+    //     marginLeft: "10px",
+    //     minWidth: "80px",
+    //   }}
+    // >
+    //   <input
+    //     type="text"
+    //     className="form-control dropdown-toggle "
+    //     value={i18LangStatus}
+    //     style={{
+    //       position: "relative",
+    //       cursor: "pointer",
+    //       border: "1px solid #3FA34B",
+    //       backgroundColor: "#3FA34B",
+    //       color: "white",
+    //       textTransform: "uppercase",
+    //     }}
+    //     name="language"
+    //     data-bs-toggle="dropdown"
+    //     aria-expanded="false"
+    //   />
+    //   <div
+    //     className="input-group-text dropdown-toggle absolute bg-transparent border-0 right-0 bottom-0 h-100 text-white"
+    //     style={{
+    //       position: "absolute",
+    //       bottom: 0,
+    //       right: 0,
+    //       border: "0px",
+    //       width:'100%',
+    //       display:'flex',
+    //       justifyContent:'end'
+    //     }}
+    //     data-bs-toggle="dropdown"
+    //     aria-expanded="false"
+    //   >
+    //     <i className="bi bi-person-fill"></i>
+    //   </div>
+    //   <ul
+    //     className="dropdown-menu"
+    //     style={{
+    //       width: "80px",
+    //       minWidth: "80px !important",
+    //     }}
+    //   >
+    //     {value?.option?.map((elem, index) => (
+    //       <li
+    //         key={index}
+    //         onClick={() => {
+    //           changeLng(elem.lang);
+    //           i18n.changeLanguage(elem.lang);
+    //         }}
+    //         value={elem.lang}
+    //         className="dropdown-item"
+    //         style={{ marginLeft: "0px" }}
+    //       >
+    //         {elem.language}
+    //       </li>
+    //     ))}
+    //   </ul>
+    // </div>
+
     // <li
     //   className="front-setting rounded"
     //   style={{ border: "1px solid #3FA34B", backgroundColor: "#3FA34B" }}

@@ -14,12 +14,12 @@ const Sidebar: React.FC = () => {
     <nav>
       <div className="main-navbar">
         <div id="main-nav">
-          {/* <div className="toggle-nav">
+          <div className="toggle-nav">
             <i
               className="fa fa-bars sidebar-bar"
               onClick={() => setToggleSideBar(!toggleSideBar)}
             ></i>
-          </div> */}
+          </div>
           <div className={`menu-overlay ${toggleSideBar ? "show" : ""}`}></div>
           <ul
             className="nav-menu"

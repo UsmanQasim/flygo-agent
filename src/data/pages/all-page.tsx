@@ -94,25 +94,33 @@ export const parallaxData = [
   },
 ];
 
-export const centerSlides = ["/assets/images/portfolio/10.jpg", "/assets/images/portfolio/12.jpg", "/assets/images/portfolio/9.jpg", "/assets/images/portfolio/11.jpg"];
+export const centerSlides = [
+  "/assets/images/portfolio/10.jpg",
+  "/assets/images/portfolio/12.jpg",
+  "/assets/images/portfolio/9.jpg",
+  "/assets/images/portfolio/11.jpg",
+];
 
 export const sections = [
   {
     imageSrc: "/assets/images/tour/tour/11.jpg",
     title: "luxury gateway",
-    description: "Vienna is a dreamy city that flaunts various artistic and musical legacies. The solo piano sonatas of Mozart, the nine symphonies of Beethoven and the dream interpretations of Sigmund Freud – all of it was shaped in the beautiful artistic realms of Vienna.",
+    description:
+      "Vienna is a dreamy city that flaunts various artistic and musical legacies. The solo piano sonatas of Mozart, the nine symphonies of Beethoven and the dream interpretations of Sigmund Freud – all of it was shaped in the beautiful artistic realms of Vienna.",
     right: false,
   },
   {
     imageSrc: "/assets/images/tour/tour/9.jpg",
     title: "luxury gateway",
-    description: "Vienna is a dreamy city that flaunts various artistic and musical legacies. The solo piano sonatas of Mozart, the nine symphonies of Beethoven and the dream interpretations of Sigmund Freud – all of it was shaped in the beautiful artistic realms of Vienna.",
+    description:
+      "Vienna is a dreamy city that flaunts various artistic and musical legacies. The solo piano sonatas of Mozart, the nine symphonies of Beethoven and the dream interpretations of Sigmund Freud – all of it was shaped in the beautiful artistic realms of Vienna.",
     right: true,
   },
   {
     imageSrc: "/assets/images/tour/tour/8.jpg",
     title: "luxury gateway",
-    description: "Vienna is a dreamy city that flaunts various artistic and musical legacies. The solo piano sonatas of Mozart, the nine symphonies of Beethoven and the dream interpretations of Sigmund Freud – all of it was shaped in the beautiful artistic realms of Vienna.",
+    description:
+      "Vienna is a dreamy city that flaunts various artistic and musical legacies. The solo piano sonatas of Mozart, the nine symphonies of Beethoven and the dream interpretations of Sigmund Freud – all of it was shaped in the beautiful artistic realms of Vienna.",
     right: false,
   },
 ];
@@ -123,63 +131,109 @@ export const commentsData = [
     avatar: "/assets/images/avtar/1.jpg",
     name: "That Guy",
     date: "Dec 16, 2023",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 2,
     avatar: "/assets/images/avtar/3.jpg",
     name: "That Guy",
     date: "Dec 16, 2023",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     id: 3,
     avatar: "/assets/images/avtar/2.jpg",
     name: "That Guy",
     date: "Dec 16, 2023",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
 
 export const teamMembers = [
-  { name: "Julia Holmes", role: "CEO", image: "/assets/images/inner-pages/team/1.jpg" },
-  { name: "Lucas Smith", role: "marketing", image: "/assets/images/inner-pages/team/2.jpg" },
-  { name: "Pablo Himenez", role: "customer service", image: "/assets/images/inner-pages/team/3.jpg" },
-  { name: "Lucas Smith", role: "marketing", image: "/assets/images/inner-pages/team/2.jpg" },
+  {
+    name: "Julia Holmes",
+    role: "CEO",
+    image: "/assets/images/inner-pages/team/1.jpg",
+  },
+  {
+    name: "Lucas Smith",
+    role: "marketing",
+    image: "/assets/images/inner-pages/team/2.jpg",
+  },
+  {
+    name: "Pablo Himenez",
+    role: "customer service",
+    image: "/assets/images/inner-pages/team/3.jpg",
+  },
+  {
+    name: "Lucas Smith",
+    role: "marketing",
+    image: "/assets/images/inner-pages/team/2.jpg",
+  },
 ];
 
 export const factsData = [
-  { icon: "/assets/images/icon/facts/1.png", counter: 2745, label: "happy client" },
-  { icon: "/assets/images/icon/facts/2.png", counter: 953, label: "complete tour" },
+  {
+    icon: "/assets/images/icon/facts/1.png",
+    counter: 2745,
+    label: "happy client",
+  },
+  {
+    icon: "/assets/images/icon/facts/2.png",
+    counter: 953,
+    label: "complete tour",
+  },
   { icon: "/assets/images/icon/facts/3.png", counter: 450, label: "guiders" },
-  { icon: "/assets/images/icon/facts/4.png", counter: 180, label: "tour country" },
+  {
+    icon: "/assets/images/icon/facts/4.png",
+    counter: 180,
+    label: "tour country",
+  },
 ];
 
 export const serviceData = [
   {
     icon: <PigiBankSvg />,
     title: "Guaranteed savings",
-    description: "Lorem Ipsum is simply dummy text of the typesetting industry. Lorem Ipsum the has been standard dummy text ever 1500s..",
+    description:
+      "Lorem Ipsum is simply dummy text of the typesetting industry. Lorem Ipsum the has been standard dummy text ever 1500s..",
     discount: "15% discount",
   },
   {
     icon: <TelephonSvg />,
     title: "24 X 7 helpline",
-    description: "Lorem Ipsum is simply dummy text of the typesetting industry. Lorem Ipsum the has been standard dummy text ever 1500s..",
+    description:
+      "Lorem Ipsum is simply dummy text of the typesetting industry. Lorem Ipsum the has been standard dummy text ever 1500s..",
     discount: "free 1 ride",
   },
   {
     icon: <LightSvg />,
     title: "live booking on hotel",
-    description: "Lorem Ipsum is simply dummy text of the typesetting industry. Lorem Ipsum the has been standard dummy text ever 1500s..",
+    description:
+      "Lorem Ipsum is simply dummy text of the typesetting industry. Lorem Ipsum the has been standard dummy text ever 1500s..",
     discount: "2% discount",
   },
 ];
 
 export const imageData = [
-  { src: "/assets/images/inner-pages/about/1.jpg", title: "Venezuela", subTitle: "water fall" },
-  { src: "/assets/images/inner-pages/about/2.jpg", title: "Shillong", subTitle: "paragliding" },
-  { src: "/assets/images/inner-pages/about/3.jpg", title: "Berlin", subTitle: "River Front" },
+  {
+    src: "/assets/images/inner-pages/about/1.jpg",
+    title: "Venezuela",
+    subTitle: "water fall",
+  },
+  {
+    src: "/assets/images/inner-pages/about/2.jpg",
+    title: "Shillong",
+    subTitle: "paragliding",
+  },
+  {
+    src: "/assets/images/inner-pages/about/3.jpg",
+    title: "Berlin",
+    subTitle: "River Front",
+  },
 ];
 
 export const tabs = [
@@ -202,13 +256,21 @@ export const userTabs = [
   { id: "profile", label: "profile" },
   { id: "bookings", label: "bookings" },
   { id: "cards", label: "cards & payment" },
-  { id: "bookmark", label: "bookmark" },
-  { id: "security", label: "security" },
+  // { id: "bookmark", label: "bookmark" },
+  // { id: "security", label: "security" },
 ];
 
 export const counters = [
-  { iconSrc: "/assets/images/icon/hotel.png", count: 25, label: "hotel booked" },
-  { iconSrc: "/assets/images/icon/flight.png", count: 12, label: "flight booked" },
+  {
+    iconSrc: "/assets/images/icon/hotel.png",
+    count: 25,
+    label: "hotel booked",
+  },
+  {
+    iconSrc: "/assets/images/icon/flight.png",
+    count: 12,
+    label: "flight booked",
+  },
   { iconSrc: "/assets/images/icon/taxi.png", count: 50, label: "cab booked" },
   { iconSrc: "/assets/images/icon/food.png", count: 40, label: "food ordered" },
 ];
@@ -216,10 +278,25 @@ export const counters = [
 export const activities = [
   { icon: "fas fa-plane", text: "Paris to Dubai", date: "3 days ago" },
   { icon: "fas fa-plane", text: "Paris to Dubai", date: "23 june" },
-  { icon: "fas fa-hotel", text: "hotel sea view", date: "20 april", className: "blue-line" },
-  { icon: "fas fa-taxi", text: "Paris To Toulouse", date: "12 feb", className: "yellow-line" },
+  {
+    icon: "fas fa-hotel",
+    text: "hotel sea view",
+    date: "20 april",
+    className: "blue-line",
+  },
+  {
+    icon: "fas fa-taxi",
+    text: "Paris To Toulouse",
+    date: "12 feb",
+    className: "yellow-line",
+  },
   { icon: "fas fa-plane", text: "Paris to Dubai", date: "14 jan" },
-  { icon: "fas fa-hotel", text: "hotel sea view", date: "12 jan", className: "blue-line" },
+  {
+    icon: "fas fa-hotel",
+    text: "hotel sea view",
+    date: "12 jan",
+    className: "blue-line",
+  },
 ];
 
 export const chartDataOption: ApexOptions = {
@@ -239,7 +316,7 @@ export const chartDataOption: ApexOptions = {
         total: {
           show: true,
           label: "Total",
-          formatter: function (val:string) {
+          formatter: function (val: string) {
             return "80";
           },
         },
@@ -495,7 +572,12 @@ export const bookmarks = [
   },
 ];
 
-export const imageUrls = ["/assets/images/tour/tour/7.jpg", "/assets/images/tour/tour/8.jpg", "/assets/images/tour/tour/9.jpg", "/assets/images/tour/tour/10.jpg"];
+export const imageUrls = [
+  "/assets/images/tour/tour/7.jpg",
+  "/assets/images/tour/tour/8.jpg",
+  "/assets/images/tour/tour/9.jpg",
+  "/assets/images/tour/tour/10.jpg",
+];
 
 export const themeButtons = [
   { href: "#", className: "btn btn-solid", label: "read more" },
@@ -519,9 +601,24 @@ export const whiteBlackButtons = [
 export const buttonTags = [
   { className: "btn btn-primary", href: "#", role: "button", label: "Link" },
   { className: "btn btn-primary", type: "submit", label: "Button" },
-  { className: "btn btn-primary", type: "button", value: "Input", label: "Input" },
-  { className: "btn btn-primary", type: "submit", value: "Submit", label: "Submit" },
-  { className: "btn btn-primary", type: "reset", value: "Reset", label: "Reset" },
+  {
+    className: "btn btn-primary",
+    type: "button",
+    value: "Input",
+    label: "Input",
+  },
+  {
+    className: "btn btn-primary",
+    type: "submit",
+    value: "Submit",
+    label: "Submit",
+  },
+  {
+    className: "btn btn-primary",
+    type: "reset",
+    value: "Reset",
+    label: "Reset",
+  },
 ];
 
 export const buttonSizes = [
@@ -556,8 +653,7 @@ export const buttonSearch = [
   { className: ">Block level button", label: "Secondary" },
 ];
 
-
-export const userSection= [
+export const userSection = [
   {
     title: "Profile",
     details: [
@@ -572,9 +668,24 @@ export const userSection= [
   {
     title: "Login Details",
     details: [
-      { label: "email address", value: "mark.endss@mail.com", editable: true, modalTarget: "#edit-address" },
-      { label: "phone no", value: "+91 123 - 456 - 7890", editable: true, modalTarget: "#edit-phone" },
-      { label: "password", value: "&#9679;&#9679;", editable: true, modalTarget: "#edit-password" },
+      {
+        label: "email address",
+        value: "mark.endss@mail.com",
+        editable: true,
+        modalTarget: "#edit-address",
+      },
+      {
+        label: "phone no",
+        value: "+91 123 - 456 - 7890",
+        editable: true,
+        modalTarget: "#edit-phone",
+      },
+      {
+        label: "password",
+        value: "&#9679;&#9679;",
+        editable: true,
+        modalTarget: "#edit-password",
+      },
     ],
   },
 ];
