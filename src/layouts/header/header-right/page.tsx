@@ -109,7 +109,7 @@ const HeaderRight: React.FC<IHeaderRightProps> = ({ userBgClass }) => {
                       }}
                     >
                       <a
-                        href="pages/other-pages/user-dashboard"
+                        href="/pages/other-pages/user-dashboard"
                         className="dropdownuser"
                         style={{
                           display: "block",
