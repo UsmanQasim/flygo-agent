@@ -15,7 +15,7 @@ const Register: FC = () => {
         // subTitle={"sign up"}
         bannerImg={"/assets/signup-s.jpg"}
       />
-      <LoginPage title="sign up" />
+      <LoginPage title="Add Employee" />
     </CustomLayout>
   );
 };

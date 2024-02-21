@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
         <div id="main-nav">
           <div className="toggle-nav">
             <i
-              className="fa fa-bars sidebar-bar"
+              className="fa fa-bars sidebar-bar black"
               onClick={() => setToggleSideBar(!toggleSideBar)}
             ></i>
           </div>

@@ -23,7 +23,7 @@ const LoginPage: FC<ILoginPageProps> = ({ title }) => {
                 <h3>{title}</h3>
               </div>
               {/* <SocialContent title={title} /> */}
-              {title === "sign up" ? <RegisterForm /> : <LoginForm />}
+              {title === "Add Employee" ? <RegisterForm /> : <LoginForm />}
             </div>
           </div>
         </div>

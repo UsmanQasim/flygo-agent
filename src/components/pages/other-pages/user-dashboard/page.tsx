@@ -8,6 +8,7 @@ import AddedCard from "./payment/page";
 import Bookmark from "./bookmark/page";
 import Security from "./security/page";
 import { userTabs } from "@/data/pages/all-page";
+import AddEmployee from "./addEmployee/page";
 
 const BodyContent: FC = () => {
   const [activeTab, setActiveTab] = useState(userTabs[0].id);
@@ -52,6 +53,14 @@ const BodyContent: FC = () => {
                   id={"bookings"}
                 >
                   <Bookings />
+                </div>
+                <div
+                  className={`tab-pane fade ${
+                    activeTab === "addEmployee" ? "show active" : ""
+                  }`}
+                  id={"addEmployee"}
+                >
+               <AddEmployee />
                 </div>
                 <div
                   className={`tab-pane fade ${

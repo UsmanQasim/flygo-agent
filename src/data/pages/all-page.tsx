@@ -128,27 +128,27 @@ export const sections = [
 export const commentsData = [
   {
     id: 1,
-    avatar: "/assets/images/avtar/1.jpg",
-    name: "That Guy",
-    date: "Dec 16, 2023",
+    avatar: "/assets/images/user.jpg",
+    name: "Peter",
+    date: "Jan 08, 2024",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "This article provides practical tips for planning a stress-free long weekend getaway, covering everything from destination selection to itinerary optimization. By following these recommendations, travelers can enjoy a smooth and enjoyable trip without the hassle of last-minute planning.",
   },
   {
     id: 2,
-    avatar: "/assets/images/avtar/3.jpg",
-    name: "That Guy",
+    avatar: "/assets/images/user.jpg",
+    name: "Michael Johnson",
     date: "Dec 16, 2023",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Offering helpful guidance on destination selection, flight booking, transportation, and itinerary planning, this article ensures a fulfilling and memorable long weekend trip experience. By following these tips, travelers can create a well-rounded itinerary tailored to their preferences and interests.",
   },
   {
     id: 3,
-    avatar: "/assets/images/avtar/2.jpg",
-    name: "That Guy",
-    date: "Dec 16, 2023",
+    avatar: "/assets/images/user.jpg",
+    name: "Sarah Thompson",
+    date: "Dec 29, 2023",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "With a focus on budget-friendly and comfortable travel, this guide provides valuable tips for every aspect of planning a long weekend getaway. From selecting the right destination to booking flights and exploring attractions, it covers all the essentials for a fulfilling trip.",
   },
 ];
 
@@ -256,6 +256,7 @@ export const userTabs = [
   { id: "profile", label: "profile" },
   { id: "bookings", label: "bookings" },
   { id: "cards", label: "cards & payment" },
+  { id: "addEmployee", label: "Add Employee" },
   // { id: "bookmark", label: "bookmark" },
   // { id: "security", label: "security" },
 ];

@@ -13,7 +13,7 @@ export interface IGetAllAgentBookings {
 
 export interface IDashboardBookingData {
   id: number;
-  itinerary_id: string;
+  itinerary_id: number | string;
   origin: string;
   destination: string;
   arrival_date_time: string;
@@ -25,6 +25,7 @@ export interface IDashboardBookingData {
   cost: number;
   createdAt: string;
   updatedAt: string;
+  onIconClick:Function
 }
 
 type GetAllBookingProps = {

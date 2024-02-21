@@ -15,19 +15,19 @@ const MENUITEMS: IMenuItemProps[] = [
     title: "Top Deals",
     type: "sub",
     megaMenu: false,
-    path: "/",
+    path: "/pages/other-pages/coming-soon-1",
   },
   {
     title: "Package",
     type: "sub",
     megaMenu: false,
-    path: "/",
+    path: "/pages/other-pages/coming-soon-1",
   },
   {
     title: "Blog",
     type: "sub",
     megaMenu: false,
-    path: "/",
+    path: "pages/blog-detail/left-sidebar",
   },
   {
     title: "Contact",

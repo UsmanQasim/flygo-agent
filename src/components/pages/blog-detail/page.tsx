@@ -15,7 +15,7 @@ interface IBlogDetailProps {
   side: string;
   view?: string;
 }
-const BodyContent: FC<IBlogDetailProps> = ({ side, view }) => {
+const BodyContent: FC<IBlogDetailProps> = ({ side = "no", view }) => {
   return (
     <section className="section-b-space bg-white">
       <div className="container">
@@ -27,7 +27,7 @@ const BodyContent: FC<IBlogDetailProps> = ({ side, view }) => {
           )}
           <div className={` ${side === "no" ? "col-lg-12" : "col-lg-9"} `}>
             <div className="blog-single-detail">
-              <div className="top-image">{view === "slide" ? <TopSlider /> : view === "video" ? <TopVideo /> : <Img src="/assets/images/portfolio/13.jpg" alt="" className="img-fluid " />}</div>
+              <div className="top-image">{view === "slide" ? <TopSlider /> : view === "video" ? <TopVideo /> : <Img src="/assets/images/longweekend-1.jpg" alt="" className="img-fluid" style={{width:'80%', height:'500px'}}/>}</div>
               <PostDetail />
               <DetailPart />
               <CommentContent />

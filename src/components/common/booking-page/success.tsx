@@ -11,6 +11,7 @@ import Img from "@/utils/BackgroundImageRatio";
 import Link from "next/link";
 import { FC, useEffect, useState } from "react";
 import { parseCookies } from "nookies";
+import { DownloadInvoiceData } from "@/services/flights";
 
 const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
   const [code, setCode] = useState("");
@@ -32,6 +33,14 @@ const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
 
     if (parsedToken) setToken(parsedToken);
   }, []);
+
+  // const handleDownloadInvoice = async () => {
+  //   try {
+  //      await DownloadInvoiceData(code);
+  //   } catch (error) {
+  //     console.error("Error downloading invoice:", error);
+  //   }
+  // };
 
   return (
     <section className="section-b-space success-section">
@@ -57,10 +66,11 @@ const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
             <div className="d-flex gap-2 justify-content-center">
               {token && (
                 <Link
-                  href={`https://flygo-admin.vercel.app/auth/accept-redirects?__t=${encodeURI(
-                    token
-                  )} `}
-                  target="_blank"
+                  // href={`https://flygo-admin.vercel.app/auth/accept-redirects?__t=${encodeURI(
+                  //   token
+                  // )} `}
+                  // target="_blank"
+                  href={`/pages/other-pages/user-dashboard`}
                 >
                   <Button
                     btnClass="btn btn-solid color1"
@@ -68,7 +78,11 @@ const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
                   />
                 </Link>
               )}
-              <Button btnClass="btn btn-solid color1" name={DownloadInvoice} />
+              <Button
+                btnClass="btn btn-solid color1"
+                name={DownloadInvoice}
+                //  onClick={handleDownloadInvoice}
+              />
             </div>
           </div>
         </div>

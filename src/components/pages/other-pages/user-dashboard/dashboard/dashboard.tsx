@@ -20,7 +20,7 @@ type DashboardType = {
 
 const Dashboard = ({ handleTabClick }: DashboardType) => {
   const [dashboardData, setDashboardData] = useState<AgentDashBoardData>();
-  const [bookingID, setBookingID] = useState<any>();
+  const [bookingID, setBookingID] = useState<number>();
   const [bookingIDModal, setBookingIDModal] = useState<any>();
   const [show, setShow] = useState(false);
   const [bookingData, setBookingData] = useState<
@@ -42,6 +42,8 @@ const Dashboard = ({ handleTabClick }: DashboardType) => {
   }, []);
 
   useEffect(() => {
+    if(!bookingID) return;
+    
     GetAgentBookingById(bookingID)
       .then((res) => setBookingIDModal(res))
       .catch((err) => {
@@ -78,7 +80,7 @@ const Dashboard = ({ handleTabClick }: DashboardType) => {
           <div className="col-xl-6 col-sm-6">
             <div className="counter-box">
               <Img
-                src={"/assets/images/icon/flight.png"}
+                src={"https://icons.veryicon.com/png/o/business/official-website-monochrome-icon/total-balance.png"}
                 className="img-fluid"
                 alt="total balance"
               />
@@ -89,7 +91,7 @@ const Dashboard = ({ handleTabClick }: DashboardType) => {
           <div className="col-xl-6 col-sm-6">
             <div className="counter-box">
               <Img
-                src={"/assets/images/icon/flight.png"}
+                src={"https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/booking-confirmed-icon.png"}
                 className="img-fluid"
                 alt="flight"
               />

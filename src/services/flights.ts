@@ -244,3 +244,12 @@ export const completeBookingFlight = async (data: ICompleteBookingProps) => {
     console.log(e);
   }
 };
+
+
+export const DownloadInvoiceData = async (id:string) => {
+  try {
+    const response = await Axios.get(`/sabre/flights/invoice/${id}`);
+    if (response.data.success) return response.data.data;
+  } catch (error) {}
+};
+

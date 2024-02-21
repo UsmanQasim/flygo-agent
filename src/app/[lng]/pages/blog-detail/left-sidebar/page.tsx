@@ -7,7 +7,7 @@ import BodyContent from "@/components/pages/blog-detail/page";
 const LeftSidebar: FC = () => {
   return (
     <CustomLayout title="light_header" userBgClass="user user-light" logo={"dark"} loader="pre">
-      <Breadcrumb title="Home" subTitle="blog" bannerImg={"/assets/images/tour/inner-page/breadcrumb.jpg"} />
+      <Breadcrumb title="" subTitle="" bannerImg={"https://4kwallpapers.com/images/wallpapers/riffelsee-lake-switzerland-glacier-mountains-snow-covered-3840x2160-3912.jpg"} />
       <BodyContent side="left" />
     </CustomLayout>
   );

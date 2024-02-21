@@ -149,8 +149,8 @@ export const masonryBlogsData = [
 ];
 
 export const popularPosts = [
-  { image: "/assets/images/portfolio/6.jpg", date: "25 Dec 2023", hits: 100 },
-  { image: "/assets/images/portfolio/7.jpg", date: "25 Dec 2023", hits: 540 },
-  { image: "/assets/images/portfolio/8.jpg", date: "25 Dec 2023", hits: 250 },
-  { image: "/assets/images/portfolio/2.jpg", date: "25 Dec 2023", hits: 30 },
+  { image: "/assets/images/zurich.jpg", date: "25 Dec 2023", hits: 100 },
+  { image: "/assets/images/londonEye.jpg", date: "25 Dec 2023", hits: 540 },
+  { image: "/assets/images/london.jpg", date: "25 Dec 2023", hits: 250 },
+  { image: "/assets/images/turky.jpg", date: "25 Dec 2023", hits: 30 },
 ];

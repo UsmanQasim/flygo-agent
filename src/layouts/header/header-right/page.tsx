@@ -45,6 +45,15 @@ const HeaderRight: React.FC<IHeaderRightProps> = ({ userBgClass }) => {
   }, []);
 
   const [settingIcon, setSettingIcon] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowDropdown(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowDropdown(false);
+  };
   return (
     <ul className="header-right">
       {RightNavMenuItem.map((value, i) => (
@@ -52,39 +61,64 @@ const HeaderRight: React.FC<IHeaderRightProps> = ({ userBgClass }) => {
           {value.title === "currency" && <Currency value={value} />}
           {value.title === "language" && <Language value={value} />}
           {value.title === "user" && (
-            <li className={`${userBgClass && userBgClass}`}>
-              {user ? (
-                <Link
-                  href={"/pages/other-pages/user-dashboard"}
-                  className="rounded p-2"
-                  style={{
-                    display: "flex",
-                    gap: 10,
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    border: "1px solid #213B70",
-                  }}
-                >
-                  <i className="fas fa-user " color="#213B70"></i>
-                  <b style={{ color: "#213B70" }}>{user?.representativeName}</b>
-                </Link>
-              ) : (
-                <Link
-                  href={"/pages/other-pages/login"}
-                  className="rounded p-2"
-                  style={{
-                    display: "flex",
-                    gap: 10,
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    border: "1px solid #213B70",
-                  }}
-                >
-                  {/* <i className="fas fa-user " color="#213B70"></i> */}
-                  <b style={{ color: "#213B70" }}>LOGIN</b>
-                </Link>
-              )}
-            </li>
+    <li className={`${userBgClass && userBgClass}`}>
+    {user ? (
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="rounded p-2"
+        style={{
+          display: "flex",
+          gap: 10,
+          justifyContent: "space-between",
+          alignItems: "center",
+          border: "1px solid #213B70",
+          position: "relative", // Necessary for absolute positioning of the dropdown
+          borderBottomLeftRadius: showDropdown ? "0px" : "5px",
+          borderBottomRightRadius: showDropdown ? "0px" : "5px",
+        }}
+      >
+        <i className="fas fa-user" color="#213B70"></i>
+        <b style={{ color: "#213B70" }}>{user?.representativeName}</b>
+        {showDropdown && (
+          <div
+            style={{
+              position: "absolute",
+              top: "100%",
+              left: 0,
+              backgroundColor: "#fff", 
+              padding: "10px",
+              border: "1px solid #213B70",
+              borderTopLeftRadius: '0', 
+              borderTopRightRadius: '0',
+              borderBottomLeftRadius: '5px', 
+              borderBottomRightRadius: '5px',
+              width:'100%',
+              zIndex: 999, 
+            }}
+          >
+            <button style={{ display: 'block', marginBottom: '5px', border:'0px',background:'transparent' }}>Dashboard</button>
+            <button style={{border:'0px',background:'transparent' }}>Logout</button>
+          </div>
+        )}
+      </div>
+    ) : (
+      <Link
+        href={"/pages/other-pages/login"}
+        className="rounded p-2"
+        style={{
+          display: "flex",
+          gap: 10,
+          justifyContent: "space-between",
+          alignItems: "center",
+          border: "1px solid #213B70",
+        }}
+      >
+        {/* <i className="fas fa-user " color="#213B70"></i> */}
+        <b style={{ color: "#213B70" }}>LOGIN</b>
+      </Link>
+    )}
+  </li>
           )}
           {value.title === "setting" && (
             <li className="setting">
