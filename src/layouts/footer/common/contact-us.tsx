@@ -25,7 +25,7 @@ const ContactUsComponent: React.FC = () => {
                 src={"/assets/images/logo.png"}
                 alt="logo"
                 className="img-fluid"
-                width={200}
+                width={100}
                 height={100}
               />
             </Link>

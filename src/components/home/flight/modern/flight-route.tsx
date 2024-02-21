@@ -24,7 +24,10 @@ const FlightRoute: FC = () => {
           {topDealData.map((data: ITopProps, index) => (
             <div className="col-lg-3 col-6" key={index}>
               <div className="routes-box">
-                <Link href="" className="routes-img">
+                <Link
+                  href="/pages/other-pages/coming-soon-1"
+                  className="routes-img"
+                >
                   <Img src={data.image} alt="" className="img-fluid bg-img" />
                   <div
                     className="price-round"

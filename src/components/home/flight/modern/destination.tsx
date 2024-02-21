@@ -9,11 +9,19 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux-toolkit/store";
 import Img from "@/utils/BackgroundImageRatio";
 import Link from "next/link";
+import { parseCookies } from "nookies";
 
 const Destination: FC = () => {
   const { symbol, currencyValue } = useSelector(
     (state: RootState) => state.currency
   );
+
+  const { accessToken } = parseCookies();
+
+  const loginURL = accessToken
+    ? "/home/flight"
+    : `/pages/other-pages/login?returnURL=${encodeURI("/home/flight")}`;
+
   return (
     <section className="blog_section destination-section section-b-space ratio_55">
       <div className="container">
@@ -41,7 +49,7 @@ const Destination: FC = () => {
                       on an unforgettable journey to the heart of the vibrant
                       capital.
                     </h6>
-                    <Link href="/home/flight">
+                    <Link href={loginURL}>
                       <Button
                         btnClass="btn btn-rounded color2 fs-6"
                         name={`from ${symbol}${(

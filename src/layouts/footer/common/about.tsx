@@ -30,7 +30,10 @@ const AboutComponent: React.FC = () => {
                 </Link>
               </li>
               <li className="text-white">
-                <Link className="text-white" href="/pages/other-pages/register">
+                <Link
+                  className="text-white"
+                  href="/pages/other-pages/coming-soon-1"
+                >
                   register
                 </Link>
               </li>
@@ -53,7 +56,7 @@ const AboutComponent: React.FC = () => {
               <li className="text-white">
                 <Link
                   className="text-white"
-                  href="https://support.pixelstrap.com/"
+                  href="/pages/other-pages/coming-soon-1"
                 >
                   support
                 </Link>

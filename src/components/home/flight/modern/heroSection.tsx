@@ -40,7 +40,7 @@ const carouselData = [
     title: "Discover Your Next Adventure: Explore, Dream, Travel!",
   },
   {
-    url: "https://www.technologyhunger.com/wp-content/uploads/2021/07/Travel-Agency.jpg",
+    url: "/assets/carousal-s.jpg",
     title: "FlyGO - Your Passport to Unforgettable Adventures",
   },
   {

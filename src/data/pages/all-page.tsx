@@ -156,17 +156,20 @@ export const teamMembers = [
   {
     name: "Julia Holmes",
     role: "CEO",
-    image: "/assets/images/inner-pages/team/1.jpg",
+    image:
+      "https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Lucas Smith",
     role: "marketing",
-    image: "/assets/images/inner-pages/team/2.jpg",
+    image:
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Pablo Himenez",
     role: "customer service",
-    image: "/assets/images/inner-pages/team/3.jpg",
+    image:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Lucas Smith",
@@ -199,38 +202,38 @@ export const serviceData = [
     icon: <PigiBankSvg />,
     title: "Guaranteed savings",
     description:
-      "Lorem Ipsum is simply dummy text of the typesetting industry. Lorem Ipsum the has been standard dummy text ever 1500s..",
+      "Book your flight with us and enjoy guaranteed savings on your next trip!",
     discount: "15% discount",
   },
   {
     icon: <TelephonSvg />,
     title: "24 X 7 helpline",
     description:
-      "Lorem Ipsum is simply dummy text of the typesetting industry. Lorem Ipsum the has been standard dummy text ever 1500s..",
+      "Get 24/7 flight booking assistance with our reliable helpline. Your travel plans are now a call away",
     discount: "free 1 ride",
   },
   {
     icon: <LightSvg />,
-    title: "live booking on hotel",
+    title: "live Flight booking",
     description:
-      "Lorem Ipsum is simply dummy text of the typesetting industry. Lorem Ipsum the has been standard dummy text ever 1500s..",
+      "Experience seamless hotel bookings with our live booking feature – simplicity and convenience at your fingertips.",
     discount: "2% discount",
   },
 ];
 
 export const imageData = [
   {
-    src: "/assets/images/inner-pages/about/1.jpg",
+    src: "https://images.unsplash.com/photo-1534396579421-7c278108bf83?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Venezuela",
     subTitle: "water fall",
   },
   {
-    src: "/assets/images/inner-pages/about/2.jpg",
+    src: "https://images.unsplash.com/photo-1592208127889-a44ea490c64b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Shillong",
     subTitle: "paragliding",
   },
   {
-    src: "/assets/images/inner-pages/about/3.jpg",
+    src: "https://images.unsplash.com/photo-1509140594846-5013db7b2313?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Berlin",
     subTitle: "River Front",
   },

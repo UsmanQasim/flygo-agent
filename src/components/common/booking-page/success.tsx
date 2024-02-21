@@ -78,11 +78,11 @@ const SuccessPage: FC<ISuccessProps> = ({ title, svg, img }) => {
                   />
                 </Link>
               )}
-              <Button
+              {/* <Button
                 btnClass="btn btn-solid color1"
                 name={DownloadInvoice}
                 //  onClick={handleDownloadInvoice}
-              />
+              /> */}
             </div>
           </div>
         </div>

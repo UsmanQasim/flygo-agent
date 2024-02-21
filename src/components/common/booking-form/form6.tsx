@@ -68,7 +68,7 @@ const LoginForm: FC = () => {
       }
     >
       <div className="form-group">
-        <label htmlFor="exampleInputEmail1">user name or Email address</label>
+        <label htmlFor="exampleInputEmail1">Email address</label>
         <input
           type="email"
           className="form-control"

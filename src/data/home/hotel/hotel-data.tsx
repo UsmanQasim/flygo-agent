@@ -54,7 +54,8 @@ export const roomSuitData = [
     title: "family room 5",
     shortDescription: "family",
     shortDescriptionSpan: "room",
-    description: "Lorem Ipsum is the simply dummy text of the printing is of and type the setting the industry. Lorem Ipsum of is has since the..........",
+    description:
+      "Lorem Ipsum is the simply dummy text of the printing is of and type the setting the industry. Lorem Ipsum of is has since the..........",
     btn: "book now",
     responsiveDesc: "see rooms",
     icon: "fas fa-key",
@@ -67,7 +68,8 @@ export const roomSuitData = [
     title: "family room 5",
     shortDescription: "family",
     shortDescriptionSpan: "room",
-    description: "Lorem Ipsum is the simply dummy text of the printing is of and type the setting the industry. Lorem Ipsum of is has since the..........",
+    description:
+      "Lorem Ipsum is the simply dummy text of the printing is of and type the setting the industry. Lorem Ipsum of is has since the..........",
     btn: "book now",
     responsiveDesc: "see rooms",
     icon: "fas fa-key",
@@ -114,7 +116,8 @@ export const specialRoomsData = [
     title: "Lorem Ipsum is simply dummy text.",
     oldPrice: 24,
     newPrice: 20,
-    description: "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the indu standard dummy text ever since the 1500s..............",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the indu standard dummy text ever since the 1500s..............",
     package: " 5 day | 4 night",
   },
   {
@@ -123,7 +126,8 @@ export const specialRoomsData = [
     title: "Lorem Ipsum is simply dummy text.",
     oldPrice: 24,
     newPrice: 20,
-    description: "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the indu standard dummy text ever since the 1500s..............",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the indu standard dummy text ever since the 1500s..............",
     package: " 5 day | 4 night",
   },
   {
@@ -132,7 +136,8 @@ export const specialRoomsData = [
     title: "Lorem Ipsum is simply dummy text.",
     oldPrice: 24,
     newPrice: 20,
-    description: "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the indu standard dummy text ever since the 1500s..............",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the indu standard dummy text ever since the 1500s..............",
     package: " 5 day | 4 night",
   },
 
@@ -142,7 +147,8 @@ export const specialRoomsData = [
     title: "Lorem Ipsum is simply dummy text.",
     oldPrice: 24,
     newPrice: 20,
-    description: "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the indu standard dummy text ever since the 1500s..............",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the indu standard dummy text ever since the 1500s..............",
     package: " 5 day | 4 night",
   },
 ];
@@ -152,58 +158,67 @@ export const services = [
     id: 1,
     src: "/assets/images/hotel/icon/food.png",
     title: "awesome food",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
   },
   {
     id: 2,
     src: "/assets/images/hotel/icon/make-up.png",
     title: "beauty & health",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
   },
   {
     id: 3,
     src: "/assets/images/hotel/icon/fireplace.png",
     title: "conference room",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
   },
   {
     id: 4,
     src: "/assets/images/hotel/icon/flipper.png",
     title: "swimming pool",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
   },
   {
     id: 5,
     src: "/assets/images/hotel/icon/playground.png",
     title: "play ground",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
   },
   {
     id: 6,
     src: "/assets/images/hotel/icon/tree.png",
     title: "beautiful garden",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum the industry's.",
   },
 ];
 
 export const reviews = [
   {
     id: 1,
-    src: "/assets/images/avtar/1.jpg",
+    src: "https://images.unsplash.com/photo-1499470932971-a90681ce8530?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "lara denal",
-    description: "When you innovate, you make mistakes.It is best to admit them quickly, & get on with improving your other innovations.",
+    description:
+      "When you innovate, you make mistakes.It is best to admit them quickly, & get on with improving your other innovations.",
   },
   {
     id: 2,
     src: "/assets/images/avtar/2.jpg",
     name: "denal lara",
-    description: "When you innovate, you make mistakes.It is best to admit them quickly, & get on with improving your other innovations.",
+    description:
+      "When you innovate, you make mistakes.It is best to admit them quickly, & get on with improving your other innovations.",
   },
   {
     id: 3,
     src: "/assets/images/avtar/3.jpg",
     name: "denal lara",
-    description: "When you innovate, you make mistakes.It is best to admit them quickly, & get on with improving your other innovations.",
+    description:
+      "When you innovate, you make mistakes.It is best to admit them quickly, & get on with improving your other innovations.",
   },
 ];
 

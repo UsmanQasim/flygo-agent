@@ -11,7 +11,11 @@ import Slider from "react-slick";
 const OurTeamContent: FC = () => {
   return (
     <section className="team-section animated-section section-b-space">
-      <Img src="/assets/images/cab/grey-bg.jpg" alt="" className="img-fluid bg-img" />
+      <Img
+        src="/assets/images/cab/grey-bg.jpg"
+        alt=""
+        className="img-fluid bg-img"
+      />
       <Animation />
       <div className="container">
         <TitleThree classTitle={"title-1"} title="FlyGo" subTitle={OurTeam} />
@@ -29,14 +33,38 @@ const OurTeamContent: FC = () => {
                       <h6>{member.role}</h6>
                     </div>
                     <div className="team-social">
-                      <a href="https://accounts.google.com/" target="_blank" className="social-box">
-                        <img src="/assets/images/icon/social/google.png" className="img-fluid" alt="" />
+                      <a
+                        href="https://accounts.google.com/"
+                        target="_blank"
+                        className="social-box"
+                      >
+                        <img
+                          src="/assets/images/icon/social/google.png"
+                          className="img-fluid"
+                          alt=""
+                        />
                       </a>
-                      <a href="https://twitter.com/" target="_blank" className="social-box">
-                        <img src="/assets/images/icon/social/twitter.png" className="img-fluid" alt="" />
+                      <a
+                        href="https://twitter.com/"
+                        target="_blank"
+                        className="social-box"
+                      >
+                        <img
+                          src="/assets/images/icon/social/twitter.png"
+                          className="img-fluid"
+                          alt=""
+                        />
                       </a>
-                      <a href="https://www.facebook.com/" target="_blank" className="social-box">
-                        <img src="/assets/images/icon/social/facebook.png" className="img-fluid" alt="" />
+                      <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        className="social-box"
+                      >
+                        <img
+                          src="/assets/images/icon/social/facebook.png"
+                          className="img-fluid"
+                          alt=""
+                        />
                       </a>
                     </div>
                   </div>

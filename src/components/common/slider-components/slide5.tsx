@@ -8,7 +8,7 @@ import Link from "next/link";
 const SliderFive: FC<ISliderFiveProps> = ({ slideData, round, iconColor }) => {
   return (
     <Slider {...slide3} className="no-arrow">
-      {slideData.map((data: IBlogProps,index) => (
+      {slideData.map((data: IBlogProps, index) => (
         <div key={index}>
           <div className={`blog-wrap ${round && "rounded - 0"}`}>
             <div className="blog-image">
@@ -22,10 +22,12 @@ const SliderFive: FC<ISliderFiveProps> = ({ slideData, round, iconColor }) => {
             </div>
             <div className="blog-details">
               <h6>
-                <i className={`fas fa-map-marker-alt ${iconColor && "color-1"}`}></i>
+                <i
+                  className={`fas fa-map-marker-alt ${iconColor && "color-1"}`}
+                ></i>
                 {data.location}
               </h6>
-              <Link href="">
+              <Link href="/pages/blog-detail/left-sidebar">
                 <h5>{data.title}</h5>
               </Link>
               <p>{data.desc}</p>
