@@ -114,7 +114,7 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({
               >
                 <a
                   title="facebook"
-                  href="www.facebook.com"
+                  href="https://www.facebook.com"
                   target="_blank"
                   style={{ color: "#E67C2C" }}
                 >
@@ -131,7 +131,7 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({
                 </a>
                 <a
                   title="Instagram"
-                  href="www.instagram.com"
+                  href="https://www.instagram.com"
                   target="_blank"
                   style={{ color: "#213A72" }}
                 >
@@ -148,7 +148,7 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({
                 </a>
                 <a
                   title="twitter"
-                  href="www.twitter.com"
+                  href="https://www.twitter.com"
                   target="_blank"
                   style={{ color: "#41A64B" }}
                 >
