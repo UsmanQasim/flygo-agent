@@ -14,20 +14,20 @@ const Updates: React.FC = () => {
           {news.map((news: IFooterProps, index) => (
             <div className="media" key={index}>
               <div className="img-part">
-                <Link href="/pages/blog-pages/creative-left-sidebar">
-                  <Image
-                    src={news.img}
-                    className="img-fluid"
-                    alt=""
-                    width={96}
-                    height={96}
-                  />
-                </Link>
+                {/* <Link href="/pages/blog-pages/creative-left-sidebar"> */}
+                <Image
+                  src={news.img}
+                  className="img-fluid"
+                  alt=""
+                  width={96}
+                  height={96}
+                />
+                {/* </Link> */}
               </div>
               <div className="media-body">
-                <Link href="/pages/blog-pages/creative-left-sidebar">
-                  <h5>{news.title}</h5>
-                </Link>
+                {/* <Link href="/pages/blog-pages/creative-left-sidebar"> */}
+                <h5>{news.title}</h5>
+                {/* </Link> */}
                 <p className="text-white">{news.description}</p>
               </div>
             </div>
