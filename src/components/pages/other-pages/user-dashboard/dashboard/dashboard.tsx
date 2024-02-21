@@ -13,6 +13,8 @@ import {
 } from "@/services/dashboard";
 import moment from "moment";
 import Loader from "@/layouts/loader/page";
+import LoaderFlight from "@/layouts/loader/loader-flight";
+import Image from "next/image";
 
 type DashboardType = {
   handleTabClick: Function;
@@ -42,8 +44,8 @@ const Dashboard = ({ handleTabClick }: DashboardType) => {
   }, []);
 
   useEffect(() => {
-    if(!bookingID) return;
-    
+    if (!bookingID) return;
+
     GetAgentBookingById(bookingID)
       .then((res) => setBookingIDModal(res))
       .catch((err) => {
@@ -80,7 +82,9 @@ const Dashboard = ({ handleTabClick }: DashboardType) => {
           <div className="col-xl-6 col-sm-6">
             <div className="counter-box">
               <Img
-                src={"https://icons.veryicon.com/png/o/business/official-website-monochrome-icon/total-balance.png"}
+                src={
+                  "https://icons.veryicon.com/png/o/business/official-website-monochrome-icon/total-balance.png"
+                }
                 className="img-fluid"
                 alt="total balance"
               />
@@ -91,7 +95,9 @@ const Dashboard = ({ handleTabClick }: DashboardType) => {
           <div className="col-xl-6 col-sm-6">
             <div className="counter-box">
               <Img
-                src={"https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/booking-confirmed-icon.png"}
+                src={
+                  "https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/booking-confirmed-icon.png"
+                }
                 className="img-fluid"
                 alt="flight"
               />
@@ -453,7 +459,14 @@ const Dashboard = ({ handleTabClick }: DashboardType) => {
                 </Container>
               </Modal.Body>
             ) : (
-              <Loader />
+              <div className="d-flex justify-content-center">
+                <Image
+                  src={"/assets/images/loader.gif"}
+                  alt="Animated GIF"
+                  width={300}
+                  height={200}
+                />
+              </div>
             )}
 
             <Modal.Footer>
